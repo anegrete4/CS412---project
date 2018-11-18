@@ -39,6 +39,25 @@ $(document).ready(function(){
 	
 
 });
+
+
+function setVisibility(className, isVisible){
+	var item=document.getElementsByClassName(className);
+	for(var i=0;i<item.length; i++){
+		 if (isVisible) {
+		      (item[i]).style.visibility = "visible";
+		      (item[i]).style.height="30px";
+		    } else{
+		    	(item[i]).style.visibility = "hidden";
+		    	(item[i]).style.height="0px";
+		    }
+	}
+}
+
+function toggleVisibility(className, cBox) {
+	setVisibility(className,cBox.is(':checked'));
+}
+
 function wait(ms){
 	   var start = new Date().getTime();
 	   var end = start;
