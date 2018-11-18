@@ -3,7 +3,7 @@
       <h2>Make A Complaint</h2>
       <p>Let us know what you did not like. We will try our best to improve.</p>
    </div>
-   <form class="InputForm ComplaintForm" method="POST">
+   <form class="InputForm ComplaintForm" ACTION="submitComplaint.do" METHOD="POST">
       <!-- Complaint form starts -->
       <input type="text" name="orderNo" id="orderNo" placeholder="Order Number">
       <select name="complaintReason" id="complaintReason">
