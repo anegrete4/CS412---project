@@ -293,7 +293,7 @@ body {
 .ContentWrapper,
 .ContentGroup {
 	width: 100%;
-	height: 500px;
+	height: 540px;
 	overflow: hidden;
 	transition: all 0.5s ease;
 }
@@ -347,15 +347,13 @@ body {
 
 .InputForm {
 	width: 100%;
-	height: 100%;
-	background-color: green;
+	height: auto;
 }
 .ContactUsForm{
 	width: 800px;
 	height: 100px;
 	
 }
-
 .ContactFooter{
 	padding:0px;
 	margin:0px 0px 10px 0px;
@@ -416,6 +414,84 @@ body {
 	text-align:right;
 	float:right;
 }
-.MapInfo{
 
+.InputForm{
+	margin:auto;
+	text-align:center;
+}
+
+select{
+	font-size:16px;
+	font-weight:400;
+    width: 305px;
+    height: 35px;
+    display: block;
+    margin:auto;
+    z-index:100;
+}
+input[type="text"] {
+	font-size:16px;
+	font-weight:400;
+    width: 300px;
+    height: 30px;
+    display: block;
+    margin:auto;
+    margin-top:5px;
+	transition: height 0.3s ease;
+}
+input[type="checkbox"] {
+    font-size:16px;
+	font-weight:400;
+	margin:auto;
+}
+textarea {
+    font-size:16px;
+	font-weight:400;
+	display: block;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.InputForm label {
+    font-size:16px;
+	font-weight:400;
+    margin:auto;
+    padding-left:5px;
+    margin-right:15px;
+}
+.InputForm #orderNo{
+	width:150px;
+	display:inline;
+}
+.InputForm select{
+	width:300px;
+	display:inline;
+}
+.InputForm textarea{
+	width:455px;
+	resize: vertical;
+}
+.InputForm #fname, #lname{
+	width:222px;
+	display:inline;
+}
+.InputForm .PanelButton{
+	display:inline;
+}
+.InputFormLineGroup{
+	width:460px;
+	margin:auto;
+	display:block;
+	height:40px;
+	margin-top:10px;
+}
+.InputForm input[type="checkbox"],label{
+	float:left;
+}
+.InputFormLineGroup .PanelButton{
+	float:right;
+	margin-left:10px;
+}
+.revealWhenChecked{
+	transition: height 0.3s ease;
 }
