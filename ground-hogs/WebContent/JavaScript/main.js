@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+	var googleMapInfoUpdated=false;
 	// start defining your methods
 	$(".Content-down-arrow").on('click', function(event) {  
 	    if (this.hash !== "") {
@@ -12,7 +13,8 @@ $(document).ready(function(){
 	      });
 	    } 
 	  });
-
+	
+	
 	$(".PanelButton").on('click', function(event) {
 		var buttonClass=($(this).attr('class')).split(' ')[1];
 		var contentGroup=document.getElementsByClassName('ContentGroup');
@@ -66,12 +68,12 @@ function toggleVisibility(className, cBox) {
 }
 
 function wait(ms){
-	   var start = new Date().getTime();
-	   var end = start;
-	   while(end < start + ms) {
-	     end = new Date().getTime();
-	  }
-	}
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
 
 function closeResponseBox(){
 	var box=document.getElementById("responseBox");
@@ -86,4 +88,13 @@ function overlayOn() {
 
 function overlayOff() {
     document.getElementById("overlay").style.display = "none";
+}
+
+function toggleMenuSelection(item){
+	var menues=document.getElementsByClassName('HeaderMenu');
+	for(var i=0;i<menues.length;i++){
+		(menues[i]).classList.remove('MenuSelected');
+	}
+	var menuToSelect=document.getElementById(item);
+	(menuToSelect).classList.add('MenuSelected');
 }

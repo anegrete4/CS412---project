@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<div id="Page" class="Page">
+<div id="ContentPage" class="Page">
    <section class="Content-title">
       <h1>Contact Us</h1>
       <p>

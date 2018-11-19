@@ -91,17 +91,16 @@ body {
 
 .Content-title {
 	background: url(../images/contact-us.jpg) no-repeat center center; 
-	height: 40.125rem;
+	height: 30.125rem;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-align: center;
 	color: rgb(255, 255, 255);
-	margin-bottom: 20px;
+	padding-top:10%;
 }
 
 .Content-title h1 {
-	padding-top:250px;
 	display: block;
 	font-family: open-sans, sans-serif;
 	font-size: 3rem;
@@ -356,20 +355,21 @@ body {
 }
 .ContactFooter{
 	padding:0px;
-	margin:0px 0px 10px 0px;
+	margin:0px;
 	float:left;
-	height:400px;
+	height:410px;
 	width:100%;
+	background-color:#3F3F3F;
+	overflow:hidden;
 	
 }
 .ContactFooterLeft{ 
-	padding-top:30px;
-	margin-left:20px;
-    width:15%;
+	padding:10px;
+    width:18%;
     float:left; 
 }
 .ContactFooterPanel{
-	min-width:230px;
+	min-width:200px;
 	width:100%;
 	height:auto;
 	float:left;
@@ -402,11 +402,13 @@ body {
 }
 
 .ContactFooterRight{
-	margin:0px;
-	margin:5px;
-	width:70%;
-    height:100%;
+	width:78%;
     float:right; 
+    padding:10px;
+}
+#GoogleMap{
+	overflow:hidden;
+	frameborder="1";
 }
 
 .spanRight{
@@ -539,7 +541,7 @@ textarea {
     z-index: 2;
 }
 #responseBox{
-	background-color: rgba(255,255,255,0.8);
+	background-color: #FFFFFF;/*rgba(255,255,255,0.8);*/
     padding:10px;
     margin:auto;
     text-align:center;
@@ -568,3 +570,57 @@ textarea {
 	text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
 	text-size-adjust: 100%;
 }
+
+.Header{
+	width:100%;
+	height:70px;
+	background-color:gray;
+	margin:0px;
+	padding:0px;
+	z-index:1000;
+	transition: all 4s ease;
+	
+}
+.Header-menu{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;	
+}
+.Header-menu .Menu{
+	display: inline-block;
+	list-style: none;
+	height:100%;
+	margin:auto;
+}
+.Menu .Menu-item{
+	display: inline-block;
+	cursor:pointer;
+	height:100%;
+	width:120px;
+	text-align:center;
+}
+.Menu .Menu-item:hover{
+	display: inline-block;
+	cursor:pointer;
+	background-color:black;
+	height:100%;
+}
+
+.Header-menu .Menu .Menu-item a{
+	display:block;
+	text-decoration:none;
+	color:#FFF;
+	height:100%;
+	margin-top:25%;	
+	text-transform: uppercase;
+	font-size:14px;
+	font-weight:300;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+
+.MenuSelected{
+	background-color:black;
+}
+

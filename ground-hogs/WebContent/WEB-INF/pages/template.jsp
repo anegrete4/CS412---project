@@ -11,10 +11,13 @@
 <body>
 	<jsp:include page="/WEB-INF/pages/header.jsp"/>
 	<jsp:include page="/WEB-INF/pages/responseBox.jsp"/>
-	<h1>${param.title}</h1>
+	<!-- <h1>${param.title}</h1> -->
 	<jsp:include page="/WEB-INF/pages/${param.content}.jsp"/>
 	<jsp:include page="/WEB-INF/pages/footer.jsp"/>
 	<%  session.setAttribute("title", request.getParameter("title")); %>
 	<%  session.setAttribute("content", request.getParameter("content")); %>
+	<script type="text/javascript">
+		toggleMenuSelection('${content}');
+    </script>
 </body>
 </html>

@@ -12,7 +12,6 @@ public class SubmitCustomerSupport extends Action {
                                HttpServletResponse response)
       throws Exception {
 	  
-	  int messageCount=0;
 	  ArrayList<String> responses= new ArrayList<String>();
 	  request.getSession().setAttribute("messages", responses);
 	  
