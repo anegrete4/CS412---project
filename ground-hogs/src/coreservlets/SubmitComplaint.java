@@ -1,5 +1,7 @@
 package coreservlets;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
 
@@ -9,29 +11,19 @@ public class SubmitComplaint extends Action {
                                HttpServletRequest request,
                                HttpServletResponse response)
       throws Exception {
-	  String orderNo = request.getParameter("email");
-	    String password = request.getParameter("password");
-	    if ((orderNo == null) ||
-	        (orderNo.trim().length() < 3)) {
-	      return(mapping.findForward("bad-address"));
-	    } 
-	    else{
-	      return(mapping.findForward("success"));
-	    }
 	  
-	 /*
-    String email = request.getParameter("email");
-    String password = request.getParameter("password");
-    if ((email == null) ||
-        (email.trim().length() < 3) ||
-        (email.indexOf("@") == -1)) {
-      return(mapping.findForward("bad-address"));
-    } else if ((password == null) ||
-               (password.trim().length() < 6)) {
-      return(mapping.findForward("bad-password"));
-    } else {
-      return(mapping.findForward("success"));
-    }
-    */
+	  int messageCount=0;
+	  ArrayList<String> responses= new ArrayList<String>();
+	  request.getSession().setAttribute("messages", responses);
+	  
+	   responses.add("Thank you for your complaint, It will help us to improve ourselves moving forward.");
+	   setResponseInSession(request.getSession(),"Thank You!",responses,"success");
+	   return(mapping.findForward("returnWithResponse"));
+  }
+  
+  private  void setResponseInSession(HttpSession session, String responseTitle, ArrayList<String> responses, String responseType) {
+	  session.setAttribute("responseTitle", responseTitle);
+	  session.setAttribute("responses", responses);
+	  session.setAttribute("responseType", responseType);
   }
 }

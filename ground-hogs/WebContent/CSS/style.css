@@ -427,7 +427,6 @@ select{
     height: 35px;
     display: block;
     margin:auto;
-    z-index:100;
 }
 input[type="text"] {
 	font-size:16px;
@@ -494,4 +493,78 @@ textarea {
 }
 .revealWhenChecked{
 	transition: height 0.3s ease;
+}
+
+.responseBox{
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	background:rgba(0,0,0,0.6);
+	text-align:center;	
+	position:absoute;
+    display:block;
+	
+}
+.responseBox h3{
+	
+	font-size: 21px;
+	height: 30px;
+	line-height: 30.009px;
+	margin-bottom: 6px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 6px;
+	padding-bottom: 0px;
+	padding-left: 2.28125px;
+	padding-right: 2.28125px;
+	padding-top: 0px;
+	position: relative;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	width: 100%;
+}
+
+#overlay {
+    position: fixed;
+    display: block; 
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+#responseBox{
+	background-color: rgba(255,255,255,0.8);
+    padding:10px;
+    margin:auto;
+    text-align:center;
+    
+}
+.notificaiton h3{
+	color:yellow;
+}
+.error h3{
+	color:red;
+}
+.success h3{
+    color:green;
+}
+#responseBox p{
+   display: block;
+	font-family: open-sans, sans-serif;
+	font-size: 15px;
+	font-weight: 100;
+	height: 48px;
+	line-height: 24px;
+	margin-bottom: 18px;
+	color:black;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
+	text-size-adjust: 100%;
 }

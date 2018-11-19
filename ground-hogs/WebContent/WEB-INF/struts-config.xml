@@ -10,10 +10,8 @@
   <action-mappings>
     <action path="/submitComplaint" 
             type="coreservlets.SubmitComplaint">
-      <forward name="bad-address" 
-               path="/WEB-INF/results/bad-address.jsp"/>
-      <forward name="bad-password" 
-               path="/WEB-INF/results/bad-password.jsp"/>
+      <forward name="returnWithResponse" 
+               path="/WEB-INF/pages/returnWithResponse.jsp"/>
     </action>
   </action-mappings>
 </struts-config>
