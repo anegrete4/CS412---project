@@ -3,7 +3,7 @@
       <h2>Sales Inquiry</h2>
       <p>Late us know what you are interested in.</p>
    </div>
-   <form class="InputForm ComplaintForm" method="POST">
+   <form class="InputForm ComplaintForm" ACTION="submitSalesInquiry.do" METHOD="POST">
       <!-- Complaint form starts -->
       <input type="text" name="orderNo" id="orderNo" placeholder="Order Number">
       <select name="complaintReason" id="complaintReason">

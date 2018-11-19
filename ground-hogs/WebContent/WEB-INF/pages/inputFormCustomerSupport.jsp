@@ -3,7 +3,7 @@
       <h2>Customer Support</h2>
       <p>Please leave your information we will try to contact you as soon as possible.</p>
    </div>
-   <form class="InputForm ComplaintForm" method="POST">
+   <form class="InputForm ComplaintForm" ACTION="submitCustomerSupport.do" METHOD="POST">
       <!-- Complaint form starts -->
       <input type="text" name="orderNo" id="orderNo" placeholder="Order Number">
       <select name="complaintReason" id="complaintReason">

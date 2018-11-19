@@ -13,6 +13,16 @@
       <forward name="returnWithResponse" 
                path="/WEB-INF/pages/returnWithResponse.jsp"/>
     </action>
+    <action path="/submitSalesInquiry" 
+            type="coreservlets.SubmitSalesInquiry">
+      <forward name="returnWithResponse" 
+               path="/WEB-INF/pages/returnWithResponse.jsp"/>
+    </action>
+     <action path="/submitCustomerSupport" 
+            type="coreservlets.SubmitCustomerSupport">
+      <forward name="returnWithResponse" 
+               path="/WEB-INF/pages/returnWithResponse.jsp"/>
+    </action>
   </action-mappings>
 </struts-config>
 
