@@ -23,7 +23,7 @@
       <div class="Content-panel-image"> <img src="images/customerSupport.jpg"></div>
       <div class="Content-panel-content">
          <h3>Customer Support</h3>
-         <p>If you have any problems with our product, and you need an immidiate assistence for something, please let us know and our SME will be in touch with you as soon as possible.</p>
+         <p>If you have any problems with our product, and you need immediate assistance for something, please let us know and our SME will be in touch with you as soon as possible.</p>
       </div>
       <button class="PanelButton RightPanelButton">Customer Support</button>
    </div>
