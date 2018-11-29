@@ -32,8 +32,13 @@ $(document).ready(function(){
 	    	panelToShow=document.getElementsByClassName('Support');
 	    	performReplacement=true;
 	    }
-	   
-	    else if(buttonClass=='CancelButton'){
+		
+	    else if (buttonClass=='LongButton'){
+	    	panelToShow=document.getElementsByClassName('WorkshopSelection');
+	    	performReplacement=true;
+	    }
+		
+	   else if(buttonClass=='CancelButton'){
 	    	panelToShow=document.getElementsByClassName('ContentMainPage');
 	    	performReplacement=true;
 	   }
@@ -46,7 +51,8 @@ $(document).ready(function(){
 		}
 		
   });
-
+	
+	
 });
 
 
@@ -98,3 +104,16 @@ function toggleMenuSelection(item){
 	var menuToSelect=document.getElementById(item);
 	(menuToSelect).classList.add('MenuSelected');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

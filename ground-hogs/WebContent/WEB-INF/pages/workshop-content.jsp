@@ -18,7 +18,8 @@
    <div id="ContentBody" class="ContentWrapper">
    
       <jsp:include page="/WEB-INF/pages/workshopBody.jsp"/>
-     
+       <jsp:include page="/WEB-INF/pages/workshopSelection.jsp"/>
+       
    </div>
    
 </div>

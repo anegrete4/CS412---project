@@ -14,7 +14,7 @@
       <div class="Groundhogs"><img src="images\groudhogsimages\groundhog4.jpg"></div> 
       
    <div class="LongContent-panel">   
-      <button class="LongPanelButton MiddlePanelButton">Find Workshop</button>
+      <button class="PanelButton LongButton">Find Workshop</button>
    </div>
   
 </section>

@@ -640,35 +640,7 @@ textarea {
     height: 100%;
 }
 
-.LongPanelButton {
-	backface-visibility: hidden;
-	border-color: rgb(218, 77, 60);
-	border-radius: 30px;
-	border-width: 1px;
-	border-style: solid;
-	box-sizing: border-box;
-	color: rgb(218, 77, 60);
-	cursor: pointer;
-	display: block;
-	float: none;
-	font-family: open-sans, sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	height: 48px;
-	line-height: 46px;
-	margin: auto;
-	outline-color: rgb(255, 255, 255);
-	outline-style: none;
-	outline-width: 0px;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	transition: all 0.35s ease;
-	width: 500.094px;
-	text-decoration: none;
-}
+
 
 .LongPanelButton:hover {
 	background-color: rgb(218, 77, 60);
