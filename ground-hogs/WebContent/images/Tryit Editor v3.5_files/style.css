@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-color: #fff;
+	margin: 0px;
+}
+#maincontainer {
+	position: relative;
+	width: 728px;
+	height: 90px;
+	background-color: #fff;
+	border: 1px solid #000;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0px;
+}
+
+#logo{
+    position: absolute;
+    left:-1px;
+    top: -1px;
+}
+#bg1{
+    position: absolute;
+    left:-1px;
+    top: -1px;
+}
+#bg2{
+    position: absolute;
+    left:-1px;
+    top: -1px;
+    opacity: 0;
+}
+
+#copy1{
+    position: absolute;
+    left:0px;
+    top: 0px;
+    opacity: 0;
+}
+#img1,#img2,#img3,#img4{
+    position: absolute;
+    left:0px;
+    top: 0px;
+    opacity:0;
+}

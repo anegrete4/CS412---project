@@ -664,6 +664,7 @@ body, html{
 
 /*#quoteHeader::after{
 	background-image: url(../images/Incheon.jpg);
+	background-repeat: no-repeat;
 }*/
 
 .aboutHeader{
@@ -674,7 +675,7 @@ body, html{
 	transform-style: inherit;
 	width: 100vw;
   	color: black;
-  	font: 400 30px BrownStd-Regular, Helvetica, Arial, sans-serif;
+  	font: 400 30px Helvetica, Arial, sans-serif;
 }
 
 .aboutHeader h1{
@@ -711,8 +712,6 @@ body, html{
 #mission, #products{
 	background: white;
 }
-
-
 #media1{margin: 0 auto 1px;}
 
 #media2{margin: 0 auto 1px;}
@@ -743,14 +742,6 @@ body, html{
 	width: 400px ;
 	letter-spacing: normal ;
 	line-height: 80px ;
-	/*margin-block-end:0px;
-	margin-block-start:0px;
-	margin-bottom:0px;
-	margin-inline-end:0px;
-	margin-inline-start:0px;
-	margin-left:0px;
-	margin-right:0px;
-	max-width: 1000px ;*/
 	margin-top:90px;
 	text-align: left ;
 	text-decoration: rgb(0, 0, 0) solid;
@@ -767,10 +758,6 @@ body, html{
 	width: 420px ;
 	letter-spacing: 0.32px ;
 	line-height: 30px ;
-	/*margin-block-end: 16px ;
-	margin-block-start: 16px ;
-	margin-inline-end: 0px ;
-	margin-inline-start: 0px ;*/
 	overflow-wrap: break-word ;
 	text-align: left ;
 	vertical-align: baseline;
