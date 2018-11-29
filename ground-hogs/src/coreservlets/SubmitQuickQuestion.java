@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import javax.servlet.http.*;
 import org.apache.struts.action.*;
 
-public class SubmitCustomerSupport extends Action {
+import database.DBAccess;
+
+public class SubmitQuickQuestion extends Action {
   public ActionForward execute(ActionMapping mapping,
                                ActionForm form,
                                HttpServletRequest request,
@@ -14,8 +16,8 @@ public class SubmitCustomerSupport extends Action {
 	  
 	  ArrayList<String> responses= new ArrayList<String>();
 	  request.getSession().setAttribute("messages", responses);
-	  
-	   responses.add("Thank you for your complaint, It will help us to improve ourselves moving forward.");
+	  DBAccess.SP_AddFAQ(request.getParameter("quickQuestion"));
+	   responses.add("We have got your question, and we will provide the answer as soon as possible.");
 	   setResponseInSession(request.getSession(),"Thank you!",responses,"success");
 	   return(mapping.findForward("returnToLastPage"));
   }

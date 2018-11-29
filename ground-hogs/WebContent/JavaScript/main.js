@@ -1,19 +1,16 @@
 
 $(document).ready(function(){
-	var googleMapInfoUpdated=false;
-	// start defining your methods
-	$(".Content-down-arrow").on('click', function(event) {  
+	$(".nextSection").on('click', function(event) {  
 	    if (this.hash !== "") {
 	      event.preventDefault();
 	      var hash = this.hash;
-	      $('html, body').animate({
+	      $('.wrapper').animate({
 	        scrollTop: $(hash).offset().top
 	      }, 800, function(){
 	        window.location.hash = hash;
 	      });
 	    } 
 	  });
-	
 	
 	$(".PanelButton").on('click', function(event) {
 		var buttonClass=($(this).attr('class')).split(' ')[1];
@@ -32,8 +29,13 @@ $(document).ready(function(){
 	    	panelToShow=document.getElementsByClassName('Support');
 	    	performReplacement=true;
 	    }
-	   
-	    else if(buttonClass=='CancelButton'){
+		
+	    else if (buttonClass=='LongButton'){
+	    	panelToShow=document.getElementsByClassName('WorkshopSelection');
+	    	performReplacement=true;
+	    }
+		
+	   else if(buttonClass=='CancelButton'){
 	    	panelToShow=document.getElementsByClassName('ContentMainPage');
 	    	performReplacement=true;
 	   }
@@ -59,7 +61,7 @@ function setVisibility(className, isVisible){
 		    } else{
 		    	(item[i]).style.visibility = "hidden";
 		    	(item[i]).style.height="0px";
-		    }
+		   }
 	}
 }
 
@@ -67,18 +69,33 @@ function toggleVisibility(className, cBox) {
 	setVisibility(className,cBox.is(':checked'));
 }
 
-function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
+function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
+	var box=document.getElementsByClassName(containerClass);
+	var buttonBox=document.getElementsByClassName('popUpButtons');
+	var newHeight=smallHeight;
+	if(makeLarge){
+		newHeight=largeHeight;
+	}
+	if((box)!=null){
+		$(box[0]).animate({height:newHeight});
+	}
+	if((buttonBox)!=null){
+		var newMargin=parseInt((parseInt(newHeight)-parseInt(largeHeight))/1.5);
+		var newmarginPx=newMargin+'px';
+		$(buttonBox[0]).animate({marginTop:newmarginPx});
+	}
+	
+}
+
+function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,mainContainerClass, cBox){
+	setVisibility(className,cBox.is(':checked'));	
+	resizeContainer(mainContainerClass,largeHeight,smallHeight,cBox.is(':checked'));
 }
 
 function closeResponseBox(){
-	var box=document.getElementById("responseBox");
+	var box=document.getElementsByClassName("popUpBox");
 	if((box)!=null){
-		$(box).hide();
+		$(box[0]).hide();
 		overlayOff();
 	}
 }
@@ -98,3 +115,18 @@ function toggleMenuSelection(item){
 	var menuToSelect=document.getElementById(item);
 	(menuToSelect).classList.add('MenuSelected');
 }
+
+function upVoteMe(questionId){
+	var calculatedId="vote"+questionId;
+	var elem=document.getElementById(calculatedId);
+	if($(elem).hasClass('voted')){
+		alert('You have already voted this item.');
+		
+	}else{
+		var newVal= parseInt(document.getElementById(calculatedId).innerHTML)+1;
+		elem.innerHTML=newVal;
+		(elem).classList.add('voted');
+		$.post("http://localhost:8080/ground-hogs/upVote.do", { "questionId": questionId });
+	}	
+}
+  
