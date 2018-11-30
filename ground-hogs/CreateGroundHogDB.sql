@@ -3,7 +3,7 @@
 # GroundHogDB
 DROP DATABASE IF EXISTS groundHogs_db;
 CREATE DATABASE groundHogs_db;
-GRANT ALL PRIVILEGES ON groundHogs_db.* TO 'student'@'localhost';
+GRANT ALL PRIVILEGES ON groundHogs_db.* TO 'root'@'localhost';
 FLUSH PRIVILEGES;
 USE groundHogs_db;
 

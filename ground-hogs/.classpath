@@ -14,35 +14,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/annotations-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/catalina-ant.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/catalina-ha.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/catalina-storeconfig.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/catalina-tribes.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/catalina.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/ecj-4.7.3a.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/el-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/jasper-el.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/jasper.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/jaspic-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-coyote.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-dbcp.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-i18n-es.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-i18n-fr.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-i18n-ja.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-i18n-ru.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-jdbc.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-jni.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-util-scan.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-util.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/tomcat-websocket.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib/websocket-api.jar"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/Documents/EDUCATION/KeshabMaster/Project/apache-tomcat-9.0.12 2/lib"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/eclipse-workspace-new/apache-tomcat-9.0.12 2/bin"/>
-	<classpathentry kind="lib" path="/Users/panthikeshab/ExternalJar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-8.0.11.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
