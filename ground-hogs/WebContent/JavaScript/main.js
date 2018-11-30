@@ -129,4 +129,14 @@ function upVoteMe(questionId){
 		$.post("http://localhost:8080/ground-hogs/upVote.do", { "questionId": questionId });
 	}	
 }
+
+function toggleCart(show){
+	if((show)=='true'){
+		document.getElementById("CartBox").style.display = "block";
+	}
+	else{
+		document.getElementById("CartBox").style.display = "none";
+	}
+}
+
   

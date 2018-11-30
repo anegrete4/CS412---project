@@ -32,6 +32,8 @@
 		}
 		session.setAttribute("hasResponse", "false");
 	 %>
+	 	<jsp:include page="/WEB-INF/pages/cart.jsp" />
+	 
 	<jsp:include page="/WEB-INF/pages/${param.content}.jsp"/>
 	<jsp:include page="/WEB-INF/pages/footer.jsp"/>
 	<script type="text/javascript">

@@ -13,10 +13,9 @@ public class PopUpDisplay extends Action {
       throws Exception {
 	  ArrayList<String> responses= new ArrayList<String>();
 	  request.getSession().setAttribute("messages", responses);
-	  
-	   responses.add("Thank you for your complaint, It will help us to improve ourselves moving forward.");
-	   setResponseInSession(request.getSession(),request.getParameter("popUpTitle"),request.getParameter("popUpContent"));
-	   return(mapping.findForward("returnToLastPage"));
+	  responses.add("Thank you for your complaint, It will help us to improve ourselves moving forward.");
+	  setResponseInSession(request.getSession(),request.getParameter("popUpTitle"),request.getParameter("popUpContent"));
+	  return(mapping.findForward("returnToLastPage"));
   }
   
   private  void setResponseInSession(HttpSession session, String popUpTitle, String popUpContent) {
