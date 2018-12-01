@@ -29,10 +29,31 @@ CREATE TABLE GGG_SalesItem -- Codes, and description.
     itemType VARCHAR(20) DEFAULT 'Food'
 );
 
+#This table will hold the reviews
+CREATE TABLE GGG_Review 
+(
+	reviewId BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    itemId BIGINT NOT NULL,
+	userName VARCHAR(500) NOT NULL,
+    reviewMessage VARCHAR(500) NOT NULL,
+    rating INT NOT NULL
+);
+
 ##############################################################################################################################################
 ######################################################       Stored Procedures         #######################################################
 ##############################################################################################################################################
 DELIMITER $$
+
+CREATE PROCEDURE SP_GetReviews(
+	IN itemIdIn INT
+)
+BEGIN
+		SELECT userName,reviewMessage, rating
+		FROM GGG_Review
+        WHERE itemId=itemIdIn
+		ORDER BY reviewId; 
+END $$
+
 
 CREATE PROCEDURE SP_AddFAQ(
 	IN questionIn VARCHAR(500)
@@ -73,20 +94,26 @@ CREATE PROCEDURE SP_GetSalesItem(
 	IN itemIdIn INT
 )
 BEGIN
-		SELECT itemId, itemName, itemDescription,itemPrice,imagePath
-		FROM GGG_SalesItem 
-        WHERE itemId=itemIdin LIMIT 1;
+		SELECT si.itemId, si.itemName, si.itemDescription,si.itemPrice,si.imagePath,AVG(COALESCE(review.rating, 0)) AS Rating,COUNT(review.itemId) AS Reviews
+		FROM GGG_SalesItem si
+        LEFT JOIN GGG_Review review ON review.itemId=si.itemId 
+    	WHERE si.itemId=itemIdIn
+        GROUP BY si.itemId LIMIT 1;
 END $$
 
 CREATE PROCEDURE SP_GetInventory(
 	IN IsFoodChecked BIGINT,
     IN IsAccessoriesChecked BIGINT,
-    IN IsCareProducts BIGINT
+    IN IsCareProducts BIGINT,
+    IN startPrice DECIMAL,
+    IN endPrice DECIMAL
 )
 BEGIN
-        SELECT itemId, itemName, itemDescription,itemPrice,imagePath
-		FROM GGG_SalesItem 
-		WHERE (itemType='Food' AND IsFoodChecked=true) OR (itemType='Accessories' AND IsAccessoriesChecked=true)OR(itemType='CareProducts' AND IsCareProducts=true);
+        SELECT si.itemId, si.itemName, si.itemDescription,si.itemPrice,si.imagePath,AVG(COALESCE(review.rating, 0)) AS Rating,COUNT(review.itemId) AS Reviews
+		FROM GGG_SalesItem si
+        LEFT OUTER JOIN GGG_Review review ON review.itemId=si.itemId 
+    	WHERE ((si.itemType='Food' AND IsFoodChecked=true) OR (si.itemType='Accessories' AND IsAccessoriesChecked=true)OR(si.itemType='CareProducts' AND IsCareProducts=true)) AND (si.itemPrice>=startPrice AND si.itemPrice <=endPrice)
+        GROUP BY si.itemId;
 END $$
 
 
@@ -97,7 +124,7 @@ DELIMITER ;
 ##############################################################################################################################################
 INSERT INTO GGG_FAQ(question,answer,votes)
 VALUES
-	('Can I take my groundhog for a walk when it is snowing?','Sure you can, but make sure your groundhog is wearing one of the jacket like productId=3',10),
+	('Can I take my groundhog for a walk when it is snowing?','Sure you can, but make sure your groundhog is wearing one of the jacket like productId=3',100),
     ('My groundhog just delivered a baby with teeth, is it normal?','Unlike people, groundhog do take birth with teeths. I recommend using productId=4 and productId=2 when cleaning those tiny teeths',5),
     ('Which item should I use to groom groundhog\'s hair?','Use productId=1. My groundhog also uses it and she is very happy with it.',3),
     ('How long do groundhog live?','Most of them live upto 20 years',4),
@@ -160,3 +187,24 @@ VALUES
     ('Item Name48','for misc purposes','11.1','CareProducts'),
     ('Item Name49','for misc purposes','11.1','CareProducts'),
     ('Item Name50','for misc purposes','12.2','Food');
+    
+INSERT INTO GGG_Review(itemId,userName,reviewMessage,rating)
+VALUES (1,'Keshab','This is a nice product use it',5),
+(1,'James','I loved it too. It does what it is supposed to',4),
+(1,'Keath','This is a nice product use it',4),
+(1,'Bella','I do not like it',2),
+(1,'Rishi','I do not recommend this product useless.',1),
+(1,'Roma','It did not last long, I had to buy another one but it is great',5),
+(2,'Keshab','This is a nice product use it',5),
+(2,'James','I loved it too. It does what it is supposed to',4),
+(2,'Keath','This is a nice product use it',4),
+(2,'Bella','I do not like it',2),
+(2,'Rishi','I do not recommend this product useless.',1),
+(2,'Roma','It did not last long, I had to buy another one but it is great',5),
+(3,'Keshab','This is a nice product use it',5),
+(3,'James','I loved it too. It does what it is supposed to',4),
+(3,'Keath','This is a nice product use it',4),
+(3,'Bella','I do not like it',2),
+(3,'Rishi','I do not recommend this product useless.',1),
+(3,'Roma','It did not last long, I had to buy another one but it is great',5)
+;

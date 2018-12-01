@@ -12,21 +12,22 @@ import model.Review;
 import model.SalesItem;
 
 public class DBAccess {
-	public static List<SalesItem> SP_GetInventory(int isFood, int isAccessories, int isCareProduct) {
+	public static List<SalesItem> SP_GetInventory(int isFood, int isAccessories, int isCareProduct, double startPrice, double endPrice) {
 		System.out.println("Fine here1");
 		List<SalesItem> items = new ArrayList<SalesItem>();
-		String sql = "{CALL SP_GetInventory(?, ?, ?)}";
+		String sql = "{CALL SP_GetInventory(?, ?, ?, ?, ?)}";
 		Connection conn = null;
 		try {
 			conn = Connect.getConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setInt(1, 1);
-			ps.setInt(2, 1);
-			ps.setInt(3, 1);
-			System.out.println("Fine here");
+			ps.setInt(1, isFood);
+			ps.setInt(2, isAccessories);
+			ps.setInt(3, isCareProduct);
+			ps.setDouble(4, startPrice);
+			ps.setDouble(5, endPrice);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				items.add(new SalesItem (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5)));
+				items.add(new SalesItem (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5),rs.getDouble(6),rs.getInt(7)));
 			}
 			conn.close();
 		} catch (SQLException e) {
@@ -65,9 +66,9 @@ public class DBAccess {
 			e.printStackTrace();
 		}
 	}
-	public static List<Review> SP_GetReview(int itemId) {
+	public static List<Review> SP_GetReviews(int itemId) {
 		List<Review> reviews = new ArrayList<Review>();
-		String sql = "{CALL SP_GetReview(?)}";
+		String sql = "{CALL SP_GetReviews(?)}";
 		Connection conn = null;
 		try {
 			conn = Connect.getConnection();
@@ -75,7 +76,7 @@ public class DBAccess {
 			ps.setInt(1, itemId);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				reviews.add(new Review(rs.getInt(1),rs.getInt(2),rs.getString(3),rs.getInt(3)));
+				reviews.add(new Review(rs.getString(1),rs.getString(2),rs.getInt(3)));
 			}
 			conn.close();
 		} catch (SQLException e) {
@@ -106,7 +107,7 @@ public class DBAccess {
 			ps.setInt(1, itemId);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				item=new SalesItem(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5));
+				item=new SalesItem(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5),rs.getDouble(6),rs.getInt(7));
 			}
 			conn.close();
 		} catch (SQLException e) {

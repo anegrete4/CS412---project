@@ -2,10 +2,10 @@
 <%@ page import="model.FrequentlyAskedQuestion" %>
 <%@ page import="database.DBAccess" %>  
 <%@ page import="model.SalesItem" %> 
-<%
-	SalesItem item=DBAccess.SP_GetSalesItem(Integer.parseInt(request.getParameter("itemId")));
-
-%>
+<%@ page import="model.Review" %> 
+<%SalesItem item=DBAccess.SP_GetSalesItem(Integer.parseInt(request.getParameter("itemId"))); %>
+<%!List<Review> reviews; %>
+<%reviews=DBAccess.SP_GetReviews(1);%>
    <form class="popUpForm" ACTION="submitQuickQuestion.do" METHOD="POST">
       <br>
       <br>
@@ -13,6 +13,7 @@
       		<div class="sicCol1">
       			<img alt="Image of <%=item.getItemName()%>." src="images/products/<%=item.getImagePath()%>" />
       			<div class="sicPrice">$<%=item.getItemPrice()%></div>
+      			<div class="sicStars">Rating:<%=item.getRating() %></div>
       		</div>
       		<div class="sicCol2">
       			<label for="quantity" class="sicLabel">Quantity: </label>
@@ -25,8 +26,22 @@
 			    </select>
 			    <input type="submit" onClick="" value="Add To Cart" class="hoverTransparentBg sicAddToCart">  
       		</div>
-      		<p class="sicItemDescription">Description:<%=item.getItemDescription() %></p>
-      			
+      		<p class="sicItemDescription">Description:<%=item.getItemDescription() %></p>			
+      </div>
+      <div id="popUpReviews">
+      <div class="sicReview">No of reviews:<%=item.getNoOfReviews() %></div>
+      <%
+      	if(item.getNoOfReviews()>0){
+      		for(Review r:reviews){
+      			%> <div class="reviewRow">
+      				<div class="revUserName"><%=r.getUserName() %></div>
+      				<div class="revMessage"><%=r.getReviewMessage() %></div>
+      				<div class="revRating"><%=r.getRating() %></div>
+      			  </div>
+      			<%
+      		}
+      	}
+      %>
       </div>
       		
    </form>

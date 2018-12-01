@@ -35,22 +35,24 @@ public class SalesItem {
 	
 	private String itemDescription;
 	private double itemPrice;
-	private int rating;
+	private double rating;
+	private int noOfReviews;
 	private String imagePath;
-	private ArrayList<Review> reviews;
+	public int getNoOfReviews() {
+		return noOfReviews;
+	}
+	public double getRating() {
+		return rating;
+	}
 	
-	public SalesItem(int itemId, String itemName, String itemDescription, double itemPrice, String imagePath) {
+	public SalesItem(int itemId, String itemName, String itemDescription, double itemPrice, String imagePath, double rating, int noOfReviews) {
 		this.itemId=itemId;
 		this.itemName=itemName;
 		this.itemDescription=itemDescription;
 		this.itemPrice=itemPrice;
 		this.imagePath=imagePath;
-	}
-	public  void addReview(Review review) {
-		reviews.add(review);
-	}
-	public ArrayList getReview() {
-		return reviews;
+		this.rating=rating;
+		this.noOfReviews=noOfReviews;
 	}
 	public double getItemPrice() {
 		return itemPrice;
