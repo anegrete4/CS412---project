@@ -29,6 +29,7 @@ CREATE TABLE GGG_SalesItem -- Codes, and description.
     itemType VARCHAR(20) DEFAULT 'Food'
 );
 
+
 #This table will hold the reviews
 CREATE TABLE GGG_Review 
 (
@@ -38,11 +39,23 @@ CREATE TABLE GGG_Review
     reviewMessage VARCHAR(500) NOT NULL,
     rating INT NOT NULL
 );
+#This table will have frequently asked questions stored
+CREATE TABLE GGG_Workshop -- Codes, and description.
+(
+	workshopId BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	workshopName VARCHAR(50) NOT NULL,
+    workshopDescription VARCHAR(500) NOT NULL DEFAULT 'No description available for this product',
+	workshopDay VARCHAR (20) NOT NULL,
+    workshopTime VARCHAR (20) NOT NULL,
+    workshopCapacity INT DEFAULT 20,
+    workshopRegistration INT DEFAULT 0
+);
 
 ##############################################################################################################################################
 ######################################################       Stored Procedures         #######################################################
 ##############################################################################################################################################
 DELIMITER $$
+
 
 CREATE PROCEDURE SP_GetReviews(
 	IN itemIdIn INT
@@ -52,6 +65,21 @@ BEGIN
 		FROM GGG_Review
         WHERE itemId=itemIdIn
 		ORDER BY reviewId; 
+END $$
+
+
+CREATE PROCEDURE SP_GetWorkshops()
+BEGIN
+	SELECT workshopId, workshopName, workshopDescription, workshopDay, workshopTime, workshopCapacity, workshopRegistration
+	FROM GGG_Workshop;
+END $$
+
+CREATE PROCEDURE SP_RegisterToWorkshop(
+	IN workshopIdIn INT
+)
+BEGIN
+	UPDATE GGG_Workshop SET workshopRegistration=workshopRegistration+1
+	WHERE workshopId=workshopIdIn;
 END $$
 
 
@@ -208,3 +236,9 @@ VALUES (1,'Keshab','This is a nice product use it',5),
 (3,'Rishi','I do not recommend this product useless.',1),
 (3,'Roma','It did not last long, I had to buy another one but it is great',5)
 ;
+
+INSERT INTO GGG_Workshop ( workshopName, workshopDescription, workshopDay, workshopTime)
+VALUES ('Groundhogs Grooming Session', 'We help visitors to train on doasdjflkajslkfjk asjfkjaskjf', 'Monday', '6:00PM-8:00PM'),
+		('Groundhogs Blooming Session', 'We help visitors to train on doasdjflkajslkfjk asjfkjaskjf', 'Wednesday', '6:00PM-8:00PM'),
+        ('Groundhogs Lomming Session', 'We help visitors to train on doasdjflkajslkfjk asjfkjaskjf', 'Thursday', '6:00PM-8:00PM');
+

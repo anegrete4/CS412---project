@@ -33,6 +33,13 @@
       <forward name="returnToLastPage" 
                path="/WEB-INF/templates/returnToLastPage.jsp"/>
     </action>
+    
+    <action path="/registerWorkshop" 
+            type="coreservlets.RegisterWorkshop">
+      <forward name="returnToLastPage" 
+               path="/WEB-INF/templates/returnToLastPage.jsp"/>
+    </action>
+    
   </action-mappings>
 </struts-config>
 
