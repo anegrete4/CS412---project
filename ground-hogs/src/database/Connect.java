@@ -11,8 +11,8 @@ public class Connect {
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			String url = "jdbc:mysql://localhost:3306/groundHogs_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-			String user = "root";
-			String password = "Cristian81@";
+			String user = "student";
+			String password = "student";
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
 			e.printStackTrace();

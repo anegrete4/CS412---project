@@ -10,6 +10,7 @@ import java.util.List;
 import model.FrequentlyAskedQuestion;
 import model.Review;
 import model.SalesItem;
+import model.Workshop;
 
 public class DBAccess {
 	public static List<SalesItem> SP_GetInventory(int isFood, int isAccessories, int isCareProduct) {
@@ -23,7 +24,6 @@ public class DBAccess {
 			ps.setInt(1, 1);
 			ps.setInt(2, 1);
 			ps.setInt(3, 1);
-			System.out.println("Fine here");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				items.add(new SalesItem (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getString(5)));
@@ -83,6 +83,40 @@ public class DBAccess {
 		}
 		return reviews;
 	}
+	
+	public static List<Workshop> SP_GetWorkshops() {
+		List<Workshop> workshops = new ArrayList<Workshop>();
+		String sql = "{CALL SP_GetWorkshops()}";
+		Connection conn = null;
+		try {
+			conn = Connect.getConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				workshops.add(new Workshop(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6),rs.getInt(7)));
+			}
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return workshops;
+	}
+	
+	public static void SP_RegisterToWorkshop(int workshopId) {
+		String sql = "{CALL SP_RegisterToWorkshop(?)}";
+		Connection conn = null;
+		try {
+			conn = Connect.getConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, workshopId);
+			ps.executeQuery();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	public static void SP_AddAVote(int questionId) {
 		String sql = "{CALL SP_AddAVote(?)}";
 		Connection conn = null;
