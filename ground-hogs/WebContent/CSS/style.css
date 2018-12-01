@@ -323,7 +323,6 @@ body {
 	padding-top:30px;
 	height:440px;
 	width:100%;
-	background-color:#3F3F3F;  /*#E2E2E2;#3F3F3F;*/
 	overflow:hidden;
 	
 }
@@ -339,14 +338,14 @@ body {
 	float:left;
 }
 .ContactFooterPanel h3{
-	color:#666;
+	color: black;/*#666;*/
 	font-size:14px;
 	font-weight:300;
 	letter-spacing:1px;
 	text-transform:uppercase;
 }
 .ContactFooterPanel p{
-	color:#ccc!important;
+	color: black!important;/*#ccc!important;*/
 	font-size:16px;
 	font-weight:200;
 	line-height:20px;
@@ -1024,7 +1023,6 @@ body, html{
 /*-----------------------FAQ-------------------------- */
 
 #FAQ{
-	background: url(../images/faq.jpg) no-repeat center center;
 	height:670px;
 }
 
