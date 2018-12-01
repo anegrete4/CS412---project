@@ -1266,6 +1266,7 @@ body, html{
 	z-index:1000;
 	right:0;
 	transition: all 0.35s ease;
+	display:none;
 }
 #cartMenu{
 	z-index: 5;
