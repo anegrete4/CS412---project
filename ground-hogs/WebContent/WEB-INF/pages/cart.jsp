@@ -5,6 +5,8 @@
 <%@ page import="java.util.*" %> 
 <%@ page import="model.Cart" %>  
 <%@ page import="model.CartItem" %> 
+<%@ page import="utility.Helper" %> 
+<%@ page import="java.util.Enumeration" %> 
 <%!Enumeration<CartItem> cartItems;%>
 <%!Cart myCart=new Cart();%>
 <% 	
@@ -21,9 +23,38 @@
       	<h3>Cart Items</h3>
   			<div class="popUpCloseButton crossButton" onClick="toggleCart('false')"></div>
         </div>
-      <div class="CartItems">
+      
+      		<% 
+      			Enumeration<CartItem> e=myCart.getCartItems();
+      			while(e.hasMoreElements()){
+      				CartItem i=(CartItem)e.nextElement();
+      				%>
+      					<div class="cartItemRow">
+      							<div class="cartItemCol1">
+      								<div class="cartItemImage"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></div>
+      								<div class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></div>
+      							</div>
+	      						<div class="cartItemCol2">
+	      							<div class="cartItemName"><%=i.getItemName() %></div>
+	      							<div class="cartItemUnitPrice"><span>Price</span><%=Helper.getFormattedAmount(i.getItemPrice())%></div>
+	      							<div class="cartItemCount"><span>Quantity</span><%=i.getItemCount() %></div>
+	      							<div class="cartItemTotal"><span>Total</span><%=Helper.getFormattedAmount(i.getTotalPrice()) %></div>
+      							</div>
+      					</div>
+      				<%
+      			}
+      		
+      		%>
+ 
       </div>
       <div class="CartTotal">
+      		<div ><%= myCart.getTotalItems()%></div>
+      		<div ><%=myCart.getSubTotal() %></div>
+      		<div><%=myCart.getShippmentAmount() %>
+      		
+      		<div ><%=myCart.TAX_PERCENT*100 %>%</div>
+      		
+      		
       </div>
     	<form class="InputForm ComplaintForm" ACTION="popUpDisplay.do" METHOD="POST">
                <input type="hidden" value="Checkout" name="popUpTitle" />

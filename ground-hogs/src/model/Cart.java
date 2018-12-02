@@ -34,7 +34,7 @@ public class Cart {
 			cartItems.remove(id);
 		}	
 	}		      
-		public double getTotalAmount() {
+		public double getSubTotal() {
 			double total=0.0;
 			Enumeration<CartItem> e = cartItems.elements();
 			while(e.hasMoreElements()) {
