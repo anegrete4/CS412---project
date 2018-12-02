@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+	
 	$(".nextSection").on('click', function(event) {  
 	    if (this.hash !== "") {
 	      event.preventDefault();
@@ -131,11 +132,14 @@ function upVoteMe(questionId){
 }
 
 function toggleCart(show){
-	if((show)=='true'){
+	var displayCart = localStorage.getItem("displayCart");
+	if((show)=='true' || (displayCart=='true' && (show)=='takeLastValue')){
 		document.getElementById("CartBox").style.display = "block";
+		localStorage.setItem("displayCart", "true");
 	}
 	else{
 		document.getElementById("CartBox").style.display = "none";
+		localStorage.setItem("displayCart", "false");
 	}
 }
 

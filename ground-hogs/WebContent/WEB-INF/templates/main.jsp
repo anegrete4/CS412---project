@@ -29,6 +29,7 @@
 		if(!hasResponse){
 			session.setAttribute("title", request.getParameter("title"));
 			session.setAttribute("content", request.getParameter("content"));
+			
 		}
 		session.setAttribute("hasResponse", "false");
 	 %>
@@ -38,6 +39,7 @@
 	<jsp:include page="/WEB-INF/pages/footer.jsp"/>
 	<script type="text/javascript">
 		toggleMenuSelection('${content}');
+		toggleCart('takeLastValue');
 	</script>
 </body>
 </html>

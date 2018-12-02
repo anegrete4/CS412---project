@@ -24,31 +24,35 @@
   			<div class="popUpCloseButton crossButton" onClick="toggleCart('false')"></div>
         </div>
       
-  <form class="InputForm ComplaintForm" ACTION="popUpDisplay.do" METHOD="POST"> 
+  
+  		   <table class="cartTable">
+        		<tbody >
       		<% 
       			Enumeration<CartItem> e=myCart.getCartItems();
       			while(e.hasMoreElements()){
       				CartItem i=(CartItem)e.nextElement();
       				%>
-      					<div class="cartItemRow">
-      							<div class="cartItemCol1">
-      								<div class="cartItemImage"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></div>
-      								<div class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></div>
-      							</div>
-	      						<div class="cartItemCol2">
-	      							<div class="cartItemName"><%=i.getItemName() %></div>
-	      							<div class="cartItemUnitPrice"><span>Price</span><%=Helper.getFormattedAmount(i.getItemPrice())%></div>
-	      							<div class="cartItemCount"><span>Quantity</span><%=i.getItemCount() %></div>
-	      							<div class="cartItemTotal"><span>Total</span><%=Helper.getFormattedAmount(i.getTotalPrice()) %></div>
-      							</div>
-      					</div>
+      					<tr class="itemRow"><td rowSpan="6"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></td><td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td></tr>
+      					<tr class="itemRow"><td colSpan="2" class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></td></tr>
+      					<tr class="itemRow"><td>Unit cost:</td><td><%=Helper.getFormattedAmount(i.getItemPrice())%></td></tr>	
+      					<tr class="itemRow"><td>Quantity:</td><td><%=i.getItemCount() %></td></tr>
+      					<tr class="itemRow"><td >Cost for this item:</td><td><span class="cartItemTotal"><%=Helper.getFormattedAmount(i.getTotalPrice()) %></span></td></tr>
+      					
+      					<tr class="itemRow"><td colSpan="2" class="removeItemButtonWrapper" rowSpan="2">
+	      					<form class="InputForm" ACTION="removeItem.do" METHOD="POST"> 
+			                	<input class="buttonAnimated removeItemButton" type="submit" value="Remove this item" class="hoverTransparentBg">  
+			                 	<input type="hidden" value="Checkout" name="popUpTitle" />
+			                    <input type="hidden" value="popUpCheckout" name="popUpContent" />
+			        		</form>
+      					</td></tr>		
+      					<tr><td colSpan="3"></td></tr>
       				<%
       			}
       		
       		%>
  
-   
-
+   			</tbody>
+   		</table>
 
 <h3 class="cartOrderSummaryH3">Order Summary</h3>                         
 <div id="cartTableWrapper">
@@ -83,21 +87,18 @@
             </tr>
             <tr class="orderBtnRow">
             	<td class="continueShoppingBtnWrapper">
-            		   		<input class="continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
+            		   		<input class="buttonAnimated continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
             	</td>
             	<td class="checkoutButtonWrapper">
-                 <input class="checkoutButton" type="submit" onClick="toggleCart('false')" value="Proceed to checkout" class="hoverTransparentBg">  
+                <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST"> 
+                	<input class="buttonAnimated checkoutButton" type="submit" onClick="toggleCart('false')" value="Proceed to checkout" class="hoverTransparentBg">  
+                 	<input type="hidden" value="Checkout" name="popUpTitle" />
+                    <input type="hidden" value="popUpCheckout" name="popUpContent" />
+        		</form>
           	</td>
             </tr>
         </tbody>
       </table>
     </div>
-    
-      
-    	
-               <input type="hidden" value="Checkout" name="popUpTitle" />
-               <input type="hidden" value="popUpCheckout" name="popUpContent" />
-        </form>
-  
    </div>
 </div>
