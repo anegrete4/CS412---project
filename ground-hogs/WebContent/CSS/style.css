@@ -1303,7 +1303,7 @@ body, html{
 	padding:5px;
 	position:fixed;
     display:block;
-    background-color:rgba(0,0,0,0.8);
+    background-color:rgb(33,33,36);/*rgba(0,0,0,0.95);/**/
 	min-width:400px;
 	max-width:400px;
 	min-height:100%;
@@ -1417,3 +1417,59 @@ body, html{
  	display:block;
  	float:right!important;
  }
+ 
+ .cartOrderSummaryH3{
+ 	font-size: 18px;
+	font-weight:600;
+	text-decoration:none;
+	color:#8ab4f8;
+	letter-spacing:1px;
+ }
+ .orderSummaryRow{
+ 	color:rgb(238,238,238)!important;
+ 	font-size: 15px;
+	font-weight:200;
+	text-decoration:none;
+ }
+ 
+ .orderTotalRow{
+ 	font-size: 16px;
+	font-weight:200;
+	text-decoration:none;
+	color:#8ab4f8;
+	letter-spacing:1px;
+ }
+ 
+
+ .continueShoppingBtnWrapper, .checkoutButtonWrapper{
+ 	padding:10px 20px 10px 0px!important;
+ }
+ 
+ .continueShoppingBtn, .checkoutButton{
+ 	width:auto;
+ 	left:0;
+ 	top:0;
+ 	cursor:pointer;
+ 	background: #f2bb3c!important; /*#e7e9ec*/
+    border-radius: 5px;
+    border-color: #f2bb3c!important;
+    border-style: solid;
+    border-width: 1px;
+    text-align:center;
+    height: 30px!important;
+    border:none!important;
+ 	color: #111!important;
+ 	cursor: pointer;
+ 	line-height: 19px;	
+ 	font-size: 14px;
+	font-weight:400;
+	text-decoration:none;
+ }
+ 
+ 
+ .continueShoppingBtn:hover,.checkoutButton:hover{
+ 	background:#f9b109!important;
+ }
+ 
+ 
+   
