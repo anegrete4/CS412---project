@@ -18,6 +18,11 @@
       <forward name="returnToLastPage" 
                path="/WEB-INF/templates/returnToLastPage.jsp"/>
     </action>
+     <action path="/submitUpdatedQuantity" 
+            type="coreservlets.SubmitUpdatedQuantity">
+      <forward name="returnToLastPage" 
+               path="/WEB-INF/templates/returnToLastPage.jsp"/>
+    </action>
     <action path="/submitCheckout" 
             type="coreservlets.SubmitCheckout">
       <forward name="returnToLastPage" 

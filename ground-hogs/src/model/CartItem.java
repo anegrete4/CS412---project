@@ -25,10 +25,4 @@ public class CartItem extends SalesItem {
 	public void setItemCount(int count) {
 		this.itemCount=count;
 	}
-	public int removeItem(int count) {
-		itemCount-=count;
-		return itemCount;
-	}
-	
-	
 }

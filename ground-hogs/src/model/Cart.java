@@ -28,12 +28,17 @@ public class Cart {
 			cartItems.put(item.getItemId(),new CartItem(quantity,item));
 		}
 	}
-	public void removeItem(int id, int count) {
+
+	public void updateQuantity(int id, int newCount) {
 		CartItem item = (CartItem) cartItems.get(id);
-		if(item.removeItem(count)<=0) {
+		if(newCount<=0) {
 			cartItems.remove(id);
+		}
+		else {
+			item.setItemCount(newCount);
 		}	
-	}		      
+	}
+		      
 		public double getSubTotal() {
 			double total=0.0;
 			Enumeration<CartItem> e = cartItems.elements();
@@ -52,3 +57,4 @@ public class Cart {
 		}
 		
 }
+

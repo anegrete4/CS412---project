@@ -39,11 +39,12 @@
       					<tr class="itemRow"><td >Cost for this item:</td><td><span class="cartItemTotal"><%=Helper.getFormattedAmount(i.getTotalPrice()) %></span></td></tr>
       					
       					<tr class="itemRow"><td colSpan="2" class="removeItemButtonWrapper" rowSpan="2">
-	      					<form class="InputForm" ACTION="removeItem.do" METHOD="POST"> 
+	      					<form class="InputForm" ACTION="submitUpdatedQuantity.do" METHOD="POST"> 
+	      						<input type="hidden" value="<%=i.getItemId() %>" name="itemId" />
+	      						<input type="hidden" value="0" name="quantity" />
+                    			<input type="hidden" value="popUpCheckout" name="popUpContent" />
 			                	<input class="buttonAnimated removeItemButton" type="submit" value="Remove this item" class="hoverTransparentBg">  
-			                 	<input type="hidden" value="Checkout" name="popUpTitle" />
-			                    <input type="hidden" value="popUpCheckout" name="popUpContent" />
-			        		</form>
+			              </form>
       					</td></tr>		
       					<tr><td colSpan="3"></td></tr>
       				<%
