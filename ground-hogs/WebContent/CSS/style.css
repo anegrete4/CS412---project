@@ -1321,7 +1321,7 @@ body, html{
     position: relative;
     height:100%;
     width:60px;
-    background-size: 35px;
+    background-size: 45px;
     background-position: center;
     background-image: url(../images/icons/cart.png);
     background-repeat: no-repeat;	
@@ -1331,14 +1331,14 @@ body, html{
 }
 
 #ItemCount{
-	font-size: 20px;
-	font-weight:300;
+	font-size: 16px;
+	font-weight:400;
 	text-decoration:none;
 	color:#8ab4f8;
 	letter-spacing:1px;	
 	display:block;
 	cursor:pointer;
-	margin-top:-20px;
+	margin-top:0px;
 }
  
  

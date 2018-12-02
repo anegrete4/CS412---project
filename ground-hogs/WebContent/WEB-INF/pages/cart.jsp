@@ -6,10 +6,10 @@
 <%@ page import="model.Cart" %>  
 <%@ page import="model.CartItem" %> 
 <%!Enumeration<CartItem> cartItems;%>
-<%!Cart cart=new Cart();%>
+<%!Cart myCart=new Cart();%>
 <% 	
-	if(request.getSession().getAttribute("CartItems")!=null){
-		cart.setStringData((String)request.getSession().getAttribute("CartItems"));
+	if(request.getSession().getAttribute("myCart")!=null){
+		myCart=(Cart)request.getSession().getAttribute("myCart");
 	}
 %>
 

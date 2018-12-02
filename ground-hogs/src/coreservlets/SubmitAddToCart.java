@@ -15,9 +15,7 @@ public class SubmitAddToCart extends Action {
                                HttpServletRequest request,
                                HttpServletResponse response)
       throws Exception {
-	  int val=0;
 	  SalesItem item= new SalesItem();
-	  ArrayList<String> responses= new ArrayList<String>();
 	  Cart myCart;
 	  
 	  if(request.getSession().getAttribute("myCart")==null) {
@@ -30,22 +28,10 @@ public class SubmitAddToCart extends Action {
 		  item=(SalesItem)request.getSession().getAttribute("itemToAdd");
 		  if(request.getParameter("quantity")!=null) {
 			 myCart.addItem(Integer.parseInt(request.getParameter("quantity")),item);
-			 responses.add("Item is added"+item.getItemName());
-			 responses.add(prevVal+"Total Items: "+myCart.getTotalItems());
 			 request.getSession().setAttribute("myCart", myCart);
 		  }
-		  
-		  setResponseInSession(request.getSession(),"Thank you!",responses,"success");
+		  request.getSession().setAttribute("hasResponse", false);
 	  }
-	  responses.add("Thank you for your registration, See you on.."+val);
-	  setResponseInSession(request.getSession(),"Thank you!",responses,"success");
 	  return(mapping.findForward("returnToLastPage"));
-  }
-  private  void setResponseInSession(HttpSession session, String popUpTitle, ArrayList<String> responses, String responseType) {
-	  session.setAttribute("popUpTitle", popUpTitle);
-	  session.setAttribute("responses", responses);
-	  session.setAttribute("responseType", responseType);
-	  session.setAttribute("hasResponse", true);
-	  session.setAttribute("popUpContent", "popUpMessages");
   }
 }
