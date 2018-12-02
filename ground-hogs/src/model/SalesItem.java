@@ -44,7 +44,13 @@ public class SalesItem {
 	public double getRating() {
 		return rating;
 	}
-	
+	public void setRating(double rating) {
+		this.rating =rating;
+	}
+	public void setNoOfReviews(int reviews) {
+		this.noOfReviews=reviews;
+	}
+	public SalesItem() {}
 	public SalesItem(int itemId, String itemName, String itemDescription, double itemPrice, String imagePath, double rating, int noOfReviews) {
 		this.itemId=itemId;
 		this.itemName=itemName;

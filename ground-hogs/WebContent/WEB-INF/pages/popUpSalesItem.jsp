@@ -6,7 +6,7 @@
 <%SalesItem item=DBAccess.SP_GetSalesItem(Integer.parseInt(request.getParameter("itemId"))); %>
 <%!List<Review> reviews; %>
 <%reviews=DBAccess.SP_GetReviews(1);%>
-   <form class="popUpForm" ACTION="submitQuickQuestion.do" METHOD="POST">
+   <form class="popUpForm" ACTION="submitAddToCart.do" METHOD="POST">
       <br>
       <br>
       	<div class="popSalesItemContainer">
@@ -24,6 +24,7 @@
 			         <option value="4">4</option>
 			         <option value="5">5</option>
 			    </select>
+			    <%session.setAttribute("itemToAdd", item); %>
 			    <input type="submit" onClick="" value="Add To Cart" class="hoverTransparentBg sicAddToCart">  
       		</div>
       		<p class="sicItemDescription">Description:<%=item.getItemDescription() %></p>			

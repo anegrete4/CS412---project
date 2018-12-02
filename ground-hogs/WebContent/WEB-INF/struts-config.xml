@@ -23,6 +23,11 @@
       <forward name="returnToLastPage" 
                path="/WEB-INF/templates/returnToLastPage.jsp"/>
     </action>
+    <action path="/submitAddToCart" 
+            type="coreservlets.SubmitAddToCart">
+      <forward name="returnToLastPage" 
+               path="/WEB-INF/templates/returnToLastPage.jsp"/>
+    </action>
     <action path="/upVote" 
             type="coreservlets.UpVote">
     </action>
