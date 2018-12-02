@@ -18,15 +18,7 @@ public class Cart {
 		return cartItems.elements();
 	}
 
-	public void addItem(int count, int itemId, String itemName, String itemDescription, Double itemPrice, String imagePath, double rating, int noOfReviews) {
-		CartItem item = (CartItem) cartItems.get(itemId);
-		if(item!=null && item.getItemCount()>0) {
-			item.add(count);
-		}
-		else {
-			cartItems.put(itemId,new CartItem(count,itemId,itemName, itemDescription,itemPrice,imagePath,rating,noOfReviews));
-		}
-	}
+	
 	public void addItem(int quantity, SalesItem item) {
 		if(cartItems.get(item.getItemId())!=null ) {
 			CartItem cartItem = (CartItem) cartItems.get(item.getItemId());
