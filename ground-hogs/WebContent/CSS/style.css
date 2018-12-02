@@ -1122,17 +1122,22 @@ body, html{
 /*scrollbar*/
 .invisibleScrollBg::-webkit-scrollbar {
       width:10px; 
+       background:transparent!important; 
     }
   .invisibleScrollBg::-webkit-scrollbar * {
-    background:transparent; 
+    background:transparent!important; 
   }
   .invisibleScrollBg::-webkit-scrollbar-thumb {
-    background:rgb(173,173,173) !important;
+    background:rgb(84,86,90)!important;
     border-radius: 5px !important;
   }
   .invisibleScrollBg::-webkit-scrollbar-thumb:hover {
-    background:rgb(84,86,90) !important;
+    background: rgb(173,173,173) !important;
   }
+  
+ .invisibleScrollBg::-webkit-scrollbar-track {
+    background: transparent!important;
+}
  
   /*sales item all*/ 
  /* sales item link*/
@@ -1501,7 +1506,12 @@ body, html{
  }
  
  .itemRow{
- 	color:
+ 	
+ }
+ .cartProductImage img{
+ 	height:150px!important;
+ 	width:auto;
+ 
  }
  
  .buttonAnimated{
@@ -1514,6 +1524,58 @@ body, html{
  	font-size: 15px;
 	font-weight:300;
 	text-decoration:none;
+ }
+ 
+ .rightAlign{
+ 	text-align:right!important;
+ }
+ .leftAlign{
+ 	text-align:left!important;
+ }
+ .cartItemsWrapper{
+ 	width:90%;
+ 	margin:0px auto 0px auto;;
+ 	max-height: 320px!important;
+  	overflow-x: hidden;
+  	overflow-y: scroll;
+  	border: 1px solid gray;/*#8ab4f8;*/
+    padding:5px;
+    border-radius: 5px;
+ }
+ .cartItems{
+ 	margin: 10px auto 0px auto;
+ 	width: 100%;
+ 	
+ }
+ .orderBoxWrapper{
+ 	width:87%;
+ 	height:auto;
+ 	margin:10px auto 0px auto;
+ 	max-height: 350px!important;
+  	border: 1px solid gray;/*#8ab4f8;*/
+    padding:5px 10px 0px 10px;
+    border-radius: 5px;
+ }
+ .EmptyCartMessage{
+ 	height:400px!important;
+ 	margin-left:auto;
+ 	mergin-right:auto;
+ 	text-align:center;
+ 	vertical-align:middle;
+ 	
+ 	margin-top:100px;
+ }
+ .EmptyCartMessageH3{
+ 	font-size:24px;
+ 	font-weight:300;
+ 	color:#f2bb3c!important;
+ 	text-align:center;
+ }
+ 
+ .buttonEmpty, .continueShoppingBtn{
+ 	margin:0px!important;
+ 	padding:0px!important;
+ 	
  }
  
  

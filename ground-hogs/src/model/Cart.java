@@ -6,7 +6,7 @@ import java.util.Hashtable;
 public class Cart {
 	public static final double TAX_PERCENT=0.058;
 	private Hashtable<Integer,CartItem> cartItems=new Hashtable<Integer,CartItem>();
-	private double shippmentAmount;
+	private double shippmentAmount=5.00;
 	public void setShippmentAmount(double amt) {
 		this.shippmentAmount=amt;
 	}
@@ -39,22 +39,32 @@ public class Cart {
 		}	
 	}
 		      
-		public double getSubTotal() {
-			double total=0.0;
-			Enumeration<CartItem> e = cartItems.elements();
-			while(e.hasMoreElements()) {
-				total= total+((CartItem)e.nextElement()).getTotalPrice();
-			}
-			return total;
+	public double getSubTotal() {
+		double total=0.0;
+		Enumeration<CartItem> e = cartItems.elements();
+		while(e.hasMoreElements()) {
+			total= total+((CartItem)e.nextElement()).getTotalPrice();
 		}
-		public int getTotalItems() {
-			int total=0;
-			Enumeration<CartItem> e = cartItems.elements();
-			while(e.hasMoreElements()) {
-				total= total+((CartItem)e.nextElement()).getItemCount();
-			}
-			return total;
+		return total;
+	}
+	
+	public int getTotalItems() {
+		int total=0;
+		Enumeration<CartItem> e = cartItems.elements();
+		while(e.hasMoreElements()) {
+			total= total+((CartItem)e.nextElement()).getItemCount();
 		}
-		
+		return total;
+	}
+	
+	public double getTotalBeforeTax() {
+		return getShippmentAmount()+getSubTotal();
+	}
+	public double getTax() {
+		return getTotalBeforeTax()*(Cart.TAX_PERCENT);
+	}
+	public double getOrderTotal() {
+		return getTotalBeforeTax()*(1+Cart.TAX_PERCENT);
+	}
 }
 
