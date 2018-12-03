@@ -93,6 +93,16 @@ function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,ma
 	resizeContainer(mainContainerClass,largeHeight,smallHeight,cBox.is(':checked'));
 }
 
+function toggleDisplayById(elemId){
+	if (document.getElementById(elemId).style.display == 'none'){
+		document.getElementById(elemId).style.display = 'block';
+		
+	}else{
+		document.getElementById(elemId).style.display = 'none';
+	}
+	
+}
+
 function closeResponseBox(){
 	var box=document.getElementsByClassName("popUpBox");
 	if((box)!=null){

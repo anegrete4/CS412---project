@@ -1154,7 +1154,9 @@ body, html{
 
  .popUpSalesItem{
  	width:400px;
- 	min-height:300px;
+ 	min-height:250px;
+ 	margin:10% auto!important;
+	
  }
  .popSalesItemContainer{
  	margin:0px;
@@ -1578,5 +1580,123 @@ body, html{
  	
  }
  
+ .clickable{
+ 	padding-left:15px!important;
+ 	color:#f2bb3c!important;
+ 	text-decoration:none;
+ 	cursor:pointer;
+ }
+ .clickable:hover{
+ 	text-decoration:underline;
  
-   
+ }
+ .unitCostPopUp{
+ 	font-size:20px;
+ 	font-weight:300;
+ 	
+ }
+ .descriptionRow{
+ 	font-size:14px;
+ 	line-height:16px!important;
+ 	text-align:justify!important;
+ }
+ .description{
+ 	color:#8ab4f8;
+ 	margin-right:15px;
+ }
+ 
+ .popUpProductImage{
+ 	width:10px;
+ 	height:auto;
+ 	padding:10px;
+ }
+ 
+ .popUpDropDownBox{
+ 	margin:0px;
+ 	padding:0px;
+ 	background:#5c90f2;
+ 	width:50px!important;
+ 	float:right!important;
+ 	color:white!important;
+ }
+
+ .popUpDropDownBoxWrapper,.popAddToCartButtonWrapper{
+ 	min-width:115px!important;
+ 	padding:0px!important;
+ 	margin:0px!important;
+ }
+ 
+.popAddToCartButtonWrapper input{
+ 	background:#5c90f2;/*#8ab4f8;*/
+ 	color:white!important;
+ 	width:100%!important;
+ 	height:35px!important;
+ 	border-radius: 5px;
+ 	display:inline!imporant;
+ 	float:left!imporant;
+ 	margin:40px auto auto 0px!important;
+ 	font-size:16px;
+ 	font-weight:400;
+ 	cursor:pointer;
+ }
+ .popAddToCartButtonWrapper input:hover,.popUpDropDownBoxWrapper select:hover{
+ 	background:#8ab4f8;
+ } 
+ 
+ .rowGap{
+ 	min-height:90px!important;
+ }
+ 
+ .reviewArea{
+	border: 1px solid gray!important;/*#8ab4f8;*/
+    border-radius: 5px!important;
+ }
+ #reviewsWrapper{
+ 	display:none;
+ 	min-height:200px;
+ 	max-height:100px!important;
+ 	overflow-x:hidden;
+ 	overflow-y:scroll;
+ }
+ .expandReview{
+ 	font-size:14px;
+ 	font-weight:300;
+ 	text-align:center!important;
+ }
+
+ .noReviews{
+ 	font-size:16px;
+ 	font-weight:100;
+ 	color: #ea6960!important;
+ 	text-align: center;
+ 	margin:100px auto auto 100px!important;
+ 	width:100%;
+ }
+ 
+ .sorryMsg{
+ 	padding:100px auto auto 100px!important;
+ 	font-size:16px;
+ 	font-weight:100;
+ 	color: #ea6960!important;
+ 	text-align: center;
+ }
+ 
+ .reviewerName{
+ 	font-size: 16px;
+	font-weight:300;
+	text-decoration:none;
+	color:#8ab4f8;
+	width:auto!important;
+	text-align:left;
+ }
+ .reviewMsg{
+ 	color:rgb(238,238,238)!important;
+ 	font-size:14px;
+ 	line-height:16px!important;
+ 	text-align:justify!important;
+ }
+ 
+ tr.bottomBorder td {
+  border-bottom: .5px solid gray!important;
+}
+ 
