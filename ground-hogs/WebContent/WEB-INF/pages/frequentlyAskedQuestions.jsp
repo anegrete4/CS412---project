@@ -8,7 +8,7 @@
 %>
   
 <div class="Content-header" id="FAQContent">
-       <h2>Frequently asked questions</h2>
+<div id="best"><h1>Answers to the quick questions</h1></div>
        <div class="faqArea invisibleScrollBg">
        		<ol>
        		<%

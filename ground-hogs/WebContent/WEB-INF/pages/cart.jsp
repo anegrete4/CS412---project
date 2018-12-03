@@ -92,7 +92,9 @@
 	            </tr>
 	            <tr class="orderBtnRow">
 	            	<td class="continueShoppingBtnWrapper">
+	            		    <a href="http://localhost:8080/ground-hogs/Shopping.jsp">
 	            		   		<input class="buttonAnimated continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
+	            			</a>
 	            	</td>
 	            	<td class="checkoutButtonWrapper">
 	                <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST"> 
@@ -111,7 +113,9 @@
       				<div class="EmptyCartMessage">
       					<h3 class="EmptyCartMessageH3">Your cart is empty!</h3>
       					<div class="continueShoppingBtnWrapper buttonEmpty">
-	            		   	<input class="buttonAnimated continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Start shopping" name="placeYourOrder">
+      						<a href="http://localhost:8080/ground-hogs/Shopping.jsp">
+	            		   	  <input class="buttonAnimated continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Start shopping" name="placeYourOrder">
+	            			</a>
 	            		</div>
       				</div>
       				

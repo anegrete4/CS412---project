@@ -381,6 +381,7 @@ body {
 .error h3{
 	color:red;
 }
+
 .success h3{
     color:#8ab4f8;
 }
@@ -670,6 +671,23 @@ body, html{
 	border-radius: 5px;
 }
 
+.errorMessage{
+	width:100%;
+	height:auto;
+	padding:5px;
+	background:transparent;
+	text-align:center;	
+	position:absoute;
+    display:block;
+    overflow:show;
+}
+.errorMessage p{
+	font-size:16px;
+ 	font-weight:400;
+ 	color:rgb(233,188,85)!important;/*#f90707!important;/*#ea6960!important;*/
+ 	text-align:center;
+}
+
 .popUpBox h3, .CartHeader h3{
 	margin:0px;
 	padding:0px;
@@ -754,8 +772,9 @@ body, html{
 
 /*------------------------------ Upser specefic pop up box ----------------------------- */
 .popUpContactUsForm{
-	width:350px;
-	height:400px;
+	width:380px;
+	height:365px;
+	padding:5px;
 }
 .popUpForm{
 	margin:auto;
@@ -764,66 +783,72 @@ body, html{
 	height:auto;
 }
 .popUpForm select{
-	padding:0px;
-		
+	padding:0px;	
 	margin:50px auto 10px auto;
 	font-size:16px;
 	font-weight:400;
-    width: 315px;
+    width: 90%;
     height: 35px;
     display:block;
     position:relative;
 }
-.popUpForm textArea{
+
+.whiteBg{
+	background-color:white;
+	width:90%;
+	height:auto;
 	margin:auto;
-	padding:5px;
+	padding:-2px;
+	border:1px solid white;
+}
+
+
+.popUpTextArea{
+	padding:8px;
 	font-size:16px;
 	font-weight:400;
-	display:block;
-    width:304px;
+    width: 95%;
     min-height:100px;
-    position:relative;
     overflow-y:scroll;
     resize:none;
+    background:transparent;
+     border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    
 }
-.popUpForm input[type="checkbox"] {
-    font-size:16px;
-	font-weight:400;
-	margin-left:16px;
-	margin-top:15px;
-	float:left;
-}
-.popUpForm label {
-    font-size:16px;
-	font-weight:400;
-    margin:auto;
-    padding-left:5px;
-    margin-right:15px;
-    margin-top:15px;
-    color:#fff;
-    float:left;
-}
+
 .InputFormLineGroup{
-	width:100%;
-	margin:auto;
-	display:block;
+	grid-column-gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 12px;
+	width:88%;
 	height:40px;
-	float:left;
+	margin:0px;
+	margin-right:25px;
+	margin-left:auto;
 }
 .popUpForm input[type="text"] {
 	font-size:16px;
 	font-weight:400;
     height: 30px;
-    margin:5px auto 0px auto;
-	width:315px;
-	display:inline-block;
+    margin:0px;
+    margin-top:5px;
+	width:88%;
 }
 .InputFormLineGroup input[type="text"] {
-	width:153px;
-	display:inline-block;
+	width:100%;
 }
 .popUpButtons{
-	display:inline-block;
+	width:100px!important;
+	padding:10px 5px!important;
+}
+.buttonsGroup{
+	float:right!important;
 }
 
 /*------------------------------------ Hover Effect ------------------------------------ */
@@ -1366,7 +1391,8 @@ body, html{
  }
  
  .error{
- 	color:red!important;
+ 	/*color:red!important;*/
+	border:0.8px solid red;
  }
  
  
@@ -1633,8 +1659,8 @@ body, html{
  	width:100%!important;
  	height:35px!important;
  	border-radius: 5px;
- 	display:inline!imporant;
- 	float:left!imporant;
+ 	display:inline!important;
+ 	float:left!important;
  	margin:40px auto auto 0px!important;
  	font-size:16px;
  	font-weight:400;
@@ -1707,16 +1733,23 @@ body, html{
 	padding:0px!important;
 	text-align:left!important;
 }
-
+.MeetUsArea{
+	width:83%;
+	margin:auto;
+}
 #MeetUsGrid {
 	grid-column-gap: 20px;
-	margin: 40px auto 0;
 	display: grid;
-	height: 90px;
+	height: auto!important;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 100px;
 	column-gap: 50px;
-	max-width:1000px;
+	border: 1px solid gray!important;/*#8ab4f8;*/
+    padding:15px!important;
+    
+	padding-left:60px!important;
+    margin:0px!important;
+    border-radius: 5px!important;
+	
 }
 
 #MeetUsGrid h3{
@@ -1758,5 +1791,66 @@ body, html{
 	height:200px!important;
 	frameborder="1";
 }
+.contactUsButtonWrapper{
+	width:300px!important;
+	height:40px!important;
+	vertical-align:middle!important;
+	text-align:center!important;;
+	overflow:hidden;
+	margin:auto!important;
+	
+}
+.contactUsButton{
+	background-color:transparent;
+	border-color:white;
+	transition: all 0.35s ease;
+	width: 150px;
+	padding:10px 5px 10px 5px;
+	text-decoration: none;
+	cursor: pointer;
+	border:1px solid rgb(0,255,0);
+	color:rgba(0,0,0,0.8);
+	font-size: 15px;
+	font-weight: 800;
+	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+	border-radius: 30px;
+	background-color: rgba(0,255,0,0.7);
+	
+	
+}
+.contactUsButton:hover{
+	background-color: rgba(0,255,0,1);
+	color:black;
+	transform: scale(1.15);
+}
+
+.contactUsButton a{
+	text-decoration:none;
+	color:rgba(0,0,0,0.8);
+	font-size: 15px;
+	font-weight: 800;
+	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+}
+.contactUsButton a:hover{
+	text-decoration:none;
+	color:black;
+	font-size: 15px;
+	font-weight: 800;
+	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+}
+
+
+
+
+
 
  

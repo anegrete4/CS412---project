@@ -15,7 +15,7 @@ public class SubmitCheckout extends Action {
       throws Exception {
 	  
 	  ArrayList<String> responses= new ArrayList<String>();
-	  request.getSession().setAttribute("messages", responses);
+	  request.getSession().setAttribute("responses", responses);
 	  DBAccess.SP_AddFAQ(request.getParameter("quickQuestion"));
 	   responses.add("Thank you for your business. Please revisit.");
 	   setResponseInSession(request.getSession(),"Thank you!",responses,"success");

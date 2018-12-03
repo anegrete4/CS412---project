@@ -2,34 +2,26 @@
    pageEncoding="UTF-8"%>
     <div class="wrapper">
         <div class="parallex" id="about">
-            <header class="aboutHeader">
+            <header class="aboutHeader contactUsHeader">
                 <h1>Contact Us!</h1>
                 <p>We are here to help.</p>
-                <a href="#media1" class="DownArrow nextSection"></a>
+                 <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
+                 	<div class="contactUsButtonWrapper">
+                        <input type="hidden" value="Customer Support" name="popUpTitle" />
+                        <input type="hidden" value="popUpContactUsForm" name="popUpContent" />
+                        <input type="submit" value="Contact Now" class="contactUsButton">
+                    </div>
+                 </form>
+                <a href="#bestRow" class="DownArrow nextSection"></a>
             </header>
 
         </div>
 
-        <div id="Media-Container" class="contactUsPanel">
-            <div class="row" id="media1">
-                <div class="column">
-                    <a><img src="images/customerSupport.jpg" alt="Customer Support" width="510" height="350"></a>
-                </div>
-                <div class="column">
-                    <h1>Customer Support</h1>
-                    <p>If your question has not already been answered <a href="#FAQ" class="nextSection">here</a>, our SMEs will try to provide the answer as soon as possible.</p>
-                    <form class="InputForm ComplaintForm" ACTION="popUpDisplay.do" METHOD="POST">
-                        <input type="hidden" value="Customer Support" name="popUpTitle" />
-                        <input type="hidden" value="popUpContactUsForm" name="popUpContent" />
-                        <input type="submit" value="Customer Support" class="PanelButton">
-                    </form>
-                </div>
-            </div>
-
-            <div class="row" id="bestRow">
+            <div class="row" id="bestRow" >
                 <div id="best">
                     <h1>Meet Us</h1>
                 </div>
+                <div class="MeetUsArea">
                 <div id="MeetUsGrid">
                 <div>
                         <h3>General Contact</h3>
@@ -54,12 +46,12 @@
                             <br> Chicago IL-60625
                        	    <br>
                        	    <br>
-                            <span class="floatLeft"> <a class="PanelButton" href="http://www.google.com/maps/place/5600+N.+St.+Louis+Ave+Chicago+IL+60625">Get Directions</a> </span>
+                            <span class="floatLeft contactUsButton"> <a href="http://www.google.com/maps/place/5600+N.+St.+Louis+Ave+Chicago+IL+60625">Get Directions</a> </span>
                         </p>
                     </div>
                 </div>
+                </div>
             </div>
-
             <div id="FAQ">
                 <jsp:include page="/WEB-INF/pages/frequentlyAskedQuestions.jsp" />
             </div>

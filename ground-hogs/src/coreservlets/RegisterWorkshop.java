@@ -15,7 +15,7 @@ public class RegisterWorkshop extends Action {
       throws Exception {
 	  
 	  ArrayList<String> responses= new ArrayList<String>();
-	  request.getSession().setAttribute("messages", responses);
+	  request.getSession().setAttribute("responses", responses);
 	  System.out.println(request.getParameter("registerId"));
 	  /* do things */
 	  if(request.getParameter("registerId")!=null && request.getParameter("workshopCapacity")!=null && request.getParameter("registration")!=null ) {

@@ -88,9 +88,10 @@ function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
 	
 }
 
-function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,mainContainerClass, cBox){
-	setVisibility(className,cBox.is(':checked'));	
-	resizeContainer(mainContainerClass,largeHeight,smallHeight,cBox.is(':checked'));
+function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,mainContainerClass, ddBoxId){
+	var e = document.getElementById(ddBoxId);
+	setVisibility(className,e.selectedIndex!=4);	
+	resizeContainer(mainContainerClass,largeHeight,smallHeight,e.selectedIndex!=4);
 }
 
 function toggleDisplayById(elemId){
