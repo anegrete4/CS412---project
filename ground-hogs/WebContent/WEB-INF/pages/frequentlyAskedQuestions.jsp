@@ -9,8 +9,7 @@
   
 <div class="Content-header" id="FAQContent">
        <h2>Frequently asked questions</h2>
-       <p>All of the answers are provided by our subject matter experts.</p>
-       <div class="faqArea">
+       <div class="faqArea invisibleScrollBg">
        		<ol>
        		<%
        			for(FrequentlyAskedQuestion q:faqs){
