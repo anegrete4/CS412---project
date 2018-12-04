@@ -4,7 +4,7 @@
         <div class="parallex" id="contactUs">
             <header class="aboutHeader contactUsHeader">
                 <h1>Contact Us!</h1>
-                <p>We are here to help.</p>
+                <p>The sun is too far to reach. We are just a click away.</p>
                  <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
                  	<div class="magButtonWrapper">
                         <input type="hidden" value="Customer Support" name="popUpTitle" />
@@ -45,7 +45,7 @@
                             <br> Chicago IL-60625
                        	    <br>
                        	    <br>
-                            <span class="floatLeft magButton"> <a href="http://www.google.com/maps/place/5600+N.+St.+Louis+Ave+Chicago+IL+60625">Get Directions</a> </span>
+                            <span class="floatLeft tButton"> <a href="http://www.google.com/maps/place/5600+N.+St.+Louis+Ave+Chicago+IL+60625">Get Directions</a> </span>
                         </p>
                     </div>
                 </div>

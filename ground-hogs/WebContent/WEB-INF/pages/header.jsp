@@ -18,7 +18,7 @@
             <li id="about-us-content" class="HeaderMenu hoverTransparentBg"><a href="AboutUs.jsp" class="disableTextSelection">About Us</a></li>
             <li id="shopping-content" class="HeaderMenu hoverTransparentBg"><a href="Shopping.jsp"class="disableTextSelection">Shopping</a></li>
             <li id="workshop-content" class="HeaderMenu hoverTransparentBg"><a href="Workshop.jsp"class="disableTextSelection">Workshop</a></li>
-            <li id="contact-us-content" class="HeaderMenu hoverTransparentBg"><a href="ContactUs.jsp"class="disableTextSelection">Contact Us</a></li>
+            <li id="contact-us-content" class="HeaderMenu hoverTransparentBg DropDown"><a href="ContactUs.jsp"class="disableTextSelection">Contact Us</a></li>
             <li id="cartMenu" class="HeaderMenu hoverTransparentBg" onClick="toggleCart('true')" ><p id="ItemCount"><%=myCart.getTotalItems()>0?myCart.getTotalItems():""%></p></li>
          </ul>
 </header>

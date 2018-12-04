@@ -1792,7 +1792,7 @@ body, html{
  	border-radius: 5px;
  	border-width:1px;
  	border:none;
- 	text-align:center;
+ 	text-align:middle;
  	height:30px!important;
  	color:#111;
  	line-height:19px;
@@ -1825,6 +1825,19 @@ body, html{
  	margin-left:-8px;
  	background:rgba(255,255,255,0.2)!important;
  	display:none;
+ }
+ 
+ .tButton a{
+ 	text-decoration:none;
+ 	padding:10px;
+ 	height:20px;
+ 	display:block;
+ 	color:inherit!important;
+ 	margin-top:-5px;
+ }
+ .tButton a:hover{
+ 	text-decoration:none;
+ 	color:inherit!important;
  }
  
  .clickable{
@@ -1918,5 +1931,5 @@ body, html{
 	width:100px;
 	overflow:hidden;
 }
- 
+
   
