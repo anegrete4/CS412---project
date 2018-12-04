@@ -109,8 +109,16 @@ function toggleDisplayById(elemId, ddBoxId){
 	else{
 		document.getElementById(elemId).style.display = 'block';
 	}
+}
 
+function toggleDisplayOfElement(elemId){
 	
+	if(document.getElementById(elemId).style.display == 'block'){
+		document.getElementById(elemId).style.display = 'none';
+	}
+	else{
+		document.getElementById(elemId).style.display = 'block';
+	}
 }
 
 function closeResponseBox(){
