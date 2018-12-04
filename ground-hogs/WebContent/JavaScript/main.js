@@ -66,8 +66,13 @@ function setVisibility(className, isVisible){
 	}
 }
 
-function toggleVisibility(className, cBox) {
+function toggleVisibility(className) {
 	setVisibility(className,cBox.is(':checked'));
+}
+
+function togleDisplayContactUsForm(elemId){
+	
+	
 }
 
 function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
@@ -94,13 +99,17 @@ function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,ma
 	resizeContainer(mainContainerClass,largeHeight,smallHeight,e.selectedIndex!=4);
 }
 
-function toggleDisplayById(elemId){
-	if (document.getElementById(elemId).style.display == 'none'){
-		document.getElementById(elemId).style.display = 'block';
-		
-	}else{
+function toggleDisplayById(elemId, ddBoxId){
+	
+	var e = document.getElementById(ddBoxId);
+	
+	if(e.selectedIndex==4){
 		document.getElementById(elemId).style.display = 'none';
 	}
+	else{
+		document.getElementById(elemId).style.display = 'block';
+	}
+
 	
 }
 

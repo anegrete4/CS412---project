@@ -272,41 +272,6 @@ body {
 }
 
 
-.PanelButton {
-	backface-visibility: hidden;
-	border-color: rgb(218, 77, 60);
-	border-radius: 30px;
-	border-width: 1px;
-	border-style: solid;
-	box-sizing: border-box;
-	color: rgb(218, 77, 60);
-	cursor: pointer;
-	display: block;
-	float: none;
-	font-family: open-sans, sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	height: 48px;
-	line-height: 46px;
-	margin: auto;
-	outline-color: rgb(255, 255, 255);
-	outline-style: none;
-	outline-width: 0px;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	transition: all 0.35s ease;
-	width: 144.094px;
-	text-decoration: none;
-}
-
-.PanelButton:hover {
-	background-color: rgb(218, 77, 60);
-	color: rgb(255, 255, 255);
-}
-
 .InputForm {
 	width: 100%;
 	height: auto;
@@ -425,9 +390,6 @@ body {
 
 
 
-/* Use cross button*/
-
-/* Use hover background*/
 
 
 .MenuSelected{
@@ -639,9 +601,7 @@ body, html{
 	margin-left:10px;
 	display:block;
 }
-.revealWhenChecked{
-	transition: height 0.3s ease;
-}
+
 
 /*--------------------------------------- Overlay -------------------------------------- */
 .overlayBox {
@@ -760,6 +720,17 @@ body, html{
 	width:350px;
 	height:100px;
 }
+.popUpMessages p{
+	color: rgb(233,233,233);
+	font: 400 16px Helvetica, Arial, sans-serif;
+	height: 120px ;
+	letter-spacing: 0.32px ;
+	line-height: 20px ;
+	overflow-wrap: break-word ;
+	text-align: left ;
+	vertical-align: baseline;
+	text-size-adjust: 100% ;
+}
 /* end of pop up box for messages*/
 
 /*------------------------------ PopUP box for quickQuestion -------------------------------- */
@@ -770,11 +741,13 @@ body, html{
 
 /* end of pop up box for messages*/
 
-/*------------------------------ Upser specefic pop up box ----------------------------- */
+/*------------------------------ User specefic pop up box ----------------------------- */
 .popUpContactUsForm{
 	width:380px;
-	height:365px;
+	height:auto;
 	padding:5px;
+	transition: height 0.3s ease;
+	
 }
 .popUpForm{
 	margin:auto;
@@ -810,7 +783,6 @@ body, html{
     width: 95%;
     min-height:100px;
     overflow-y:scroll;
-    resize:none;
     background:transparent;
      border: none;
     outline: none;
@@ -842,13 +814,6 @@ body, html{
 }
 .InputFormLineGroup input[type="text"] {
 	width:100%;
-}
-.popUpButtons{
-	width:100px!important;
-	padding:10px 5px!important;
-}
-.buttonsGroup{
-	float:right!important;
 }
 
 /*------------------------------------ Hover Effect ------------------------------------ */
@@ -1475,77 +1440,9 @@ body, html{
  }
  
 
- .continueShoppingBtnWrapper, .checkoutButtonWrapper{
- 	padding:10px 20px 10px 0px!important;
- 	height:33px!important;
- }
- 
- .continueShoppingBtn, .checkoutButton{
- 	width:auto;
- 	left:0;
- 	top:0;
- 	cursor:pointer;
- 	background: #f2bb3c!important; /*#e7e9ec*/
-    border-radius: 5px;
-    border-color: #f2bb3c!important;
-    border-style: solid;
-    border-width: 1px;
-    text-align:center;
-    height: 30px!important;
-    border:none!important;
- 	color: #111!important;
- 	cursor: pointer;
- 	line-height: 19px;	
- 	font-size: 14px;
-	font-weight:400;
-	text-decoration:none;
- }
- 
- 
- .continueShoppingBtn:hover,.checkoutButton:hover{
- 	background:#f9b109!important;
- }
- .removeItemButtonWrapper{
- 	margin-right:0px;
- 	margin-left:auto;
- }
- 
- .removeItemButton{
- 	width:auto;
- 	left:0;
- 	top:0;
- 	cursor:pointer;
- 	background: transparent!important;
-    text-align:center;
-    height: 30px!important;
- 	color: #ea6960!important;
- 	cursor: pointer;
- 	line-height: 19px;	
- 	font-size: 14px;
-	font-weight:100;
-	text-decoration:none;
-	border: 1px solid #ea6960;
-	border-radius: 5px;
- }
- .removeItemButton:hover{
- 	background:#D04422!important;
- 	color:white!important;
- }
- 
- }
- 
- .itemRow{
- 	
- }
  .cartProductImage img{
  	height:150px!important;
  	width:auto;
- 
- }
- 
- .buttonAnimated{
- 	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
  }
  
  .cartItemTotal, .cartItemName{
@@ -1601,12 +1498,6 @@ body, html{
  	text-align:center;
  }
  
- .buttonEmpty, .continueShoppingBtn{
- 	margin:0px!important;
- 	padding:0px!important;
- 	
- }
- 
  .clickable{
  	padding-left:15px!important;
  	color:#f2bb3c!important;
@@ -1617,6 +1508,7 @@ body, html{
  	text-decoration:underline;
  
  }
+ 
  .unitCostPopUp{
  	font-size:20px;
  	font-weight:300;
@@ -1636,42 +1528,6 @@ body, html{
  	width:10px;
  	height:auto;
  	padding:10px;
- }
- 
- .popUpDropDownBox{
- 	margin:0px;
- 	padding:0px;
- 	background:#5c90f2;
- 	width:50px!important;
- 	float:right!important;
- 	color:white!important;
- }
-
- .popUpDropDownBoxWrapper,.popAddToCartButtonWrapper{
- 	min-width:115px!important;
- 	padding:0px!important;
- 	margin:0px!important;
- }
- 
-.popAddToCartButtonWrapper input{
- 	background:#5c90f2;/*#8ab4f8;*/
- 	color:white!important;
- 	width:100%!important;
- 	height:35px!important;
- 	border-radius: 5px;
- 	display:inline!important;
- 	float:left!important;
- 	margin:40px auto auto 0px!important;
- 	font-size:16px;
- 	font-weight:400;
- 	cursor:pointer;
- }
- .popAddToCartButtonWrapper input:hover,.popUpDropDownBoxWrapper select:hover{
- 	background:#8ab4f8;
- } 
- 
- .rowGap{
- 	min-height:90px!important;
  }
  
  .reviewArea{
@@ -1775,32 +1631,26 @@ body, html{
 	float:left!important;
 }
 
-
-.PanelButton a{
-	text-decoration:none;
-	color: rgb(218, 77, 60);
-}
-.PanelButton a:hover{
-	background-color: rgb(218, 77, 60);
-	color: rgb(255, 255, 255);
-}
-
 #GoogleMap{
 	overflow:hidden;
 	width:480px!important;
 	height:200px!important;
 	frameborder="1";
 }
-.contactUsButtonWrapper{
+
+/* all about buttons here */
+
+.magButtonWrapper{
 	width:300px!important;
 	height:40px!important;
 	vertical-align:middle!important;
 	text-align:center!important;;
 	overflow:hidden;
 	margin:auto!important;
+	 outline: none;
 	
 }
-.contactUsButton{
+.magButton{
 	background-color:transparent;
 	border-color:white;
 	transition: all 0.35s ease;
@@ -1818,16 +1668,17 @@ body, html{
 	text-align:center!important;
 	border-radius: 30px;
 	background-color: rgba(0,255,0,0.7);
+	 outline: none;
 	
 	
 }
-.contactUsButton:hover{
+.magButton:hover{
 	background-color: rgba(0,255,0,1);
 	color:black;
 	transform: scale(1.15);
 }
 
-.contactUsButton a{
+.magButton a{
 	text-decoration:none;
 	color:rgba(0,0,0,0.8);
 	font-size: 15px;
@@ -1837,7 +1688,7 @@ body, html{
 	text-size-adjust: 100%;
 	text-align:center!important;
 }
-.contactUsButton a:hover{
+.magButton a:hover{
 	text-decoration:none;
 	color:black;
 	font-size: 15px;
@@ -1848,9 +1699,118 @@ body, html{
 	text-align:center!important;
 }
 
+/* standard button for the website */
 
-
-
-
-
+.sButton input{
+	
+	border:1px solid rgba(255,255,255,0.3);/**/
+	border-radius: 5px;
+ 	border-radius: 30px;
+	background-color: rgba(92,144,242,0.7);
+	
+	width:auto!important;
+	min-width:100px;
+ 	margin:40px auto auto 0px!important;
+ 	padding:10px 5px 10px 5px;
+	
+	color:rgba(0,0,0,0.8);
+	
+	
+	transition: all 0.35s ease;
+	text-decoration: none;
+	cursor: pointer;
+	
+ 	height:35px!important;
+ 	display:inline!important;
+ 	float:left!important;
+ 	cursor:pointer;
+ 	
+ 	font-size:16px;
+ 	font-weight:400;
+ 	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+	color:white;
+ 	
+ }
+ .sButton input:hover,.sButton select:hover{
+ 	background-color: rgba(92,144,242,1);/*background:#8ab4f8;*/
+ } 
  
+ /* color for the input buttons*/
+/* by default yellow color */
+ .tButton{
+ 	width:auto;
+ 	left:0;
+ 	top:0;
+ 	cursor:pointer;
+ 	background: #f2bb3c!important;
+ 	border-radius: 5px;
+ 	border-width:1px;
+ 	border:none;
+ 	text-align:center;
+ 	height:30px!important;
+ 	color:#111;
+ 	line-height:19px;
+ 	font-size:14px;
+ 	font-weight:400;
+ 	text-decoration:none;
+ 	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+ }
+ .tButton:hover{
+  	background:#f9b109!important;
+ }
+ 
+ .colorRed{
+ 	color: #ea6960!important;
+ 	background: transparent!important;
+ 	border: 1px solid #ea6960;
+ }
+ 
+ .colorRed:hover{
+ 	background:#D04422!important;
+ 	color:white!important;
+ }
+ 
+ .showHide{
+ 	line-height:19px;
+ 	font-size:14px;
+ 	font-weight:400;
+ 	padding:0px-100px 0px -100px !important;
+ }
+ 
+ /*drop down add to cart*/
+ .ddBoxQty{
+ 	background:#4279d6;
+ 	width:50px!important;
+ 	height:30px!important;
+ 	float:right!important;
+ 	color:white!important;
+ 	border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+ 	
+ }
+ .ddBoxQty:hover{
+ 	background:#067eff;
+ }
+ .twoInputButtonsWrapper{
+ 	width:100%;
+ 	padding-left:130px;
+ }
+ .twoInputButtonsWrapper input{
+ 	margin-top:10px;
+ 	min-width:100px;
+ }
+ 
+ 
+ /* adjustments */
+ .paddingTop{
+ 	padding-top:40px;
+ } 
+  

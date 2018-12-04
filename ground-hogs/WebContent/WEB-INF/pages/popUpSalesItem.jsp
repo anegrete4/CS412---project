@@ -18,9 +18,9 @@
       					<td class="clickable rightAlign" onClick="toggleDisplayById('reviewsWrapper');"><%="(Total "+item.getNoOfReviews()+" review"+(item.getNoOfReviews()!=1?"s)":")")%></td></tr>
       					<tr class="itemRow"><td class="leftAlign descriptionRow" colSpan="2"><span class="description">Description:</span><%=" "+item.getItemDescription()%></td></tr>	
       					<tr class="itemRow"><td class="leftAlign">Unit cost:</td><td class="rightAlign unitCostPopUp"><%=Helper.getFormattedAmount(item.getItemPrice())%></td></tr>	
-      					<tr class="itemRow popUpButtonRow" rowSpan="2">
-      						<td class="rightAlign popUpDropDownBoxWrapper">
-	      						<select name="quantity" id="quantity" class="popUpDropDownBox">
+      					<tr class="itemRow" rowSpan="2">
+      						<td class="rightAlign">
+	      						<select name="quantity" id="quantity" class="ddBoxQty">
 							         <option value="1">1</option>
 							         <option value="2">2</option>
 							         <option value="3">3</option>
@@ -28,13 +28,13 @@
 							         <option value="5">5</option>
 						    	</select>
 						    </td>
-						    <td class="leftAlign popAddToCartButtonWrapper">
+						    <td class="leftAlign paddingTop">
 						    		<%session.setAttribute("itemToAdd", item); %>
-			    					<input type="submit" onClick="" value="Add To Cart" class="popAddToCartButton">
+			    					<input type="submit" onClick="" value="Add To Cart" class="tButton">
 						    </td>
 						    </tr>
 						    <tr>
-						    	<td colSpan="3" class="reviewArea"><span class="buttonAnimated clickable" 
+						    	<td colSpan="3" class="reviewArea"><span class="tButton showHide" 
 								onclick="toggleDisplayById('reviewsWrapper');"
 								>Show/Hide review(s)</span>
 						    		<div class="invisibleScrollBg"id="reviewsWrapper">

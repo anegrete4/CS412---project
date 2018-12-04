@@ -6,13 +6,13 @@
                 <h1>Contact Us!</h1>
                 <p>We are here to help.</p>
                  <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
-                 	<div class="contactUsButtonWrapper">
+                 	<div class="magButtonWrapper">
                         <input type="hidden" value="Customer Support" name="popUpTitle" />
                         <input type="hidden" value="popUpContactUsForm" name="popUpContent" />
-                        <input type="submit" value="Contact Now" class="contactUsButton">
+                        <input type="submit" value="Contact Now" class="magButton">
                     </div>
                  </form>
-                <a href="#bestRow" class="DownArrow nextSection"></a>
+                <a id="DownArrow" href="#bestRow" class="DownArrow nextSection"></a>
             </header>
 
         </div>
@@ -46,7 +46,7 @@
                             <br> Chicago IL-60625
                        	    <br>
                        	    <br>
-                            <span class="floatLeft contactUsButton"> <a href="http://www.google.com/maps/place/5600+N.+St.+Louis+Ave+Chicago+IL+60625">Get Directions</a> </span>
+                            <span class="floatLeft magButton"> <a href="http://www.google.com/maps/place/5600+N.+St.+Louis+Ave+Chicago+IL+60625">Get Directions</a> </span>
                         </p>
                     </div>
                 </div>

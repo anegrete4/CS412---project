@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -132,6 +133,27 @@ public class Helper {
 	}
 	public static String getErrorClass() {
 		return hasErrors()?"error":"";
+	}
+	
+	
+	public static boolean isValidEmail(String email) 
+    { 
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+                            "[a-zA-Z0-9_+&*-]+)*@" + 
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+                            "A-Z]{2,7}$"; 
+                              
+        Pattern pat = Pattern.compile(emailRegex); 
+        if (email == null) 
+            return false; 
+        return pat.matcher(email).matches(); 
+    } 
+	public static boolean isValidPhone(String phone) {
+		String regexStr = "^[0-9]{10}$";
+		return phone.matches(regexStr);
+	}
+	public static boolean isValidCreditCard(String cardNo) {
+		return false;
 	}
 
 }
