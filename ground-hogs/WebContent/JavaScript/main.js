@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	
+	window.onscroll = function() {scrollFunction()};
 	$(".nextSection").on('click', function(event) {  
 	    if (this.hash !== "") {
 	      event.preventDefault();
@@ -170,5 +170,36 @@ function toggleCart(show){
 		localStorage.setItem("displayCart", "false");
 	}
 }
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("UpArrowContainer").style.display = "block";
+    } else {
+        document.getElementById("UpArrowContainer").style.display = "none";
+    }
+}
+
+function scrollTopFunction() {
+    //document.body.scrollTop = 0;
+    //document.documentElement.scrollTop = 0;
+	 var scrollStep = -window.scrollY / (20),
+     scrollInterval = setInterval(function(){
+     if ( window.scrollY != 0 ) {
+         window.scrollBy( 0, scrollStep );
+     }
+     else clearInterval(scrollInterval); 
+ },15);
+}
+
 
   

@@ -7,6 +7,8 @@
 	href="${pageContext.request.contextPath}/CSS/style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/JavaScript/main.js"></script>
+
+
 <body>
 	<jsp:include page="/WEB-INF/pages/header.jsp"/>
 	<%

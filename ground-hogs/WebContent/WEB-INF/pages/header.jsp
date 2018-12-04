@@ -12,7 +12,6 @@
 	}
 %>
 
-
 <header class="Header" id="globalNavigation">
          <ul class="Menu">
             <li id="home-content" class="HeaderMenu hoverTransparentBg "><a href="index.jsp" class="disableTextSelection">Home</a></li>
@@ -23,3 +22,7 @@
             <li id="cartMenu" class="HeaderMenu hoverTransparentBg" onClick="toggleCart('true')" ><p id="ItemCount"><%=myCart.getTotalItems()>0?myCart.getTotalItems():""%></p></li>
          </ul>
 </header>
+
+<div id="UpArrowContainer">
+		<div id="UpArrow" onclick="scrollTopFunction();" class="UpArrow"></div>
+</div>

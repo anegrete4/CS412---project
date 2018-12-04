@@ -359,6 +359,8 @@ body {
 	margin:0px;
 	padding:0px;
 	z-index:1000;	
+	/*position: fixed; /* Make it stick/fixed */
+    top: 0; 
 }
 .Menu{
 	list-style:none;
@@ -971,6 +973,53 @@ body, html{
 .DownArrow:hover {
 	margin-top:15px;
 }
+
+
+#UpArrowContainer{
+	position:fixed;
+	z-index:10;
+	bottom:0;
+	left:0;
+	background:transparent!important;
+	height:54px;
+	width:74px;
+	padding:10px;
+	display:none;
+}
+
+.UpArrow {
+  display: inline-block;
+  padding:0px;
+  width: 54px;
+  height: 54px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  z-index:1;
+}
+.UpArrow:after {
+  content: '';
+  display: inline-block;
+  margin-top: 20px!important;
+  margin-left:13px!important;
+  width: 24px;
+  height: 24px;
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  -moz-transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+  overflow:hidden;
+}
+.UpArrow:hover {
+	margin-top:-15px;
+}
+
+#UpArrow:hover{
+	margin-top:-15px!important;
+}
+
 /*end of parallelx*/
 
 /*--------------------------------------- old reference -------------------------------------- */
@@ -1011,6 +1060,7 @@ body, html{
 #FAQ{
 	height:670px;
 	display:block;
+	background:white!important;
 }
 
 #FAQContent{
@@ -1340,12 +1390,6 @@ body, html{
 }
  
  
- /* Check out area*/
- .popUpCheckout{
- 	min-width:600px;
- 	max-width:600px;
- 	min-height:400px;
- }
  
  
  
@@ -1834,4 +1878,45 @@ body, html{
 	    -ms-user-select: none;
 	    user-select: none;
  }
+ 
+ 
+ /* Check out area*/
+ .popUpCheckout{
+ 	margin-top:1%;
+ 	min-width:85%;
+ 	max-width:85%;
+ 	min-height:90%;
+ 	z-index:500;
+ }
+
+ 
+ #popUpCheckoutArea {
+
+}
+
+#shippingInfo, #paymentInfo, #cartInfo{
+	margin:25px 10px 10px 10px;
+	min-width:380px;
+	min-height:630px;
+	
+	color: #ea6960!important;
+ 	background: transparent!important;
+ 	float:left;
+ 	border: 1px solid gray;
+    border-radius: 5px;
+    background-color:rgb(33,33,36);
+    max-weidth:300px!important;
+}
+#cartInfo{
+	margin-top:20px!important;
+}
+
+.checkoutMyCart .orderSummaryRow{
+	
+}
+.itemRow2{
+	width:100px;
+	overflow:hidden;
+}
+ 
   

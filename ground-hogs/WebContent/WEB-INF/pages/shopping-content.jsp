@@ -6,7 +6,7 @@
 <% 	
 	salesItems=(ArrayList)DBAccess.SP_GetInventory(1,1,1,0,999.0);
 %>
-  
+
 <div class="Content-header" id="FAQContent">
        <h2>Shop Here</h2>
        <div class="ShopArea">
@@ -28,4 +28,5 @@
        		%>
        </div>
           
+
 </div>
