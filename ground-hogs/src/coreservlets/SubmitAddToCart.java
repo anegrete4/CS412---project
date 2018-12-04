@@ -31,6 +31,7 @@ public class SubmitAddToCart extends Action {
 			 request.getSession().setAttribute("myCart", myCart);
 		  }
 		  request.getSession().setAttribute("hasResponse", false);
+		  request.getSession().removeAttribute("itemToAdd");
 	  }
 	  return(mapping.findForward("returnToLastPage"));
   }

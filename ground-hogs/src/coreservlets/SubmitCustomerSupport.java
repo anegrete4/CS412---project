@@ -25,6 +25,7 @@ public class SubmitCustomerSupport extends Action {
 				DBAccess.SP_AddFAQ(request.getParameter("txtAreaMessage"));
 				responses.add("We received your question. We will try to post the answer as soon as possible.");
 				setResponseInSession(request.getSession(),"Thank you!",responses,"success","popUpMessages");
+				Helper.resetDataValidation(request);
 		   }
 		   else {
 			   setResponseInSession(request.getSession(),"Customer Support",responses,"success","popUpContactUsForm");
@@ -33,6 +34,7 @@ public class SubmitCustomerSupport extends Action {
 		else if(Helper.validateDataAndManageSession(request, Helper.customerSupportFormDataValidation)) {
 			responses.add("We have received your message. One of our team members will reach out to you shortly.");
 			setResponseInSession(request.getSession(),"Thank you! "+request.getParameter("fname"),responses,"success","popUpMessages"); 
+			Helper.resetDataValidation(request);
 		}else {
 			setResponseInSession(request.getSession(),"Customer Support",responses,"success","popUpContactUsForm");
 		}

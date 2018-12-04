@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
     <div class="wrapper">
-        <div class="parallex" id="about">
+        <div class="parallex" id="contactUs">
             <header class="aboutHeader contactUsHeader">
                 <h1>Contact Us!</h1>
                 <p>We are here to help.</p>

@@ -24,11 +24,13 @@ public class RegisterWorkshop extends Action {
 			  DBAccess.SP_RegisterToWorkshop(workshopId);
 			  responses.add("Thank you for your registration, See you on..");
 			  setResponseInSession(request.getSession(),"Thank you!",responses,"success");
+			  request.removeAttribute("registerId");
 		  }
 		  else {
 			  responses.add("Sorry This event is full, Please try next week.");	
 			  setResponseInSession(request.getSession(),"Sorry!",responses,"error");
-		  } 
+			  request.removeAttribute("registerId");
+		  }
 	  }
 	  
 	   return(mapping.findForward("returnToLastPage"));
