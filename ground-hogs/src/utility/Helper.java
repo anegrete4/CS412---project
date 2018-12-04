@@ -10,13 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 
-
 public class Helper {
 	public static String[] customerSupportFormDataValidation = {"contactUsReason", "txtAreaMessage", "fname", "lname", "email","phone"};
 	public static String[] quickQuestionValidation = {"contactUsReason", "txtAreaMessage"};
 	private static List<String>validData;
 	private static List<String>inValidData;
 	private static HttpSession currentSession;
+	public static String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+            "[a-zA-Z0-9_+&*-]+)*@" + 
+            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+            "A-Z]{2,7}$";
+	public static String phoneRegex = "\\d{10}|(?:\\d{3}-){2}\\d{4}|\\(\\d{3}\\)\\d{3}-?\\d{4}";
 	
 	public Helper() {
 		// TODO Auto-generated constructor stub
@@ -60,8 +64,15 @@ public class Helper {
 					inValidData.add(s);
 				}
 				else {
-					validData.add(s);
-					// also set the value in session for future use if needed
+					if(
+						(s.equalsIgnoreCase("email")&&!validateRegex(request,emailRegex,"email"))||
+						(s.equalsIgnoreCase("phone")&&!validateRegex(request,phoneRegex,"phone")))
+						{
+							inValidData.add(s);
+					}
+					else {
+						validData.add(s);
+					}
 					request.getSession().setAttribute(s, request.getParameter(s));
 				}
 			}
@@ -123,7 +134,7 @@ public class Helper {
 	}
 	public static String getStoredString(String field) {
 		String val="";
-			if(validData.contains(field)) {
+			if(currentSession.getAttribute(field)!=null) {
 				val=(String)currentSession.getAttribute(field);
 			}
 		return val;
@@ -135,25 +146,8 @@ public class Helper {
 		return hasErrors()?"error":"";
 	}
 	
-	
-	public static boolean isValidEmail(String email) 
-    { 
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
-                            "[a-zA-Z0-9_+&*-]+)*@" + 
-                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
-                            "A-Z]{2,7}$"; 
-                              
-        Pattern pat = Pattern.compile(emailRegex); 
-        if (email == null) 
-            return false; 
-        return pat.matcher(email).matches(); 
-    } 
-	public static boolean isValidPhone(String phone) {
-		String regexStr = "^[0-9]{10}$";
-		return phone.matches(regexStr);
-	}
-	public static boolean isValidCreditCard(String cardNo) {
-		return false;
+	private static boolean validateRegex(HttpServletRequest request, String regex, String field) {
+			return ((String)request.getParameter(field)).matches(regex);
 	}
 
 }

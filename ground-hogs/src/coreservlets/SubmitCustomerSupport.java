@@ -23,7 +23,7 @@ public class SubmitCustomerSupport extends Action {
 	   if(selection.equalsIgnoreCase("justAQuickQuesiton")) {
 		   if(Helper.validateDataAndManageSession(request, Helper.quickQuestionValidation)) {
 				DBAccess.SP_AddFAQ(request.getParameter("txtAreaMessage"));
-				responses.add("We have got your question. We will try to post the answer as soon as possible.");
+				responses.add("We received your question. We will try to post the answer as soon as possible.");
 				setResponseInSession(request.getSession(),"Thank you!",responses,"success","popUpMessages");
 		   }
 		   else {
@@ -31,8 +31,8 @@ public class SubmitCustomerSupport extends Action {
 		   }
 		}
 		else if(Helper.validateDataAndManageSession(request, Helper.customerSupportFormDataValidation)) {
-			responses.add("We have received your messages. One of our team member will reach out to you shortly.");
-			setResponseInSession(request.getSession(),"Thank you!",responses,"success","popUpMessages"); 
+			responses.add("We have received your message. One of our team members will reach out to you shortly.");
+			setResponseInSession(request.getSession(),"Thank you! "+request.getParameter("fname"),responses,"success","popUpMessages"); 
 		}else {
 			setResponseInSession(request.getSession(),"Customer Support",responses,"success","popUpContactUsForm");
 		}
