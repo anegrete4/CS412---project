@@ -12,12 +12,12 @@
                         <input type="submit" value="Contact Now" class="magButton">
                     </div>
                  </form>
-                <a id="DownArrow" href="#bestRow" class="DownArrow nextSection"></a>
+                <a id="DownArrow" href="#MeetUs" class="DownArrow nextSection"></a>
             </header>
 
         </div>
 
-            <div class="row" id="bestRow" >
+            <div class="row" id="MeetUs" >
                 <div id="best">
                     <h1>Meet Us</h1>
                 </div>
