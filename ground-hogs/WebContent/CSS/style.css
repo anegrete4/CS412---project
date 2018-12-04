@@ -4,6 +4,7 @@
 .title,
 body {
 	font-family: open-sans, sans-serif;
+	background-color:rgb(247,247,247)!important;
 }
 
 .Footer {
@@ -1058,21 +1059,23 @@ body, html{
 /*-----------------------FAQ-------------------------- */
 
 #FAQ{
-	height:670px;
+	height:690px;
 	display:block;
-	background:white!important;
+	background:rgb(247,247,247)!important;
+	margin-top:30px!important;
+	margin-bottom:50px!important;
 }
 
 #FAQContent{
-	height:100%;
+	height:90%;
 	width:90%;
-	margin:0px auto 10px auto;
+	margin:30px auto 10px auto;
 	padding:0px;
-	background-color: rgb(255,255,255,0.4);
+	background-color: rgb(247,247,247)!important;
 	
 }
 #FAQContent h2{
-	margin:30px auto 10px auto;
+	margin:30px auto 10px 10px!important;
 	font-weight: 400;
 }
 #FAQContent p{
@@ -1082,7 +1085,7 @@ body, html{
 .faqArea{
 	width:90%;
 	padding:5px;
-	margin:0px auto 10px auto;
+	margin:15px auto 80px auto;
 	max-height:500px;
 	overflow-x: hidden;
   	overflow-y: scroll;	
@@ -1635,6 +1638,7 @@ body, html{
 .MeetUsArea{
 	width:83%;
 	margin:auto;
+	height:350px;
 }
 #MeetUsGrid {
 	grid-column-gap: 20px;
@@ -1938,7 +1942,8 @@ body, html{
 
 
 .navbar {
-    overflow: hidden;
+	overflow: hidden;
+    width:100%;
     background-color:rgb(33,33,36);
     font-family: Arial, Helvetica, sans-serif;
 }

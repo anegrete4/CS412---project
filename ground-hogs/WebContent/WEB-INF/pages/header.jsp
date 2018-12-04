@@ -77,7 +77,7 @@
     <div class="dropdown-content">
       <a href="ContactUs.jsp" >Contact Us</a>
       <a href="ContactUs.jsp#MeetUs" >Meet Us</a>
-      <a href="ContactUs.jsp#FAQ" >Q & As</a>
+      <a href="ContactUs.jsp#Q&As" >Q & As</a>
     </div>
   </div> 
   <!-- END -->
@@ -85,6 +85,11 @@
   <!--  CART -->
     <div id="cartMenu" class="HeaderMenu hoverTransparentBg" onClick="toggleCart('true')" ><p id="ItemCount"><%=myCart.getTotalItems()>0?myCart.getTotalItems():""%></p></div>
   <!--  END  -->
+</div>
+
+
+<div id="UpArrowContainer">
+		<div id="UpArrow" onclick="scrollTopFunction();" class="UpArrow"></div>
 </div>
 
 <!--  old
@@ -107,7 +112,5 @@
          </ul>
 </header>
 
-<div id="UpArrowContainer">
-		<div id="UpArrow" onclick="scrollTopFunction();" class="UpArrow"></div>
-</div>
+
 -->
