@@ -1531,8 +1531,7 @@ body, html{
  }
  
  .reviewArea{
-	border: 1px solid gray!important;/*#8ab4f8;*/
-    border-radius: 5px!important;
+ 	width:100%!important;
  }
  #reviewsWrapper{
  	display:none;
@@ -1773,12 +1772,25 @@ body, html{
  	background:#D04422!important;
  	color:white!important;
  }
- 
  .showHide{
- 	line-height:19px;
- 	font-size:14px;
- 	font-weight:400;
- 	padding:0px-100px 0px -100px !important;
+ 	width:110%!important;
+ 	height:20px!important;
+ 	vertical-align:middle;
+ 	text-align:center;
+ 	margin-bottom:0px;
+ 	margin-left:-8px;
+ 	background:rgba(255,255,255,0.2)!important;
+ 	display:none;
+ }
+ 
+ .clickable{
+
+ 	max-height:15px!important;
+ 	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
  }
  
  /*drop down add to cart*/
@@ -1813,4 +1825,13 @@ body, html{
  .paddingTop{
  	padding-top:40px;
  } 
+ 
+ .disableTextSelection{
+	 -webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+ }
   

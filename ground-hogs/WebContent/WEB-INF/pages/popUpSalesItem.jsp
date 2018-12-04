@@ -15,7 +15,7 @@
       				<tr class="itemRow popUpProductImage"><td rowSpan="5"><img src="images/products/<%=item.getImagePath()%>" alt="Product Image"></td>
       				</tr>
       					<tr class="itemRow"><td class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating"><%=item.getRating() %></td>
-      					<td class="clickable rightAlign" onClick="toggleDisplayOfElement('reviewsWrapper');"><%="(Total "+item.getNoOfReviews()+" review"+(item.getNoOfReviews()!=1?"s)":")")%></td></tr>
+      					<td class="clickable rightAlign" onClick="toggleDisplayOfElement('reviewsWrapper');"><%="Total "+item.getNoOfReviews()+" review"+(item.getNoOfReviews()!=1?"s":"")%></td></tr>
       					<tr class="itemRow"><td class="leftAlign descriptionRow" colSpan="2"><span class="description">Description:</span><%=" "+item.getItemDescription()%></td></tr>	
       					<tr class="itemRow"><td class="leftAlign">Unit cost:</td><td class="rightAlign unitCostPopUp"><%=Helper.getFormattedAmount(item.getItemPrice())%></td></tr>	
       					<tr class="itemRow" rowSpan="2">
@@ -34,9 +34,9 @@
 						    </td>
 						    </tr>
 						    <tr>
-						    	<td colSpan="3" class="reviewArea"><span class="tButton showHide" 
+						    	<td colSpan="3" class="reviewArea disableTextSelection"><div class="tButton showHide" 
 								onclick="toggleDisplayOfElement('reviewsWrapper');"
-								>Show/Hide review(s)</span>
+								>Show/Hide review(s)</div>
 						    		<div class="invisibleScrollBg"id="reviewsWrapper">
 						    			<table><tbody>
 						    				<%

@@ -20,7 +20,8 @@ public class Helper {
             "[a-zA-Z0-9_+&*-]+)*@" + 
             "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
             "A-Z]{2,7}$";
-	public static String phoneRegex = "\\d{10}|(?:\\d{3}-){2}\\d{4}|\\(\\d{3}\\)\\d{3}-?\\d{4}";
+
+	public static String phoneRegex = "\\d{10}|(?:\\d{3}-){2}\\d{4}|\\(\\d{3}\\)\\d{3}-?\\d{4}|\\(d{3}\\) d{3}-?d{4}";
 	
 	public Helper() {
 		// TODO Auto-generated constructor stub
@@ -147,7 +148,7 @@ public class Helper {
 	}
 	
 	private static boolean validateRegex(HttpServletRequest request, String regex, String field) {
-			return ((String)request.getParameter(field)).matches(regex);
+			 return ((String)request.getParameter(field)).matches(regex);
 	}
 
 }
