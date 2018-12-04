@@ -22,11 +22,11 @@ public class RegisterWorkshop extends Action {
 		  if((Integer.parseInt(request.getParameter("workshopCapacity"))-Integer.parseInt(request.getParameter("registration")))>0) {
 			  int workshopId =  Integer.parseInt(request.getParameter("registerId"));
 			  DBAccess.SP_RegisterToWorkshop(workshopId);
-			  responses.add("Thank you for your registration, See you on..");
+			  responses.add("Thank you for your registration.");
 			  setResponseInSession(request.getSession(),"Thank you!",responses,"success");
 		  }
 		  else {
-			  responses.add("Sorry This event is full, Please try next week.");	
+			  responses.add("This event is full. Please try next week.");	
 			  setResponseInSession(request.getSession(),"Sorry!",responses,"error");
 		  } 
 	  }

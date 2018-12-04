@@ -238,7 +238,7 @@ VALUES (1,'Keshab','This is a nice product use it',5),
 ;
 
 INSERT INTO GGG_Workshop ( workshopName, workshopDescription, workshopDay, workshopTime)
-VALUES ('Groundhogs Grooming Session', 'We help visitors to train on doasdjflkajslkfjk asjfkjaskjf', 'Monday', '6:00PM-8:00PM'),
-		('Groundhogs Blooming Session', 'We help visitors to train on doasdjflkajslkfjk asjfkjaskjf', 'Wednesday', '6:00PM-8:00PM'),
-        ('Groundhogs Lomming Session', 'We help visitors to train on doasdjflkajslkfjk asjfkjaskjf', 'Thursday', '6:00PM-8:00PM');
+VALUES ('Proper Introductons', 'You likely realize that first impressions count when meeting someone new. The same holds true for groundhogs. A botched introduction could lead to a cool relationship, or worse, between groundhogs. ', 'Monday', '6:00PM-8:00PM'),
+		('Groudhog Confidence Building', 'Is your groundhog shy around people or environmental changes? In this class, we will learn to read our groundhog\’s stress signals, teach our groundhog to go to their safe place to relax, establish successful introductions to new people and build their confidence. ', 'Wednesday', '6:00PM-8:00PM'),
+        ('Your New Groundhog Cub', 'Did you just get a groundhog cub? This workshop is designed to give you a jump start on dealing with cub problems! Issues that will be addressed include: housebreaking, crate training, jumping, and social development.', 'Saturday', '1:00PM-4:00PM');
 

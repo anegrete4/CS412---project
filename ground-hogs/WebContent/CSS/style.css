@@ -282,7 +282,7 @@ body {
 	color: rgb(218, 77, 60);
 	cursor: pointer;
 	display: block;
-	float: none;
+	float: right;
 	font-family: open-sans, sans-serif;
 	font-size: 15px;
 	font-weight: 400;
