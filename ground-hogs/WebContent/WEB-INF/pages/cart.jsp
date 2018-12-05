@@ -21,7 +21,7 @@
  
 <div class="CartWrapper" id="CartBox">
       <div class="CartHeader">
-      	<h3>Cart Items</h3>
+      	<h3>My Cart</h3>
   			<div class="popUpCloseButton crossButton" onClick="toggleCart('false')"></div>
         </div>
       	<%
@@ -35,7 +35,7 @@
       			while(e.hasMoreElements()){
       				CartItem i=(CartItem)e.nextElement();
       				%>
-      					<tr class="itemRow cartProductImage"><td rowSpan="6"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></td><td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td></tr>
+      					<tr class="itemRow cartProductImage"><td rowSpan="6"><a href="<%=i.createHtmlAnchorHref()%>"><img class="clickableImage" src="images/products/<%=i.getImagePath()%>" alt="Product Image"></a></td><td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td></tr>
       					<tr class="itemRow"><td colSpan="2" class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></td></tr>
       					<tr class="itemRow"><td class="leftAlign">Unit cost:</td><td class="rightAlign"><%=Helper.getFormattedAmount(i.getItemPrice())%></td></tr>	
       					<tr class="itemRow"><td class="leftAlign">Quantity:</td><td class="rightAlign"><%=i.getItemCount() %></td></tr>
@@ -46,7 +46,7 @@
 	      						<input type="hidden" value="<%=i.getItemId() %>" name="itemId" />
 	      						<input type="hidden" value="0" name="quantity" />
                     			<input type="hidden" value="popUpCheckout" name="popUpContent" />
-			                	<input class="buttonAnimated removeItemButton" type="submit" value="Remove this item" class="hoverTransparentBg">  
+			                	<input class="tButton colorRed" type="submit" value="Remove this item">  
 			              </form>
       					</td></tr>		
       					<tr><td colSpan="3"></td></tr>
@@ -91,12 +91,14 @@
 	                <td class="rightAlign"><strong><%=Helper.getFormattedAmount(myCart.getOrderTotal()) %></strong></td>
 	            </tr>
 	            <tr class="orderBtnRow">
-	            	<td class="continueShoppingBtnWrapper">
-	            		   		<input class="buttonAnimated continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
+	            	<td >
+	            		    <a href="http://localhost:8080/ground-hogs/Shopping.jsp">
+	            		   		<input class="tButton" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
+	            			</a>
 	            	</td>
-	            	<td class="checkoutButtonWrapper">
+	            	<td>
 	                <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST"> 
-	                	<input class="buttonAnimated checkoutButton" type="submit" onClick="toggleCart('false')" value="Proceed to checkout" class="hoverTransparentBg">  
+	                	<input class="tButton" type="submit" onClick="toggleCart('false')" value="Proceed to checkout">  
 	                 	<input type="hidden" value="Checkout" name="popUpTitle" />
 	                    <input type="hidden" value="popUpCheckout" name="popUpContent" />
 	        		</form>
@@ -111,7 +113,9 @@
       				<div class="EmptyCartMessage">
       					<h3 class="EmptyCartMessageH3">Your cart is empty!</h3>
       					<div class="continueShoppingBtnWrapper buttonEmpty">
-	            		   	<input class="buttonAnimated continueShoppingBtn" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Start shopping" name="placeYourOrder">
+      						<a href="http://localhost:8080/ground-hogs/Shopping.jsp">
+	            		   	  <input class="tButton" onClick="toggleCart('false')" title="Continue Shopping"  value="Start shopping" name="placeYourOrder">
+	            			</a>
 	            		</div>
       				</div>
       				

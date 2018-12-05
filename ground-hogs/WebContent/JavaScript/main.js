@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 	
+	
+	
+	window.onscroll = function() {scrollFunction()};
 	$(".nextSection").on('click', function(event) {  
 	    if (this.hash !== "") {
 	      event.preventDefault();
@@ -66,8 +69,13 @@ function setVisibility(className, isVisible){
 	}
 }
 
-function toggleVisibility(className, cBox) {
+function toggleVisibility(className) {
 	setVisibility(className,cBox.is(':checked'));
+}
+
+function togleDisplayContactUsForm(elemId){
+	
+	
 }
 
 function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
@@ -88,9 +96,32 @@ function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
 	
 }
 
-function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,mainContainerClass, cBox){
-	setVisibility(className,cBox.is(':checked'));	
-	resizeContainer(mainContainerClass,largeHeight,smallHeight,cBox.is(':checked'));
+function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,mainContainerClass, ddBoxId){
+	var e = document.getElementById(ddBoxId);
+	setVisibility(className,e.selectedIndex!=4);	
+	resizeContainer(mainContainerClass,largeHeight,smallHeight,e.selectedIndex!=4);
+}
+
+function toggleDisplayById(elemId, ddBoxId){
+	
+	var e = document.getElementById(ddBoxId);
+	
+	if(e.selectedIndex==4){
+		document.getElementById(elemId).style.display = 'none';
+	}
+	else{
+		document.getElementById(elemId).style.display = 'block';
+	}
+}
+
+function toggleDisplayOfElement(elemId){
+	
+	if(document.getElementById(elemId).style.display == 'block'){
+		document.getElementById(elemId).style.display = 'none';
+	}
+	else{
+		document.getElementById(elemId).style.display = 'block';
+	}
 }
 
 function closeResponseBox(){
@@ -142,5 +173,42 @@ function toggleCart(show){
 		localStorage.setItem("displayCart", "false");
 	}
 }
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("UpArrowContainer").style.display = "block";
+    } else {
+        document.getElementById("UpArrowContainer").style.display = "none";
+    }
+}
+
+function scrollTopFunction() {
+    //document.body.scrollTop = 0;
+    //document.documentElement.scrollTop = 0;
+	 var scrollStep = -window.scrollY / (20),
+     scrollInterval = setInterval(function(){
+     if ( window.scrollY != 0 ) {
+         window.scrollBy( 0, scrollStep );
+     }
+     else clearInterval(scrollInterval); 
+ },15);
+}
+
+function magImageInside(elem){
+	var myImg=$(elem).getElementsByTagName('img');
+	(myImg[0]).css({transform:'scale(1.5)'});
+	
+}
+
 
   

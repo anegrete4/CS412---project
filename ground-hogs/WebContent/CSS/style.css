@@ -2,13 +2,14 @@
 
 
 .title,
-body {
 	font-family: open-sans, sans-serif;
+	background-color:rgb(247,247,247)!important;
 }
 
 .Footer {
 	color: #ccc;
 	background-color: #242424;
+	display:none;
 }
 .
 .Footer a {
@@ -271,42 +272,6 @@ body {
 	padding-top:80px;
 }
 
-
-.PanelButton {
-	backface-visibility: hidden;
-	border-color: rgb(218, 77, 60);
-	border-radius: 30px;
-	border-width: 1px;
-	border-style: solid;
-	box-sizing: border-box;
-	color: rgb(218, 77, 60);
-	cursor: pointer;
-	display: block;
-	float: right;
-	font-family: open-sans, sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	height: 48px;
-	line-height: 46px;
-	margin: auto;
-	outline-color: rgb(255, 255, 255);
-	outline-style: none;
-	outline-width: 0px;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	transition: all 0.35s ease;
-	width: 144.094px;
-	text-decoration: none;
-}
-
-.PanelButton:hover {
-	background-color: rgb(218, 77, 60);
-	color: rgb(255, 255, 255);
-}
-
 .InputForm {
 	width: 100%;
 	height: auto;
@@ -366,10 +331,6 @@ body {
     float:right; 
     padding:10px;
 }
-#GoogleMap{
-	overflow:hidden;
-	frameborder="1";
-}
 
 .spanRight{
 	margin:0;
@@ -385,6 +346,7 @@ body {
 .error h3{
 	color:red;
 }
+
 .success h3{
     color:#8ab4f8;
 }
@@ -397,6 +359,8 @@ body {
 	margin:0px;
 	padding:0px;
 	z-index:1000;	
+	/*position: fixed; /* Make it stick/fixed */
+    top: 0; 
 }
 .Menu{
 	list-style:none;
@@ -428,9 +392,6 @@ body {
 
 
 
-/* Use cross button*/
-
-/* Use hover background*/
 
 
 .MenuSelected{
@@ -642,9 +603,7 @@ body, html{
 	margin-left:10px;
 	display:block;
 }
-.revealWhenChecked{
-	transition: height 0.3s ease;
-}
+
 
 /*--------------------------------------- Overlay -------------------------------------- */
 .overlayBox {
@@ -672,6 +631,23 @@ body, html{
     display:block;
     background-color:rgb(33,33,36);
 	border-radius: 5px;
+}
+
+.errorMessage{
+	width:100%;
+	height:auto;
+	padding:5px;
+	background:transparent;
+	text-align:center;	
+	position:absoute;
+    display:block;
+    overflow:show;
+}
+.errorMessage p{
+	font-size:16px;
+ 	font-weight:400;
+ 	color:rgb(233,188,85)!important;/*#f90707!important;/*#ea6960!important;*/
+ 	text-align:center;
 }
 
 .popUpBox h3, .CartHeader h3{
@@ -746,6 +722,17 @@ body, html{
 	width:350px;
 	height:100px;
 }
+.popUpMessages p{
+	color: rgb(233,233,233);
+	font: 400 16px Helvetica, Arial, sans-serif;
+	height: 120px ;
+	letter-spacing: 0.32px ;
+	line-height: 20px ;
+	overflow-wrap: break-word ;
+	text-align: left ;
+	vertical-align: baseline;
+	text-size-adjust: 100% ;
+}
 /* end of pop up box for messages*/
 
 /*------------------------------ PopUP box for quickQuestion -------------------------------- */
@@ -756,10 +743,13 @@ body, html{
 
 /* end of pop up box for messages*/
 
-/*------------------------------ Upser specefic pop up box ----------------------------- */
+/*------------------------------ User specefic pop up box ----------------------------- */
 .popUpContactUsForm{
-	width:350px;
-	height:400px;
+	width:380px;
+	height:auto;
+	padding:5px;
+	transition: height 0.3s ease;
+	
 }
 .popUpForm{
 	margin:auto;
@@ -768,66 +758,64 @@ body, html{
 	height:auto;
 }
 .popUpForm select{
-	padding:0px;
-		
+	padding:0px;	
 	margin:50px auto 10px auto;
 	font-size:16px;
 	font-weight:400;
-    width: 315px;
+    width: 90%;
     height: 35px;
     display:block;
     position:relative;
 }
-.popUpForm textArea{
+
+.whiteBg{
+	background-color:white;
+	width:90%;
+	height:auto;
 	margin:auto;
-	padding:5px;
+	padding:-2px;
+	border:1px solid white;
+}
+
+
+.popUpTextArea{
+	padding:8px;
 	font-size:16px;
 	font-weight:400;
-	display:block;
-    width:304px;
+    width: 95%;
     min-height:100px;
-    position:relative;
     overflow-y:scroll;
-    resize:none;
+    background:transparent;
+     border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    
 }
-.popUpForm input[type="checkbox"] {
-    font-size:16px;
-	font-weight:400;
-	margin-left:16px;
-	margin-top:15px;
-	float:left;
-}
-.popUpForm label {
-    font-size:16px;
-	font-weight:400;
-    margin:auto;
-    padding-left:5px;
-    margin-right:15px;
-    margin-top:15px;
-    color:#fff;
-    float:left;
-}
+
 .InputFormLineGroup{
-	width:100%;
-	margin:auto;
-	display:block;
+	grid-column-gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 12px;
+	width:88%;
 	height:40px;
-	float:left;
+	margin:0px;
+	margin-right:25px;
+	margin-left:auto;
 }
 .popUpForm input[type="text"] {
 	font-size:16px;
 	font-weight:400;
     height: 30px;
-    margin:5px auto 0px auto;
-	width:315px;
-	display:inline-block;
+    margin:0px;
+    margin-top:5px;
+	width:88%;
 }
 .InputFormLineGroup input[type="text"] {
-	width:153px;
-	display:inline-block;
-}
-.popUpButtons{
-	display:inline-block;
+	width:100%;
 }
 
 /*------------------------------------ Hover Effect ------------------------------------ */
@@ -904,7 +892,7 @@ body, html{
 	background-repeat: no-repeat; 
 }
 #contactUs::after{
-	background-image: url(../images/contact-us.jpg);
+	background-image: url(../images/contactUsCloud.jpg);
 	background-repeat: no-repeat;
 }
 
@@ -985,6 +973,53 @@ body, html{
 .DownArrow:hover {
 	margin-top:15px;
 }
+
+
+#UpArrowContainer{
+	position:fixed;
+	z-index:1000;
+	bottom:0;
+	left:0;
+	background:transparent!important;
+	height:54px;
+	width:74px;
+	padding:10px;
+	display:none;
+}
+
+.UpArrow {
+  display: inline-block;
+  padding:0px;
+  width: 54px;
+  height: 54px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  z-index:1;
+}
+.UpArrow:after {
+  content: '';
+  display: inline-block;
+  margin-top: 20px!important;
+  margin-left:13px!important;
+  width: 24px;
+  height: 24px;
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  -moz-transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+  overflow:hidden;
+}
+.UpArrow:hover {
+	margin-top:-15px;
+}
+
+#UpArrow:hover{
+	margin-top:-15px!important;
+}
+
 /*end of parallelx*/
 
 /*--------------------------------------- old reference -------------------------------------- */
@@ -1023,18 +1058,23 @@ body, html{
 /*-----------------------FAQ-------------------------- */
 
 #FAQ{
-	height:670px;
+	height:690px;
+	display:block;
+	background:rgb(247,247,247)!important;
+	margin-top:30px!important;
+	margin-bottom:50px!important;
 }
 
 #FAQContent{
-	height:100%;
-	width:80%;
-	margin:0px auto 10px auto;
+	height:90%;
+	width:90%;
+	margin:30px auto 10px auto;
 	padding:0px;
-	background-color: rgb(255,255,255,0.4);
+	background-color: rgb(247,247,247)!important;
+	
 }
 #FAQContent h2{
-	margin:30px auto 10px auto;
+	margin:30px auto 10px 10px!important;
 	font-weight: 400;
 }
 #FAQContent p{
@@ -1044,10 +1084,13 @@ body, html{
 .faqArea{
 	width:90%;
 	padding:5px;
-	margin:0px auto 10px auto;
+	margin:15px auto 80px auto;
 	max-height:500px;
 	overflow-x: hidden;
   	overflow-y: scroll;	
+    border: 1px solid gray!important;/*#8ab4f8;*/
+    padding:5px!important;
+    border-radius: 5px!important;
 }
 .faqArea ol{
 	margin:auto;
@@ -1062,8 +1105,8 @@ body, html{
 	border-radius: 5px;
 	width:98%;
 }
-.faqArea li { background-color: rgb(255,255,255,0.5);}
-.faqArea li:nth-child(odd) {background-color: rgb(255,255,255,0.6);}
+.faqArea li { background-color: rgb(0,0,0,0.05);}
+.faqArea li:nth-child(odd) {background-color: rgb(0,0,0,0.02);}
 
 .faqRow{
 	width:100%;
@@ -1153,8 +1196,10 @@ body, html{
  }
 
  .popUpSalesItem{
- 	width:400px;
- 	min-height:300px;
+ 	width:500px;
+ 	min-height:250px;
+ 	margin:10% auto!important;
+	
  }
  .popSalesItemContainer{
  	margin:0px;
@@ -1220,72 +1265,6 @@ body, html{
 
 
 
-.LongPanelButton:hover {
-	background-color: rgb(218, 77, 60);
-	color: rgb(255, 255, 255);
-}
-
-.LongContent-panel {
-	background-clip: border-box;
-	background-position-x: 0px;
-	background-position-y: 0px;
-	background-repeat-x: ;
-	background-repeat-y: ;
-	background-size: auto;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	box-sizing: border-box;
-	display: block;
-	float: left;
-	height: auto;
-	line-height: 15px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 0px;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	padding-bottom: 6px;
-	padding-left: 48px;
-	padding-right: 48px;
-	padding-top: 6px;
-	position: relative;
-	width: 90%;
-	min-width: 100px!important;
-}
-
-.LongPanelButton {
-	backface-visibility: hidden;
-	border-color: rgb(218, 77, 60);
-	border-radius: 30px;
-	border-width: 1px;
-	border-style: solid;
-	box-sizing: border-box;
-	color: rgb(218, 77, 60);
-	cursor: pointer;
-	display: block;
-	float: none;
-	font-family: open-sans, sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	height: 48px;
-	line-height: 46px;
-	margin: auto;
-	outline-color: rgb(255, 255, 255);
-	outline-style: none;
-	outline-width: 0px;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	text-rendering: optimizeLegibility;
-	text-size-adjust: 100%;
-	transition: all 0.35s ease;
-	width: 500px;
-	text-decoration: none;
-}
-
-
 .AboutWorkshops{
 	padding: 10px;
 	text-indent: 10px;
@@ -1319,12 +1298,12 @@ body, html{
 	display:none;
 }
 #cartMenu{
-	z-index: 5;
 	margin-right:60px!important;
 	float:right!important;
     cursor: pointer;
+    padding-bottom:-50px;
     position: relative;
-    height:100%;
+    height:60px;
     width:60px;
     background-size: 45px;
     background-position: center;
@@ -1347,26 +1326,20 @@ body, html{
 }
  
  
- /* Check out area*/
- .popUpCheckout{
- 	min-width:600px;
- 	max-width:600px;
- 	min-height:400px;
- }
  
  
  
  /* styling for workshop form */
  .popUpWorkshopForm{
- 	min-width:400px!important;
- 	min-height:400px!important;
+ 	max-width:400px!important;
+ 	max-height:400px!important;
  }
- 
  .error{
- 	color:red!important;
+ 	/*color:red!important;*/
+	border:0.8px solid red;
  }
  
- 
+
  /*CartItems
  */
  .CartItems, .cartItemRow{
@@ -1446,77 +1419,9 @@ body, html{
  }
  
 
- .continueShoppingBtnWrapper, .checkoutButtonWrapper{
- 	padding:10px 20px 10px 0px!important;
- 	height:33px!important;
- }
- 
- .continueShoppingBtn, .checkoutButton{
- 	width:auto;
- 	left:0;
- 	top:0;
- 	cursor:pointer;
- 	background: #f2bb3c!important; /*#e7e9ec*/
-    border-radius: 5px;
-    border-color: #f2bb3c!important;
-    border-style: solid;
-    border-width: 1px;
-    text-align:center;
-    height: 30px!important;
-    border:none!important;
- 	color: #111!important;
- 	cursor: pointer;
- 	line-height: 19px;	
- 	font-size: 14px;
-	font-weight:400;
-	text-decoration:none;
- }
- 
- 
- .continueShoppingBtn:hover,.checkoutButton:hover{
- 	background:#f9b109!important;
- }
- .removeItemButtonWrapper{
- 	margin-right:0px;
- 	margin-left:auto;
- }
- 
- .removeItemButton{
- 	width:auto;
- 	left:0;
- 	top:0;
- 	cursor:pointer;
- 	background: transparent!important;
-    text-align:center;
-    height: 30px!important;
- 	color: #ea6960!important;
- 	cursor: pointer;
- 	line-height: 19px;	
- 	font-size: 14px;
-	font-weight:100;
-	text-decoration:none;
-	border: 1px solid #ea6960;
-	border-radius: 5px;
- }
- .removeItemButton:hover{
- 	background:#D04422!important;
- 	color:white!important;
- }
- 
- }
- 
- .itemRow{
- 	
- }
  .cartProductImage img{
  	height:150px!important;
  	width:auto;
- 
- }
- 
- .buttonAnimated{
- 	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
  }
  
  .cartItemTotal, .cartItemName{
@@ -1572,11 +1477,569 @@ body, html{
  	text-align:center;
  }
  
- .buttonEmpty, .continueShoppingBtn{
- 	margin:0px!important;
- 	padding:0px!important;
+ .clickable{
+ 	padding-left:15px!important;
+ 	color:#f2bb3c!important;
+ 	text-decoration:none;
+ 	cursor:pointer;
+ }
+ .clickable:hover{
+ 	text-decoration:underline;
+ 
+ }
+ 
+ .unitCostPopUp{
+ 	font-size:20px;
+ 	font-weight:300;
  	
+ }
+ .descriptionRow{
+ 	font-size:14px;
+ 	line-height:16px!important;
+ 	text-align:justify!important;
+ }
+ .description{
+ 	color:#8ab4f8;
+ 	margin-right:15px;
+ }
+ 
+ .popUpProductImage{
+ 	width:10px;
+ 	height:auto;
+ 	padding:10px;
+ }
+ 
+ .reviewArea{
+ 	width:100%!important;
+ }
+ #reviewsWrapper{
+ 	display:none;
+ 	min-height:200px;
+ 	max-height:100px!important;
+ 	overflow-x:hidden;
+ 	overflow-y:scroll;
+ }
+ .expandReview{
+ 	font-size:14px;
+ 	font-weight:300;
+ 	text-align:center!important;
+ }
+
+ .noReviews{
+ 	font-size:16px;
+ 	font-weight:100;
+ 	color: #ea6960!important;
+ 	text-align: center;
+ 	margin:100px auto auto 100px!important;
+ 	width:100%;
+ }
+ 
+ .sorryMsg{
+ 	padding:100px auto auto 100px!important;
+ 	font-size:16px;
+ 	font-weight:100;
+ 	color: #ea6960!important;
+ 	text-align: center;
+ }
+ 
+ .reviewerName{
+ 	font-size: 16px;
+	font-weight:300;
+	text-decoration:none;
+	color:#8ab4f8;
+	width:auto!important;
+	text-align:left;
+ }
+ .reviewMsg{
+ 	color:rgb(238,238,238)!important;
+ 	font-size:14px;
+ 	line-height:16px!important;
+ 	text-align:justify!important;
+ }
+ 
+ tr.bottomBorder td {
+  border-bottom: .5px solid gray!important;
+}
+
+.ContactFooterPanel h3, .ContactFooterPanel p{
+	max-width:200px!important;
+	margin:0px!important;
+	padding:0px!important;
+	text-align:left!important;
+}
+.MeetUsArea{
+	width:83%;
+	margin:auto;
+	height:350px;
+}
+#MeetUsGrid {
+	grid-column-gap: 20px;
+	display: grid;
+	height: auto!important;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 50px;
+	border: 1px solid gray!important;/*#8ab4f8;*/
+    padding:15px!important;
+    
+	padding-left:60px!important;
+    margin:0px!important;
+    border-radius: 5px!important;
+	
+}
+
+#MeetUsGrid h3{
+	color: black;/*#666;*/
+	font-size:14px;
+	font-weight:300;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	text-align:left;
+}
+#MeetUsGrid p{
+	color: black!important;/*#ccc!important;*/
+	font-size:16px;
+	font-weight:200;
+	line-height:20px;
+	letter-spacing:1px;
+	text-align:left;
+}
+.fixedWidth{
+	max-width:250px;
+}
+.floatLeft{
+	float:left!important;
+}
+
+#GoogleMap{
+	overflow:hidden;
+	width:480px!important;
+	height:200px!important;
+	frameborder="1";
+}
+
+/* all about buttons here */
+
+.magButtonWrapper{
+	width:300px!important;
+	height:40px!important;
+	vertical-align:middle!important;
+	text-align:center!important;;
+	overflow:hidden;
+	margin:auto!important;
+	 outline: none;
+	
+}
+.magButton{
+	background-color:transparent;
+	border-color:white;
+	transition: all 0.35s ease;
+	width: 150px;
+	padding:10px 5px 10px 5px;
+	text-decoration: none;
+	cursor: pointer;
+	border:1px solid rgb(0,255,0);
+	color:rgba(0,0,0,0.8);
+	font-size: 15px;
+	font-weight: 800;
+	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+	border-radius: 30px;
+	background-color: rgba(0,255,0,0.7);
+	 outline: none;
+	
+	
+}
+.magButton:hover{
+	background-color: rgba(0,255,0,1);
+	color:black;
+	transform: scale(1.15);
+}
+
+.magButton a{
+	text-decoration:none;
+	color:rgba(0,0,0,0.8);
+	font-size: 15px;
+	font-weight: 800;
+	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+}
+.magButton a:hover{
+	text-decoration:none;
+	color:black;
+	font-size: 15px;
+	font-weight: 800;
+	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+}
+
+/* standard button for the website */
+
+.sButton input{
+	
+	border:1px solid rgba(255,255,255,0.3);/**/
+	border-radius: 5px;
+ 	border-radius: 30px;
+	background-color: rgba(92,144,242,0.7);
+	
+	width:auto!important;
+	min-width:100px;
+ 	margin:40px auto auto 0px!important;
+ 	padding:10px 5px 10px 5px;
+	
+	color:rgba(0,0,0,0.8);
+	
+	
+	transition: all 0.35s ease;
+	text-decoration: none;
+	cursor: pointer;
+	
+ 	height:35px!important;
+ 	display:inline!important;
+ 	float:left!important;
+ 	cursor:pointer;
+ 	
+ 	font-size:16px;
+ 	font-weight:400;
+ 	font-family: open-sans, sans-serif!important;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	text-align:center!important;
+	color:white;
+ 	
+ }
+ .sButton input:hover,.sButton select:hover{
+ 	background-color: rgba(92,144,242,1);/*background:#8ab4f8;*/
+ } 
+ 
+ /* color for the input buttons*/
+/* by default yellow color */
+ .tButton{
+ 	width:auto;
+ 	left:0;
+ 	top:0;
+ 	cursor:pointer;
+ 	background: #f2bb3c!important;
+ 	border-radius: 5px;
+ 	border-width:1px;
+ 	border:none;
+ 	vertical-align:middle;
+ 	height:30px!important;
+ 	color:#111;
+ 	line-height:19px;
+ 	font-size:14px;
+ 	font-weight:400;
+ 	text-decoration:none;
+ 	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-align:center!important;
+ }
+ .tButton:hover{
+  	background:#f9b109!important;
+ }
+ 
+ .colorRed{
+ 	color: #ea6960!important;
+ 	background: transparent!important;
+ 	border: 1px solid #ea6960;
+ }
+ 
+ .colorRed:hover{
+ 	background:#D04422!important;
+ 	color:white!important;
+ }
+ .showHide{
+ 	width:110%!important;
+ 	height:20px!important;
+ 	vertical-align:middle;
+ 	text-align:center;
+ 	margin-bottom:0px;
+ 	margin-left:-8px;
+ 	background:rgba(255,255,255,0.2)!important;
+ 	display:none;
+ }
+ 
+ .tButton a{
+ 	text-decoration:none;
+ 	padding:10px;
+ 	height:20px;
+ 	display:block;
+ 	color:inherit!important;
+ 	margin-top:-5px;
+ }
+ .tButton a:hover{
+ 	text-decoration:none;
+ 	color:inherit!important;
+ }
+ 
+ .clickable{
+
+ 	max-height:15px!important;
+ 	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+ }
+ 
+ /*drop down add to cart*/
+ .ddBoxQty{
+ 	background:#4279d6;
+ 	width:50px!important;
+ 	height:30px!important;
+ 	float:right!important;
+ 	color:white!important;
+ 	border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+ 	
+ }
+ .ddBoxQty:hover{
+ 	background:#067eff;
+ }
+ .twoInputButtonsWrapper{
+ 	width:100%;
+ 	padding-left:130px;
+ }
+ .twoInputButtonsWrapper input{
+ 	margin-top:10px;
+ 	min-width:100px;
  }
  
  
-   
+ /* adjustments */
+ .paddingTop{
+ 	padding-top:40px;
+ } 
+ 
+ .disableTextSelection{
+	 -webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+ }
+ 
+ 
+ /* Check out area*/
+ .popUpCheckout{
+ 	margin-top:1%;
+ 	min-width:85%;
+ 	max-width:85%;
+ 	min-height:90%;
+ 	z-index:500;
+ }
+
+ 
+ #popUpCheckoutArea {
+
+}
+
+#shippingInfo, #paymentInfo, #cartInfo{
+	margin:25px 10px 10px 10px;
+	min-width:380px;
+	min-height:630px;
+	
+	color: #ea6960!important;
+ 	background: transparent!important;
+ 	float:left;
+ 	border: 1px solid gray;
+    border-radius: 5px;
+    background-color:rgb(33,33,36);
+    max-weidth:300px!important;
+}
+#cartInfo{
+	margin-top:20px!important;
+}
+
+.checkoutMyCart .orderSummaryRow{
+	
+}
+.itemRow2{
+	width:100px;
+	overflow:hidden;
+}
+
+
+/* style for drop down */
+
+
+.navbar {
+	overflow: hidden;
+    width:100%;
+    background-color:rgb(33,33,36);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;/* */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* ----------------------------- Shopping Page ------------------------------------ */
+.ShopArea{
+	background:rgb(247,247,247)!important;
+	height:100%!important;
+	margin-left:auto;
+	margin-right:auto;
+}
+.salesItemShop{
+	min-width:300px;
+	max-width:300px;
+	max-height:320px;
+	min-height:320px;
+	float:left;
+	margin:15px;
+	padding:10px;
+	background:white!important;
+	box-sizing: border-box;
+	background-color: #eed;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	transition:.5s ease;
+    
+}
+.salesImage img{
+	background:#FFFFFF;
+	width:150px!important;
+	height:auto!important;
+}
+
+.salesName{
+	
+}
+.salesPrice{
+	
+}
+.cartItemRating{
+	
+}
+
+/* hover sales product */
+.salesItemShop{
+	
+}
+
+.middle{
+	opacity:0;
+	top:50%;
+	left:50%;
+}
+.salesItemShop:hover .middle{
+	opacity:1;
+	z-index:0;
+}
+
+.middle a{
+	background:#f1f1f1;
+	width:50px;
+	padding:8px;
+	border-radius:10px;
+	cursor:pointer;
+	z-index:1;
+	
+}
+
+/* sales item texts */
+.salesName h1{
+	font-size:20px;
+}
+.salesPrice h2{
+	font-size:18px;
+}
+
+/* uButton */
+.uButton{
+	background:transparent;
+	width:120px!important;
+	height:22px!important;
+	margin:auto;
+	text-align:center;
+	vertical-align:middle;
+	padding-top:5px!important;
+}
+.uButton a{
+	margin-top:5px!important;
+	background:transparent;
+	text-decoration:none;
+	display:inline!important;
+}
+.uButton:hover a{
+	background:transparent;
+
+}
+
+/* pop up product image */
+
+.popUpProdImg img{
+	width:300px!important;
+	height:auto!important;
+	background:transparent!important;
+	
+}
+
+.minWidth td{
+	min-width:470px!important;
+	padding:none;
+}
+

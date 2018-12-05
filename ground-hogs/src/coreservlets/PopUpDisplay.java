@@ -11,9 +11,7 @@ public class PopUpDisplay extends Action {
                                HttpServletRequest request,
                                HttpServletResponse response)
       throws Exception {
-	  ArrayList<String> responses= new ArrayList<String>();
-	  request.getSession().setAttribute("messages", responses);
-	  responses.add("Thank you for your complaint, It will help us to improve ourselves moving forward.");
+	  request.getSession().removeAttribute("responses");
 	  String responseType=request.getParameter("responseType")==null?"error":request.getParameter("responseType");
 	  setResponseInSession(request.getSession(),request.getParameter("popUpTitle"),request.getParameter("popUpContent"),responseType);
 	  return(mapping.findForward("returnToLastPage"));

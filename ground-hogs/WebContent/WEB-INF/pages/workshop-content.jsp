@@ -2,6 +2,7 @@
    pageEncoding="UTF-8"%>
 
 <%@ page import="java.util.*" %> 
+<%@ page import="utility.Helper" %> 
 <%@ page import="model.Workshop" %>
 <%@ page import="database.DBAccess" %>     
 <%!ArrayList<Workshop> workshops=new ArrayList<Workshop>();%>
@@ -24,8 +25,8 @@
 				 <div class="AboutWorkshops">
    					<h4>
    						Our workshops are a great way to learn a lot about groundhogs quickly.
-   						We offer three different free workshops for ground-hog parents every week.
-      	 				They are presented by our favorite positive ground-hog trainers and other 
+   						We offer three different free workshops for groundhog parents every week.
+      	 				They are presented by our favorite positive groundhog trainers and other 
       	 				groundhog related professionals in the area.  We also demonstrate the proper use of a
       	 				variety of groundhog toys and training products at every workshop.
        				</h4>
@@ -36,7 +37,7 @@
 				<div class="column"> 
 					<a><img src="images\groudhogsimages\groundhog2.jpg" alt="kissing hogs" width="410" height="350"></a>
 				</div>
-				<div class="column">
+				<div class="column" id="Workshop1">
 					<h5><%=workshops.get(0).getWorkshopName() %></h5>
 					<p><%=workshops.get(0).getWorkshopDescription()%>
 					<br>Day:<%=workshops.get(0).getWorkshopDay()%>
@@ -51,14 +52,14 @@
 		               <input type="hidden" value="<%=workshops.get(0).getWorkshopId()%>" name="registerId">
 		               <input type="hidden" value="<%=workshops.get(0).getWorkshopCapacity()%>" name="workshopCapacity">
 		                 <input type="hidden" value="<%=workshops.get(0).getRegistration()%>" name="registration">
-		               <input type="submit" value="Register" class="PanelButton">  
+		               <input type="submit" value="Register" class="tButton">  
 		            </form>
 				</div>
 			</div>
 
 			<div class="row" id="media2">
 		         
-				<div class="column">
+				<div class="column" id="Workshop2">
 					<h5><%=workshops.get(1).getWorkshopName() %></h5>
 					<p><%=workshops.get(1).getWorkshopDescription()%>
 					<br>Day:<%=workshops.get(1).getWorkshopDay()%>
@@ -74,7 +75,7 @@
 		               <input type="hidden" value="<%=workshops.get(1).getWorkshopId()%>" name="registerId">
 		               <input type="hidden" value="<%=workshops.get(1).getWorkshopCapacity()%>" name="workshopCapacity">
 		                 <input type="hidden" value="<%=workshops.get(1).getRegistration()%>" name="registration">
-		               <input type="submit" value="Register" class="PanelButton">  
+		               <input type="submit" value="Register" class="tButton">  
 		            </form>
 				</div>
 				<div class="column"> 
@@ -88,7 +89,7 @@
 					<a><img src="images\groudhogsimages\groundhog4.jpg" alt="baby hog" width="500" height="400"></a>
 				</div>
 				
-				<div class="column">
+				<div class="column" id="Workshop3">
 					<h5><%=workshops.get(2).getWorkshopName() %></h5>
 					<p><%=workshops.get(2).getWorkshopDescription()%>
 					<br>Day:<%=workshops.get(2).getWorkshopDay()%>
@@ -103,7 +104,7 @@
 		               <input type="hidden" value="<%=workshops.get(2).getWorkshopId()%>" name="registerId">
 		               <input type="hidden" value="<%=workshops.get(2).getWorkshopCapacity()%>" name="workshopCapacity">
 		                 <input type="hidden" value="<%=workshops.get(2).getRegistration()%>" name="registration">
-		               <input type="submit" value="Register" class="PanelButton">  
+		               <input type="submit" value="Register" class="tButton">  
 		            </form>
 				</div>
 			</div>

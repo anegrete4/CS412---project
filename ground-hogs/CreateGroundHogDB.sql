@@ -25,7 +25,7 @@ CREATE TABLE GGG_SalesItem -- Codes, and description.
 	itemName VARCHAR(500) NOT NULL,
     itemDescription VARCHAR(500) NOT NULL DEFAULT 'No description available for this product',
     itemPrice DECIMAL(6,4) NOT NULL,
-    imagePath VARCHAR(500) DEFAULT 'NoImage.jpg',
+    imagePath VARCHAR(500) DEFAULT 'NoImage.png',
     itemType VARCHAR(20) DEFAULT 'Food'
 );
 
@@ -238,7 +238,7 @@ VALUES (1,'Keshab','This is a nice product use it',5),
 ;
 
 INSERT INTO GGG_Workshop ( workshopName, workshopDescription, workshopDay, workshopTime)
-VALUES ('Proper Introductons', 'You likely realize that first impressions count when meeting someone new. The same holds true for groundhogs. A botched introduction could lead to a cool relationship, or worse, between groundhogs. ', 'Monday', '6:00PM-8:00PM'),
-		('Groudhog Confidence Building', 'Is your groundhog shy around people or environmental changes? In this class, we will learn to read our groundhog\’s stress signals, teach our groundhog to go to their safe place to relax, establish successful introductions to new people and build their confidence. ', 'Wednesday', '6:00PM-8:00PM'),
+VALUES ('Proper Introductions', 'You likely realize that first impressions count when meeting someone new. The same holds true for groundhogs. A botched introduction could lead to a cool relationship, or worse, between groundhogs. ', 'Monday', '6:00PM-8:00PM'),
+		('Groundhog Confidence Building', 'Is your groundhog shy around people or environmental changes? In this class, we will learn to read our groundhog\Â’s stress signals, teach our groundhog to go to their safe place to relax, establish successful introductions to new people and build their confidence. ', 'Wednesday', '6:00PM-8:00PM'),
         ('Your New Groundhog Cub', 'Did you just get a groundhog cub? This workshop is designed to give you a jump start on dealing with cub problems! Issues that will be addressed include: housebreaking, crate training, jumping, and social development.', 'Saturday', '1:00PM-4:00PM');
 
