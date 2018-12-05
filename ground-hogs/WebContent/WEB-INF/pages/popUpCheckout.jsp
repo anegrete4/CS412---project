@@ -15,13 +15,18 @@
 		myCart=(Cart)request.getSession().getAttribute("myCart");
 		isCartEmpty=myCart.getTotalItems()<=0;
 	}
+	Boolean isSameBilling=request.getParameter("isSameBilling")!=null;
+	
 %>
 
-   
-   
+<%
+	if(!isCartEmpty){
+		
+%>
+
    <form class="popUpForm" ACTION="submitCheckout.do" METHOD="POST">
      
-     <div id="popUpCheckoutArea">			
+     <div id="popUpCheckoutArea" class="invisibleScrollBg">			
 			
 		<!-- BEGIN CART INFO -->
 		<div id="cartInfo"> 
@@ -89,12 +94,66 @@
  <input class=" <%=Helper.validate("saddress") %>" type="text" name="saddress" id="saddress" value="<%=Helper.getStoredString("saddress") %>" placeholder="Street Address: 123 Main St." >
  <input class=" <%=Helper.validate("saddress2") %>" type="text" name="saddress2" id="saddress2" value="<%=Helper.getStoredString("saddress2") %>" placeholder="Appartment, House, Unit">
  <input class="city <%=Helper.validate("city") %>" type=text name="city" id="city" value="<%=Helper.getStoredString("city") %>" placeholder="City" >
- <input class="state <%=Helper.validate("state") %>" type="text" name="state" id="state" value="<%=Helper.getStoredString("state") %>" placeholder="State">
+  <select name="state" id="state" class="state <%=Helper.validate("state") %>">
+ 		<option SELECTED value="">Choose State</option>
+						<option  value="AL">Alabama</option>
+						<option  value="AK">Alaska</option>
+						<option  value="AZ">Arizona</option>
+						<option  value="AR">Arkansas</option>
+						<option  value="CA">California</option>
+						<option  value="CO">Colorado</option>
+						<option  value="CT">Connecticut</option>
+						<option  value="DE">Delaware</option>
+						<option  value="DC">District Of Columbia</option>
+						<option  value="FL">Florida</option>
+						<option  value="GA">Georgia</option>
+						<option  value="HI">Hawaii</option>
+						<option  value="ID">Idaho</option>
+						<option  value="IL">Illinois</option>
+						<option  value="IN">Indiana</option>
+						<option  value="IA">Iowa</option>
+						<option  value="KS">Kansas</option>
+						<option  value="KY">Kentucky</option>
+						<option  value="LA">Louisiana</option>
+						<option  value="ME">Maine</option>
+						<option  value="MD">Maryland</option>
+						<option  value="MA">Massachusetts</option>
+						<option  value="MI">Michigan</option>
+						<option  value="MN">Minnesota</option>
+						<option  value="MS">Mississippi</option>
+						<option  value="MO">Missouri</option>
+						<option  value="MT">Montana</option>
+						<option  value="NE">Nebraska</option>
+						<option  value="NV">Nevada</option>
+						<option  value="NH">New Hampshire</option>
+						<option  value="NJ">New Jersey</option>
+						<option  value="NM">New Mexico</option>
+						<option  value="NY">New York</option>
+						<option  value="NC">North Carolina</option>
+						<option  value="ND">North Dakota</option>
+						<option  value="OH">Ohio</option>
+						<option  value="OK">Oklahoma</option>
+						<option  value="OR">Oregon</option>
+						<option  value="PA">Pennsylvania</option>
+						<option  value="RI">Rhode Island</option>
+						<option  value="SC">South Carolina</option>
+						<option  value="SD">South Dakota</option>
+						<option  value="TN">Tennessee</option>
+						<option  value="TX">Texas</option>
+						<option  value="UT">Utah</option>
+						<option  value="VT">Vermont</option>
+						<option  value="VA">Virginia</option>
+						<option  value="WA">Washington</option>
+						<option  value="WV">West Virginia</option>
+						<option  value="WI">Wisconsin</option>
+						<option  value="WY">Wyoming</option>
+					</select>
+ 
+ 
  <input class="zip <%=Helper.validate("zip") %>" type="text" name="zip" id="zip" value="<%=Helper.getStoredString("zip") %>" placeholder="Zip" >
  <div class="line"></div>
  <input class=" <%=Helper.validate("email") %>" type="text" name="email" id="email" value="<%=Helper.getStoredString("email") %>" placeholder="Email: sample@sample.com" >
- <input class=" <%=Helper.validate("vemail") %>" type="text" name="vemail" id="vemail" value="<%=Helper.getStoredString("vemail") %>" placeholder="Verify the email">
-</div>
+ </div>
 
 		</div>
 		
@@ -105,20 +164,107 @@
 			<h3 class="cartOrderSummaryH3">Payment Information</h3> 
 			<div id="sectionBilling">
 <input class=" <%=Helper.validate("cname") %>" type="text" name="cname" id="cname" value="<%=Helper.getStoredString("cname") %>" placeholder="Name on the card" >
- 
  <input class=" <%=Helper.validate("cardno") %>" type="text" name="cardno" id="cardno" value="<%=Helper.getStoredString("cardno") %>" placeholder="Debit/Credit card no" >
- <input class="month <%=Helper.validate("expmonth") %>" type="text" name="expmonth" id="expmonth" value="<%=Helper.getStoredString("expmonth") %>" placeholder="Month">
- <input class="expyear <%=Helper.validate("expyear") %>" type="text" name="expyear" id="expyear" value="<%=Helper.getStoredString("expyear") %>" placeholder="YYYY">
+ <span class="checkoutInlineGroup adjustMarginTopCheckoutSelect">
+    <select name="expmonth" id="expmonth" class="month <%=Helper.validate("expmonth") %>">
+       	<option SELECTED value="">Exp. Month</option>
+		<option  value="1">01 - Jan</option>
+		<option  value="2">02 - Feb</option>
+		<option  value="3">03 - Mar</option>
+		<option  value="4">04 - Apr</option>
+		<option  value="5">05 - May</option>
+		<option  value="6">06 - Jun</option>
+		<option  value="7">07 - July</option>
+		<option  value="8">08 - Aug</option>
+		<option  value="9">09 - Sep</option>
+		<option  value="10">10 - Oct</option>
+		<option  value="11">11 - Nov</option>
+		<option  value="12">12 - Dec</option>
+	 </select>
+	 <select name="expyear" id="expyear" class="expyear <%=Helper.validate("expyear") %>">
+       	<option SELECTED value="">Exp. Year</option>
+		<option  value="2018">2018</option>
+		<option  value="2019">2019</option>
+		<option  value="2020">2020</option>
+		<option  value="2021">2021</option>
+		<option  value="2022">2022</option>
+		<option  value="2023">2023</option>
+		<option  value="2024">2024</option>
+		<option  value="2025">2025</option>
+		<option  value="2026">2026</option>
+		<option  value="2027">2027</option>
+		<option  value="2029">2028</option>
+		<option  value="2030">2029</option>
+	 </select>
  <input class="csv <%=Helper.validate("csv") %>" type="text" name="csv" id="csv" value="<%=Helper.getStoredString("csv") %>" placeholder="CSV">
- <input class=" <%=Helper.validate("issamebilling") %>" type="checkbox" name="issamebilling" id="issamebilling" value="issamebilling"  <%=Helper.isChecked("issamebilling") %>>
- <label for="issamebilling">Billing address is same as shipping.</label>
-
- <input class=" <%=Helper.validate("bsaddress") %>" type="text" name="bsaddress" id="sbaddress" value="<%=Helper.getStoredString("bsaddress") %>" placeholder="Street Address: 123 Main St." >
- <input class=" <%=Helper.validate("bsaddress2") %>" type="text" name="bsaddress2" id="bsaddress2" value="<%=Helper.getStoredString("bsaddress2") %>" placeholder="Appartment, House, Unit">
- <input class="city <%=Helper.validate("bcity") %>" type=text name="cbity" id="bcity" value="<%=Helper.getStoredString("bcity") %>" placeholder="City" >
- <input class="state <%=Helper.validate("bstate") %>" type="text" name="bstate" id="bstate" value="<%=Helper.getStoredString("bstate") %>" placeholder="State">
+</span>
+ 
+ <span class="checkoutInlineGroup adjustCheckbox">
+ 	<input style="cursor:pointer;" type="checkbox" name="isSameBilling" id="isSameBilling" <%=isSameBilling?"checked":"" %>>
+ 	<label for="isSameBilling" style="cursor:pointer;">Billing address is same as shipping.</label>
+</span>
+<span id="billingAddress">
+ <input class=" <%=Helper.validate("baddress") %>" type="text" name="baddress" id="baddress" value="<%=Helper.getStoredString("baddress") %>" placeholder="Street Address: 123 Main St." >
+ <input class=" <%=Helper.validate("baddress2") %>" type="text" name="baddress2" id="baddress2" value="<%=Helper.getStoredString("baddress2") %>" placeholder="Appartment, House, Unit">
+ <input class="city <%=Helper.validate("bcity") %>" type=text name="bcity" id="bcity" name="bcity" value="<%=Helper.getStoredString("bcity") %>" placeholder="City" >
+  <select name="bstate" id="bstate" class="state <%=Helper.validate("bstate") %>">
+ 		<option SELECTED value="">Choose State</option>
+						<option  value="AL">Alabama</option>
+						<option  value="AK">Alaska</option>
+						<option  value="AZ">Arizona</option>
+						<option  value="AR">Arkansas</option>
+						<option  value="CA">California</option>
+						<option  value="CO">Colorado</option>
+						<option  value="CT">Connecticut</option>
+						<option  value="DE">Delaware</option>
+						<option  value="DC">District Of Columbia</option>
+						<option  value="FL">Florida</option>
+						<option  value="GA">Georgia</option>
+						<option  value="HI">Hawaii</option>
+						<option  value="ID">Idaho</option>
+						<option  value="IL">Illinois</option>
+						<option  value="IN">Indiana</option>
+						<option  value="IA">Iowa</option>
+						<option  value="KS">Kansas</option>
+						<option  value="KY">Kentucky</option>
+						<option  value="LA">Louisiana</option>
+						<option  value="ME">Maine</option>
+						<option  value="MD">Maryland</option>
+						<option  value="MA">Massachusetts</option>
+						<option  value="MI">Michigan</option>
+						<option  value="MN">Minnesota</option>
+						<option  value="MS">Mississippi</option>
+						<option  value="MO">Missouri</option>
+						<option  value="MT">Montana</option>
+						<option  value="NE">Nebraska</option>
+						<option  value="NV">Nevada</option>
+						<option  value="NH">New Hampshire</option>
+						<option  value="NJ">New Jersey</option>
+						<option  value="NM">New Mexico</option>
+						<option  value="NY">New York</option>
+						<option  value="NC">North Carolina</option>
+						<option  value="ND">North Dakota</option>
+						<option  value="OH">Ohio</option>
+						<option  value="OK">Oklahoma</option>
+						<option  value="OR">Oregon</option>
+						<option  value="PA">Pennsylvania</option>
+						<option  value="RI">Rhode Island</option>
+						<option  value="SC">South Carolina</option>
+						<option  value="SD">South Dakota</option>
+						<option  value="TN">Tennessee</option>
+						<option  value="TX">Texas</option>
+						<option  value="UT">Utah</option>
+						<option  value="VT">Vermont</option>
+						<option  value="VA">Virginia</option>
+						<option  value="WA">Washington</option>
+						<option  value="WV">West Virginia</option>
+						<option  value="WI">Wisconsin</option>
+						<option  value="WY">Wyoming</option>
+					</select>
  <input class="zip <%=Helper.validate("bzip") %>" type="text" name="bzip" id="bzip" value="<%=Helper.getStoredString("bzip") %>" placeholder="Zip" >
+</span>
 </div>
+
 <div id="cartTableSummary" class="orderBoxWrapper">
 		<h3 class="cartOrderSummaryH3">Order Summary</h3> 
 	   <table class="cartTableSummary">
@@ -170,6 +316,21 @@
 		</div>
 		
 	</div>
-		
       		
 </form>
+<%
+	}
+		else{
+      			%>
+      				<div class="EmptyCartMessage">
+      					<h3 class="EmptyCartMessageH3">Your cart is empty!</h3>
+      					<div class="continueShoppingBtnWrapper buttonEmpty">
+      						<a href="http://localhost:8080/ground-hogs/Shopping.jsp">
+	            		   	  <input class="tButton startShoppingCenter yellowGlow btnMiddle" onClick="toggleCart('false')" title="Continue Shopping"  value="Start shopping" name="placeYourOrder">
+	            			</a>
+	            		</div>
+      				</div>
+      				
+      			<%
+		}
+%>

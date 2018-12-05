@@ -1,7 +1,13 @@
 
 $(document).ready(function(){
 	
+	$('#isSameBilling').change(function() {
+		 $('#billingAddress').toggle(!this.checked);
+		});
 	
+	if ($("#isSameBilling").is(':checked')){
+	    $("#billingAddress").hide();
+	}
 	
 	window.onscroll = function() {scrollFunction()};
 	$(".nextSection").on('click', function(event) {  
@@ -56,27 +62,7 @@ $(document).ready(function(){
 });
 
 
-function setVisibility(className, isVisible){
-	var item=document.getElementsByClassName(className);
-	for(var i=0;i<item.length; i++){
-		 if (isVisible) {
-		      (item[i]).style.visibility = "visible";
-		      (item[i]).style.height="30px";
-		    } else{
-		    	(item[i]).style.visibility = "hidden";
-		    	(item[i]).style.height="0px";
-		   }
-	}
-}
 
-function toggleVisibility(className) {
-	setVisibility(className,cBox.is(':checked'));
-}
-
-function togleDisplayContactUsForm(elemId){
-	
-	
-}
 
 function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
 	var box=document.getElementsByClassName(containerClass);
@@ -96,11 +82,6 @@ function resizeContainer(containerClass,largeHeight,smallHeight, makeLarge){
 	
 }
 
-function toggleVisibilityNChangePopUpHeight(className,largeHeight,smallHeight,mainContainerClass, ddBoxId){
-	var e = document.getElementById(ddBoxId);
-	setVisibility(className,e.selectedIndex!=4);	
-	resizeContainer(mainContainerClass,largeHeight,smallHeight,e.selectedIndex!=4);
-}
 
 function toggleDisplayById(elemId, ddBoxId){
 	
@@ -209,6 +190,7 @@ function magImageInside(elem){
 	(myImg[0]).css({transform:'scale(1.5)'});
 	
 }
+
 
 
   

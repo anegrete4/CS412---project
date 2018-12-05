@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
-
+*{ /* user can not select anything*/
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+}
 .title,
 	font-family: open-sans, sans-serif;
 	background-color:rgb(247,247,247)!important;
@@ -1843,15 +1850,17 @@ body, html{
  /* Check out area*/
  .popUpCheckout{
  	margin-top:1%;
- 	min-width:85%;
+ 	min-width:95%;
  	max-width:85%;
- 	min-height:95%;
+ 	height:auto;
  	z-index:500;
  }
 
- 
  #popUpCheckoutArea {
-
+ 	max-height:680px!important;
+ 	min-width:100%!important;
+ 	overflow-x:hidden;
+ 	overflow-y:scroll!important;
 }
 #sectionShipping, #sectionBilling{
 	padding-top:50px!important;
@@ -1869,39 +1878,44 @@ body, html{
 
 #shippingInfo, #paymentInfo, #cartInfo{
 	margin:25px 10px 10px 10px;
-	min-width:380px;
-	max-width:380px;
-	min-height:630px;
-	max-height:630px;
+	min-width:380px!important;
+	max-width:380px!important;
+	min-height:630px!important;
+	max-height:630px!important;
 	
 	color: #ea6960!important;
- 	background: transparent!important;
  	float:left;
  	border: 1px solid gray;
     border-radius: 5px;
-    background-color:rgb(33,33,36);
+    background-color:rgb(33,33,36)!important;;
     max-weidth:300px!important;
 }
 
 .city{
-	width:150px!important;
+	width:115px!important;
 	margin-right:2px!important;
 }
 .state{
-	width:50px!important;
+	width:130px!important;
 	margin-right:2px!important;
+	display:inline!important;
+	margin-top:0px!important;
 }
 .zip{
-	width:112px!important;
+	width:70px!important;
 }
-.month{
-	width:80px!important;
+.month,.expyear{
+	width:110px!important;
+	display:inline!important;
+	margin-right:10px!important;
 }
-.expyear{
-	width:100px!important;
-}
+
 .csv{
-	width:50px!important;
+	width:40px!important;
+	margin-left:45px!important;
+}
+.adjustMarginTopCheckoutSelect{
+	margin-top:-50px!important;
 }
 
 
@@ -1917,6 +1931,18 @@ body, html{
 	overflow:hidden;
 }
 
+.checkoutInlineGroup{
+	display:block!important;
+	
+}
+.checkoutInlineGroup label,.checkoutInlineGroup input{
+	color:#8ab4f8!important;
+	
+}
+.adjustCheckbox{
+	cursor:pointer!important;	
+	margin-left:-100px!important;
+}
 
 /* style for drop down */
 
@@ -2097,10 +2123,12 @@ body, html{
  	background:rgba(0,255,0,.1)!important;
  	/*background: transparent!important;
  	*/border: 1px solid rgba(0,255,0,.5);
+ 	text-decoration:none!important;
  }
  .greenGlow:hover{
  	background:rgba(0,255,0,.5)!important;
  	color:white!important;
+ 	text-decoration:none!important;
  }
  
  .redGlow{
@@ -2108,10 +2136,12 @@ body, html{
  	background:rgba(255,0,0,.1)!important;
  	/*background: transparent!important;
  	*/border: 1px solid rgba(255,0,0,.5);
+ 	text-decoration:none!important;
  }
  .redGlow:hover{
  	background:rgba(255,0,0,.5)!important;
  	color:white!important;
+ 	text-decoration:none!important;
  }
  
  .yellowGlow{
@@ -2120,8 +2150,15 @@ body, html{
  	height:24px!important;
  	/*background: transparent!important;
  	*/border: 1px solid yellow;
+ 	text-decoration:none!important;
  }
  .yellowGlow:hover{
  	background:rgba(255,255,0,.7)!important;
  	color:white!important;
+ 	text-decoration:none!important;
+ }
+ .btnMiddle{
+ 	float:left;
+ 	
+ 	
  }
