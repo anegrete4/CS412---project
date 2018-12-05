@@ -28,7 +28,7 @@
 					<%
 				}
 			}
-		}
+		} 
 		if(!hasResponse){
 			session.setAttribute("title", request.getParameter("title"));
 			session.setAttribute("content", request.getParameter("content"));

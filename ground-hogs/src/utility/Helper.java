@@ -141,6 +141,15 @@ public class Helper {
 			}
 		return val;
 	}
+	public static String isChecked(String field) {
+		String val="";
+			if(currentSession.getAttribute(field)!=null) {
+				if(val.equalsIgnoreCase(field)) {
+						val="checked";
+				}
+			}
+		return val;
+	}
 	public static boolean hasErrors() {
 		return inValidData!=null&&!inValidData.isEmpty();
 	}

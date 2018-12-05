@@ -1447,6 +1447,16 @@ body, html{
     padding:5px;
     border-radius: 5px;
  }
+ 
+  .maxSize{
+ 	width:95%;
+ 	margin:0px auto 0px auto;;
+ 	max-height: 580px!important;
+  	overflow-x: hidden;
+  	overflow-y: scroll;
+  	padding:15 5px 5px;
+  	border:none!important;
+    }
  .cartItems{
  	margin: 10px auto 0px auto;
  	width: 100%;
@@ -1748,7 +1758,7 @@ body, html{
  	background: transparent!important;
  	border: 1px solid #ea6960;
  }
- 
+
  .colorRed:hover{
  	background:#D04422!important;
  	color:white!important;
@@ -1835,7 +1845,7 @@ body, html{
  	margin-top:1%;
  	min-width:85%;
  	max-width:85%;
- 	min-height:90%;
+ 	min-height:95%;
  	z-index:500;
  }
 
@@ -1843,11 +1853,26 @@ body, html{
  #popUpCheckoutArea {
 
 }
+#sectionShipping, #sectionBilling{
+	padding-top:50px!important;
+}
+
+#sectionShipping input, #sectionBilling input{
+	margin-top:8px!important;
+	margin-bottom:8px!important;
+}
+.line{
+	width:80%;
+	margin:10px auto 10px auto;
+	border-bottom:1px solid gray;
+}
 
 #shippingInfo, #paymentInfo, #cartInfo{
 	margin:25px 10px 10px 10px;
 	min-width:380px;
+	max-width:380px;
 	min-height:630px;
+	max-height:630px;
 	
 	color: #ea6960!important;
  	background: transparent!important;
@@ -1857,6 +1882,29 @@ body, html{
     background-color:rgb(33,33,36);
     max-weidth:300px!important;
 }
+
+.city{
+	width:150px!important;
+	margin-right:2px!important;
+}
+.state{
+	width:50px!important;
+	margin-right:2px!important;
+}
+.zip{
+	width:112px!important;
+}
+.month{
+	width:80px!important;
+}
+.expyear{
+	width:100px!important;
+}
+.csv{
+	width:50px!important;
+}
+
+
 #cartInfo{
 	margin-top:20px!important;
 }
@@ -2043,3 +2091,37 @@ body, html{
 	padding:none;
 }
 
+
+ .greenGlow{
+ 	color: rgba(0,255,0,.8);!important;
+ 	background:rgba(0,255,0,.1)!important;
+ 	/*background: transparent!important;
+ 	*/border: 1px solid rgba(0,255,0,.5);
+ }
+ .greenGlow:hover{
+ 	background:rgba(0,255,0,.5)!important;
+ 	color:white!important;
+ }
+ 
+ .redGlow{
+ 	color: rgba(255,0,0,.8);!important;
+ 	background:rgba(255,0,0,.1)!important;
+ 	/*background: transparent!important;
+ 	*/border: 1px solid rgba(255,0,0,.5);
+ }
+ .redGlow:hover{
+ 	background:rgba(255,0,0,.5)!important;
+ 	color:white!important;
+ }
+ 
+ .yellowGlow{
+ 	color: rgba(255,255,0,.8);!important;
+ 	background:rgba(255,255,0,.1)!important;
+ 	height:24px!important;
+ 	/*background: transparent!important;
+ 	*/border: 1px solid yellow;
+ }
+ .yellowGlow:hover{
+ 	background:rgba(255,255,0,.7)!important;
+ 	color:white!important;
+ }
