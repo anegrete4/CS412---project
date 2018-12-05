@@ -25,7 +25,7 @@ CREATE TABLE GGG_SalesItem -- Codes, and description.
 	itemName VARCHAR(500) NOT NULL,
     itemDescription VARCHAR(500) NOT NULL DEFAULT 'No description available for this product',
     itemPrice DECIMAL(6,4) NOT NULL,
-    imagePath VARCHAR(500) DEFAULT 'NoImage.jpg',
+    imagePath VARCHAR(500) DEFAULT 'NoImage.png',
     itemType VARCHAR(20) DEFAULT 'Food'
 );
 

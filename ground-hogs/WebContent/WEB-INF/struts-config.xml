@@ -8,13 +8,18 @@
              path="/WEB-INF/results/confirm.jsp"/>
   </global-forwards>
   <action-mappings>
-     <action path="/submitCustomerSupport" 
-            type="coreservlets.SubmitCustomerSupport">
+     <action path="/shopping" 
+            type="coreservlets.Shopping">
       <forward name="returnToLastPage" 
-               path="/WEB-INF/templates/returnToLastPage.jsp"/>
+               path="/Shopping.jsp"/>
     </action>
      <action path="/submitUpdatedQuantity" 
             type="coreservlets.SubmitUpdatedQuantity">
+      <forward name="returnToLastPage" 
+               path="/WEB-INF/templates/returnToLastPage.jsp"/>
+    </action>
+    <action path="/submitCustomerSupport" 
+            type="coreservlets.SubmitCustomerSupport">
       <forward name="returnToLastPage" 
                path="/WEB-INF/templates/returnToLastPage.jsp"/>
     </action>

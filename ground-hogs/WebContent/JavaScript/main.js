@@ -1,5 +1,16 @@
 
 $(document).ready(function(){
+	
+	
+	
+	var slider = document.getElementById("myRange");
+	var output = document.getElementById("demo");
+//	output.innerHTML = slider.value;
+
+	slider.oninput = function() {
+	//  output.innerHTML = this.value;
+	}
+	
 	window.onscroll = function() {scrollFunction()};
 	$(".nextSection").on('click', function(event) {  
 	    if (this.hash !== "") {
@@ -199,6 +210,12 @@ function scrollTopFunction() {
      }
      else clearInterval(scrollInterval); 
  },15);
+}
+
+function magImageInside(elem){
+	var myImg=$(elem).getElementsByTagName('img');
+	(myImg[0]).css({transform:'scale(1.5)'});
+	
 }
 
 
