@@ -35,8 +35,9 @@ public class SubmitCheckout extends Action {
 
 		}
 		if (validationSuccess) {
+			setResponseInSession(request.getSession(), "Thank you!", responses, "success", "popUpShippingConfirmation");
 			Helper.resetDataValidation(request);
-			setResponseInSession(request.getSession(), "Thank you!", responses, "success", "popUpMessages");
+			
 		} else {
 			setResponseInSession(request.getSession(), "Checkout", responses, "success", "popUpCheckout");
 		}
