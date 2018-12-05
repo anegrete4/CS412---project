@@ -12,10 +12,12 @@
       <br>
       <table>
       	<tbody>
-      				<tr class="itemRow popUpProductImage"><td rowSpan="5"><img src="images/products/<%=item.getImagePath()%>" alt="Product Image"></td>
+      				<tr class="itemRow popUpProductImage"><td class="popUpProdImg" rowSpan="6"><img src="images/products/<%=item.getImagePath()%>" alt="Product Image"></td>
       				</tr>
-      					<tr class="itemRow"><td class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating"><%=item.getRating() %></td>
-      					<td class="clickable rightAlign" onClick="toggleDisplayOfElement('reviewsWrapper');"><%="Total "+item.getNoOfReviews()+" review"+(item.getNoOfReviews()!=1?"s":"")%></td></tr>
+      					<tr class="itemRow"><td colSpan="2" class="cartItemRating rightAlign"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating"><%=item.getRating() %></td>
+      					<tr>
+      						<td colSpan="2" class="clickable rightAlign" onClick="toggleDisplayOfElement('reviewsWrapper');"><%="Total "+item.getNoOfReviews()+" review"+(item.getNoOfReviews()!=1?"s":"")%></td>
+      					</tr>
       					<tr class="itemRow"><td class="leftAlign descriptionRow" colSpan="2"><span class="description">Description:</span><%=" "+item.getItemDescription()%></td></tr>	
       					<tr class="itemRow"><td class="leftAlign">Unit cost:</td><td class="rightAlign unitCostPopUp"><%=Helper.getFormattedAmount(item.getItemPrice())%></td></tr>	
       					<tr class="itemRow" rowSpan="2">
@@ -47,7 +49,7 @@
 							    		      				<td class="reviewerName leftAlign"><%=r.getUserName()%></td>
 							    		      				<td class="cartItemRating rightAlign"><img src="images/icons/<%=Helper.getClassNameForRating(r.getRating()+0.0) %>.png" alt="rating"><%=r.getRating() %></td>
 							    		      			</tr>
-							    		      			<tr class="bottomBorder"><td class="reviewMsg" colSpan="2"><%=r.getReviewMessage() %></td></tr>
+							    		      			<tr class="bottomBorder minWidth"><td class="reviewMsg" colSpan="2"><%=r.getReviewMessage() %></td></tr>
 							    		      			<%
 							    		      		}
 							    		      	}

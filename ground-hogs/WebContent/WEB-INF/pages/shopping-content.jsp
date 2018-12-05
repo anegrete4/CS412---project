@@ -39,7 +39,7 @@
 	       					<div class="salesItemShop" onmousehover="magImageInside(this)">
 	       						<div class="salesImage"><img class="hovImg" src="images/products/<%=item.getImagePath()%>"></div>
 	       						<div class="salesName"><h1><%=item.getItemName()%></h1></div>
-	       						<div class="middle">
+	       						<div class="middle tButton uButton">
 		       						<a href="<%=item.createHtmlAnchorHref() %>">
 		       							View Product
 		       						</a>
