@@ -45,15 +45,15 @@
                                     <input type="checkbox" name="CareProducts" id="CareProducts" value="CareProducts" <%=(isCare==1 ? "checked" : "")%>>
                                  <label for="amount">Care Products</label>	
                                 </div>
-                                <input type="submit" onClick="" value="Filter" class="tButton">
+                                <input type="submit" onClick="" value="Filter" class="tButton yellowGlow">
                             </form>
                             <div class="ShopArea">
                                 <%
        			for(SalesItem item:salesItems){
        				%>
 
-                                    <div class="salesItemShop" onmousehover="magImageInside(this)">
-                                        <div class="salesImage"><img class="hovImg" src="images/products/<%=item.getImagePath()%>"></div>
+                                    <div class="parentHover salesItemShop" onmousehover="magImageInside(this)">
+                                        <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
                                         <div class="salesName">
                                             <h1><%=item.getItemName()%></h1></div>
                                         <div class="middle tButton uButton">
@@ -61,9 +61,9 @@
 		       							View Product
 		       						</a>
                                         </div>
-                                        <div class="salesPrice">
+                                        <div class="salesPrice front">
                                             <h2><%=Helper.getFormattedAmount(item.getItemPrice())%></h2></div>
-                                        <div class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating">
+                                        <div class="cartItemRating front"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating">
                                             <%=item.getRating() %>
                                         </div>
 
