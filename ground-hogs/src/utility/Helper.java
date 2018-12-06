@@ -1,7 +1,9 @@
 package utility;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -175,6 +177,17 @@ public class Helper {
 
 	private static boolean validateRegex(HttpServletRequest request, String regex, String field) {
 		return request.getParameter(field).matches(regex);
+	}
+
+	public static String getRandomOrderNo() {
+		return (Helper.getFormattedDate().replace('-', 'G') + (Math.floor((Math.random() * 1234) + 1) * 100));
+
+	}
+
+	public static String getFormattedDate() {
+		SimpleDateFormat mdyFormat = new SimpleDateFormat("MM-dd-yyyy");
+		Date myDate = new Date();
+		return mdyFormat.format(myDate);
 	}
 
 }

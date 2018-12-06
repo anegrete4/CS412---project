@@ -35,9 +35,19 @@ public class SubmitCheckout extends Action {
 
 		}
 		if (validationSuccess) {
-			setResponseInSession(request.getSession(), "Thank you!", responses, "success", "popUpShippingConfirmation");
+			HttpSession session = request.getSession();
+			session.setAttribute("custName", request.getParameter("fname") + " " + request.getParameter("lname"));
+			session.setAttribute("custAddress",
+					request.getParameter("saddress") + " " + request.getParameter("saddress2") != null
+							? request.getParameter("saddress2")
+							: "");
+			session.setAttribute("cityStateZip", request.getParameter("city") + ", " + request.getParameter("state")
+					+ "-" + request.getParameter("zip"));
+
+			setResponseInSession(session, "Thank you!", responses, "success", "popUpShippingConfirmation");
+
 			Helper.resetDataValidation(request);
-			
+
 		} else {
 			setResponseInSession(request.getSession(), "Checkout", responses, "success", "popUpCheckout");
 		}

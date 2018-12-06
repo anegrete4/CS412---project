@@ -41,7 +41,7 @@
             	CartItem i=(CartItem)e.nextElement();
             	%>
          <tr class="itemRow cartProductImage">
-            <td rowSpan="6"><a href="<%=i.createHtmlAnchorHref()%>"><img class="clickableImage" src="images/products/<%=i.getImagePath()%>" alt="Product Image"></a></td>
+            <td rowSpan="5"><a href="<%=i.createHtmlAnchorHref()%>"><img class="clickableImage" src="images/products/<%=i.getImagePath()%>" alt="Product Image"></a></td>
             <td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td>
          </tr>
          <tr class="itemRow">
@@ -59,14 +59,7 @@
             <td class="leftAlign">Cost for this item:</td>
             <td class="rightAlign"><span class="cartItemTotal"><%=Helper.getFormattedAmount(i.getTotalPrice()) %></span></td>
          </tr>
-         <tr class="itemRow">
-            <td colSpan="2" class="removeItemButtonWrapper" rowSpan="2">
-                  <input type="hidden" value="<%=i.getItemId() %>" name="itemId" />
-                  <input type="hidden" value="0" name="quantity" />
-                  <input type="hidden" value="popUpCheckout" name="popUpContent" />
-                  <input class="tButton redGlow" type="submit" value="Remove this item">  
-            </td>
-         </tr>
+     
          <tr>
             <td colSpan="3"></td>
          </tr>

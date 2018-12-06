@@ -21,7 +21,6 @@
     </button>
     <div class="dropdown-content">
       <a href="index.jsp" >Home</a>
-      <a href="index.jsp#link1" >Link1</a>
       <a href="index.jsp#link2" >Link2</a>
     </div>
   </div> 

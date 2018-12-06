@@ -1913,6 +1913,7 @@ body, html{
 .csv{
 	width:40px!important;
 	margin-left:45px!important;
+	color:black!important;
 }
 .adjustMarginTopCheckoutSelect{
 	margin-top:-50px!important;
@@ -2161,4 +2162,162 @@ body, html{
  	float:left;
  	
  	
+ }
+ 
+ .popUpShippingConfirmation{
+ 	margin-top:1%!important;
+ 	min-width:700px!important;
+ 	max-width:700px!important;
+ 	background:white!important;
+ 	color:black!imoportant;
+ 	
+ }
+ 
+ 
+.popUpShippingConfirmation .crossButton {
+    z-index: 0;
+    cursor: pointer;
+    height: 45px;
+    width:45px;
+    position: relative;
+    background-size: 20px;
+    background-position: center;
+    background-image: url(../images/icons/CloseWhite.png);
+    background-repeat: no-repeat;
+    margin-right:-50px!important;
+    margin-top:-20px!important;
+}
+ 
+ 
+ 
+ .popUpShippingConfirmation h3{
+ 	color:black!important;
+ 	border-bottom: 1px solid black!important;
+ }
+ 
+ /*Order Confirmation*/
+ #confirmLetterBody *{
+ 	color:black!important;
+ }
+ #confirmLetterBody{
+ 	width:100%!important;
+ 	min-width:595px!important;
+ 	max-width:595px!important;
+ 	height:100%!important;
+ 	overflow-x:hidden;
+ 	margin-left:auto!important;
+ 	margin-right:auto!important;
+ 	padding:20px!important;
+ }
+ 
+
+ #rightAlignTextBox{
+ 	float:right!important;
+ 	display:inline-block!important;
+ 	text-align:right!important;
+ 	font-size:16px!important;
+ 	line-height:20px!important;
+ 	width:100%!important;
+ 	height:auto!important;
+ 	margin-bottom:40px!important;
+ }
+ #rightAlignTextBox p, #leftAlignTextBox p, #leftAlignTextInfo p{
+ 	margin-bottom: -12px!important;
+ 	min-width:100%!important;
+ 	
+ }
+ 
+ 
+ #leftAlignText h2{
+ 	font-size:20px!important;
+ 	width:100%!important;
+ 	line-height:10px!important;
+ 	margin-bottom:10px!important;
+ 	text-align:left!important;
+ }
+ 
+  #leftAlignTextBox{
+ 	float:left!important;
+ 	display:block!important;
+ 	text-align:left!important;
+ 	font-size:16px!important;
+ 	line-height:20px!important;
+ 	width:100%!important;
+ 	margin-bottom:40px!important;
+ }
+ 
+ #leftAlignTextInfo{
+ 	text-align:left!important;
+ 	margin-bottom:40px!important;
+ 	height:150px!important;
+ 	width:100%;
+ 	display:block;
+ }
+ 
+ #leftAlignText{
+ 	width:100%!important;
+ 	display:block!important;
+ }
+ 
+  .textRow{
+ 	width:100%!important;
+ 	min-width:100%!important;
+ 	height:auto!important;
+ 	display:block!important;
+ 	text-align:left!important;
+ }
+ 
+ #confirmLetterBody table {
+ 	width:100%!important;
+ 	border-collapse: collapse!important;
+ 	margin:0px;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	border-collapse: collapse;
+ }
+ 
+ .subTotalRow,.taxRow,.totalRow{
+ 	border-left:none;
+ 	border-right:none;
+ 	border-bottom:none;
+ 	border-top:none;
+ }
+ 
+ #confirmTable tr td{
+ 	padding:5px!important;
+ }
+ 
+ .lineRow td{
+ 	min-width:50px!important;
+ 	line-height:50px!important;
+ 	padding:10px!important;
+ 	border-color:white!important;
+ 	border-bottom:5px solid black!important;
+ }
+ 
+ .rightPadding td{
+ 	text-align:right!important;
+ }
+ 
+ .subTotalRow, .taxRow, .totalRow{
+ 	border-color:white!important;
+ }
+ .subTotalRow td,.taxRow td,.totalRow td{
+ 	border:0px solid white !important;
+ 	padding:5px!important;
+ }
+ 
+ .total{
+ 	font-size:20px;
+ }
+
+ 
+ #leftAlignTextInfo{
+ 	margin-bottom:50px!important;
+ }
+ 
+ #confirmTable tr td,  #confirmTable tr, #confirmTable th{
+ 	border: 1px solid black;
+ 	border-collapse: collapse;
+ 	margin:0px;
  }
