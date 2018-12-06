@@ -30,7 +30,8 @@ $(document).ready(function(){
 		      max: 200,
 		      values: [ $("#price-min").val(), $("#price-max").val() ],
 		      slide: function( event, ui ) {
-		        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		        $("#minPrice").val("Minimum: $"+ui.values[0]);
+		        $("#maxPrice").val("Maximum: $"+ui.values[1]);
 		        $("#price-min").val(ui.values[0]);
 		        $("#price-max").val(ui.values[1]);
 		      }
@@ -75,6 +76,21 @@ $(document).ready(function(){
 		}
 		
   });
+	/*
+	$(window).on('scroll',function(){
+		var scrolltop=$(this).scrollTop();
+		if(scrolltop >=0){
+			$("#filterContent").css('position','fixed');
+			$("#filterContent").css('margin-top','-140px');
+			
+		}
+		if(scrolltop<80){
+			$("#filterContent").css('position','absolute');
+			$("#filterContent").css('margin-top','-70px');
+
+		}
+	});
+	*/
 
 });
 

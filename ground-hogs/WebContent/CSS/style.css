@@ -1859,7 +1859,6 @@ body, html{
  	min-width:95%;
  	max-width:85%;
  	height:auto;
- 	z-index:500;
  }
 
  #popUpCheckoutArea {
@@ -1895,6 +1894,7 @@ body, html{
     border-radius: 5px;
     background-color:rgb(33,33,36)!important;;
     max-weidth:300px!important;
+    z-index:3!important;
 }
 
 .city{
@@ -2330,19 +2330,7 @@ body, html{
  }
 
  /*Shopping filters */
- .Filters{
- 	min-width:100%!important;
- 	min-height:20px!important;
- 	display:block;
- 	background:gray;
- }
- 
- #FilterArea{
- 	width:400px!important;
- 	display:block;
- 	margin:0px!important;
- }
- 
+
  #amount{
  	background:transparent!important;
  	border:0;
@@ -2357,9 +2345,98 @@ body, html{
  	 overflow:hidden;
  	 transform: scale(1.20);
 }
+
+.parentHover .childMagCart{
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+ }
+ 
+.parentHover:hover .childMagCart {
+ 	 overflow:hidden;
+ 	 transform: scale(1.05);
+ 	 
+}
+
 .back{
 	z-index:-1!important;
 }
 .front{
 	z-index:10!important;
 }
+
+.checkoutLeft{
+	text-align:left!important;
+	float:left!important;
+}
+.cartItemNameCheckout{
+	font-size:20px!important;
+}
+
+
+#filterTable{
+	min-width:95%!important;
+	max-width:95%!important;
+	margin:0px!important;
+}
+
+#maxPrice, #minPrice{
+	background:transparent;
+	color:black;
+	border:none;
+	width:90px!important;
+}
+#slider-range{
+	width:80%!important;
+	margin:auto!important;
+}
+#maxPrice{
+	margin-left:20%!important;
+}
+
+.filterTableAttributes{
+	position:fixed;
+	max-width:400px!important;
+	min-width:400px!important;
+	padding:5px!important;
+	
+ 	z-index:5!important;
+ 	background:white!important;
+ 	margin-top:-140px!important;
+ 	margin-left:55%;
+ 	background:transparent!important;
+ 	border:none;
+}
+
+.filterTableAttributes:hover{
+	 background-color:rgb(255,255,255)!important;
+	 margin-top:-75px!important;
+	 border-radius:6px;
+	border: 1px solid gray;
+ 	box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.filterTableAttributes:hover .filterButton{
+	cursor:pointer;
+ 	background: #f2bb3c!important;
+ 	border-radius: 5px;
+ 	border-width:1px;
+ 	border:none;
+ 	color:#111;
+
+}
+
+.filterButton{
+	max-height:24px!important;
+	font:16px!important;
+	width:100px!important;;
+ 	background: transparent!important;
+ 	text-decoration:none!important;
+ 	border:0.5px solid #8ab4f8;
+ 	color:#8ab4f8;
+ }
+ .filterButton:hover{
+ 	background:#f9b109!important;
+ 	text-decoration:none!important;
+ 	
+ }
+ 

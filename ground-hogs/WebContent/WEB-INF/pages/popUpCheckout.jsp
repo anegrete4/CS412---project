@@ -42,10 +42,10 @@
             	%>
          <tr class="itemRow cartProductImage">
             <td rowSpan="5"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></td>
-            <td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td>
+            <td colSpan="2"><span class="cartItemName checkoutLeft cartItemNameCheckout"><%=i.getItemName() %></span></td>
          </tr>
          <tr class="itemRow">
-            <td colSpan="2" class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></td>
+            <td colSpan="2" class="cartItemRating checkoutLeft"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></td>
          </tr>
          <tr class="itemRow">
             <td class="leftAlign">Unit cost:</td>
