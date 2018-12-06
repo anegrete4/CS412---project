@@ -41,7 +41,7 @@
             	CartItem i=(CartItem)e.nextElement();
             	%>
          <tr class="itemRow cartProductImage">
-            <td rowSpan="5"><a href="<%=i.createHtmlAnchorHref()%>"><img class="clickableImage" src="images/products/<%=i.getImagePath()%>" alt="Product Image"></a></td>
+            <td rowSpan="5"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></td>
             <td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td>
          </tr>
          <tr class="itemRow">
