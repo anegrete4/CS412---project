@@ -309,6 +309,12 @@
 		</div>
 		
 	</div>
+	<script>
+        	document.getElementById('state').value = '<%=Helper.getStoredString("state") %>';
+        	document.getElementById('bstate').value = '<%=Helper.getStoredString("bstate") %>';
+        	document.getElementById('expmonth').value = '<%=Helper.getStoredString("expmonth") %>';
+        	document.getElementById('expyear').value = '<%=Helper.getStoredString("expyear") %>';
+       </script>
       		
 </form>
 <%
