@@ -30,7 +30,8 @@
 %>
 
                         <div class="Content-header" id="ShopContent">
-
+                        <div class="secondHeader">
+                        
                                <div class="filterTableAttributes" id="filterContent">
                                	 <form class="Filters" ACTION="shopping.do" METHOD="POST">
                                     <table id="filterTable">
@@ -81,7 +82,7 @@
                                       </form>
                                 </div>
                                 
-                          
+                          </div>
                             <div class="ShopArea">
                                 <%
        			for(SalesItem item:salesItems){

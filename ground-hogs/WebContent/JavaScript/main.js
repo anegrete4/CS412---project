@@ -1,5 +1,12 @@
 
 $(document).ready(function(){
+	$("input").change(function(){
+		$(this).removeClass( "error" );
+	});
+	$("select").change(function(){
+		$(this).removeClass( "error" );
+	});
+	
 	
 	$('#isSameBilling').change(function() {
 		 $('#billingAddress').toggle(!this.checked);
