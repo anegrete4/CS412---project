@@ -22,6 +22,23 @@ $(document).ready(function(){
 	    } 
 	  });
 	
+	 $( function() {
+		    $( "#slider-range" ).slider({
+		    
+		      range: true,
+		      min: 5,
+		      max: 200,
+		      values: [ $("#price-min").val(), $("#price-max").val() ],
+		      slide: function( event, ui ) {
+		        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		        $("#price-min").val(ui.values[0]);
+		        $("#price-max").val(ui.values[1]);
+		      }
+		    });
+		  } );
+	 
+	 
+	
 	$(".PanelButton").on('click', function(event) {
 		var buttonClass=($(this).attr('class')).split(' ')[1];
 		var contentGroup=document.getElementsByClassName('ContentGroup');

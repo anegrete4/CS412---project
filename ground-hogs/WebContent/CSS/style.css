@@ -2321,3 +2321,22 @@ body, html{
  	border-collapse: collapse;
  	margin:0px;
  }
+
+ /*Shopping filters */
+ .Filters{
+ 	min-width:100%!important;
+ 	min-height:20px!important;
+ 	display:block;
+ 	background:gray;
+ }
+ 
+ #FilterArea{
+ 	width:400px!important;
+ 	display:block;
+ 	margin:0px!important;
+ }
+ 
+ #amount{
+ 	background:transparent!important;
+ 	border:0;
+ }
