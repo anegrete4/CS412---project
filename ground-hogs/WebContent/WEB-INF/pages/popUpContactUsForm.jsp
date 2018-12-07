@@ -17,12 +17,12 @@
 	      		<input class=" <%=Helper.validate("fname") %>" type="text" name="fname" id="fname" value="<%=Helper.getStoredString("fname") %>" placeholder="First name" >
 	      		<input class=" <%=Helper.validate("lname") %>" type="text" name="lname" id="lname" value="<%=Helper.getStoredString("lname") %>" placeholder="Last name">
 	     	</span>
-	     	<input type="text" name="email" id="email" placeholder="Email: sample@sample.com" value="<%=Helper.getStoredString("email") %>" class=" <%=Helper.validate("email") %>">
-	      	<input type="text" name="phone" id="phone" placeholder="Phone: 777-777-7777" value="<%=Helper.getStoredString("phone") %>"class=" <%=Helper.validate("phone") %>">
+	     	<input type="text" name="email" id="email" class="adjustInputFieldCSForm" placeholder="Email: sample@sample.com" value="<%=Helper.getStoredString("email") %>" class=" <%=Helper.validate("email") %>">
+	      	<input type="text" name="phone" id="phone" class="adjustInputFieldCSForm" placeholder="Phone: 777-777-7777" value="<%=Helper.getStoredString("phone") %>"class=" <%=Helper.validate("phone") %>">
 	    </span>
 	     <span class="twoInputButtonsWrapper">
-      		<input type="reset" class='tButton colorRed' onClick="closeResponseBox()" value="Cancel">
-      		<input type="submit" class='tButton'onClick="" value="Submit" >  
+      		<input type="reset" class='tButton redGlow' onClick="closeResponseBox()" value="Cancel">
+      		<input type="submit" class="tButton greenGlow" onClick="" value="Submit" >  
         </span>
         <script>
         	document.getElementById('contactUsReason').value = '<%=Helper.getStoredString("contactUsReason") %>';

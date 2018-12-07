@@ -1060,11 +1060,6 @@ article p{
 
 /* Pop up form input */
 
-.InputFormLineGroup .hoverTransparentBg{
-	float:right;
-	margin-left:10px;
-	display:block;
-}
 
 
 /*--------------------------------------- Overlay -------------------------------------- */
@@ -1257,15 +1252,17 @@ article p{
     
 }
 
+
+
 .InputFormLineGroup{
 	grid-column-gap: 10px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 12px;
-	width:88%;
+	width:90%;
 	height:40px;
 	margin:0px;
-	margin-right:25px;
+	margin-right:19px;
 	margin-left:auto;
 }
 .popUpForm input[type="text"] {
@@ -1354,12 +1351,12 @@ article p{
 	background-repeat: no-repeat; 
 }
 #contactUs::after{
-	background-image: url(../images/contactUsCloud.jpg);
+	background-image: url(../images/home/banner2.jpg);
 	background-repeat: no-repeat;
 }
 
-#workshop::after{
-	background-image: url(../images/aboutUs-2.jpg);
+#workshopParallex::after{
+	background-image: url(../images/fam3.jpg);
 	background-repeat: no-repeat; 
 }
 #home::after{
@@ -1544,7 +1541,7 @@ article p{
 	color:black;
 }
 .faqArea{
-	width:90%;
+	width:85%;
 	padding:5px;
 	margin:15px auto 80px auto;
 	max-height:500px;
@@ -1732,8 +1729,11 @@ article p{
 	text-indent: 10px;
     text-align: justify;
     letter-spacing: 3px;
-    max-width:90%;
+    width:100%!important;
+    padding-left:50px;
+    padding-right:50px;
     margin: auto;
+    background:rgb(247,247,247)!important;
 }
 
 .Event{
@@ -1793,7 +1793,7 @@ article p{
  
  /* styling for workshop form */
  .popUpWorkshopForm{
- 	max-width:400px!important;
+ 	max-width:390px!important;
  	max-height:400px!important;
  }
  .error{
@@ -1926,7 +1926,7 @@ article p{
  	
  }
  .orderBoxWrapper{
- 	width:87%;
+ 	width:90%;
  	height:auto;
  	margin:10px auto 0px auto;
  	max-height: 350px!important;
@@ -1980,6 +1980,11 @@ article p{
  	width:10px;
  	height:auto;
  	padding:10px;
+ }
+ 
+ .popUpProdImg img{
+ 	width:30px!important;
+ 	height:30px!important;
  }
  
  .reviewArea{
@@ -2094,7 +2099,7 @@ article p{
 
 .magButtonWrapper{
 	width:300px!important;
-	height:40px!important;
+	height:80px!important;
 	vertical-align:middle!important;
 	text-align:center!important;;
 	overflow:hidden;
@@ -2478,8 +2483,8 @@ article p{
 .salesItemShop{
 	min-width:300px;
 	max-width:300px;
-	max-height:340px;
-	min-height:320px;
+	max-height:400px;
+	min-height:400px;
 	float:left;
 	margin:15px;
 	padding:10px;
@@ -2496,18 +2501,19 @@ article p{
 .salesImage img{
 	background:#FFFFFF;
 	width:150px!important;
-	height:auto!important;
+	height:200px!important;
 	margin-top:10px!important;
 }
 
 .salesName{
-	
+	min-height:40px;
+	max-height:40px;
 }
 .salesPrice{
 	
 }
 .cartItemRating{
-	
+	bottom:0;
 }
 
 /* hover sales product */
@@ -2515,17 +2521,17 @@ article p{
 	
 }
 
-.middle{
+.viewProduct{
 	opacity:0;
 	top:50%;
 	left:50%;
 }
-.salesItemShop:hover .middle{
+.salesItemShop:hover .viewProduct{
 	opacity:1;
 	z-index:0;
 }
 
-.middle a{
+.viewProduct a{
 	background:#f1f1f1;
 	width:50px;
 	padding:8px;
@@ -2547,11 +2553,12 @@ article p{
 .uButton{
 	background:transparent;
 	width:120px!important;
-	height:22px!important;
+	height:30px!important;
 	margin:auto;
 	text-align:center;
 	vertical-align:middle;
 	padding-top:5px!important;
+	padding-bottom:5px!important;
 }
 .uButton a{
 	margin-top:5px!important;
@@ -2608,7 +2615,6 @@ article p{
  .yellowGlow{
  	color: rgba(255,255,0,.8);!important;
  	background:rgba(255,255,0,.1)!important;
- 	height:24px!important;
  	/*background: transparent!important;
  	*/border: 1px solid yellow;
  	text-decoration:none!important;
@@ -2905,15 +2911,67 @@ article p{
  	border: 1px solid rgba(233,188,85,.5);
  	text-decoration:none!important;
  	border-radius:5px;
+ 	vertical-align:middle!important;
  	
  }
  
  .errorMsgDisplayArea p{
-  color:rgb(233,188,85)!important;
- 	padding:10px!important;
+ 	 color:rgb(233,188,85)!important;
+ 	padding:5px!important;
  	font:20px!important;
  	fnot-weight:300;
  	letter-spacing:1px;
- 	
- 	
+ 	vertical-align:middle!important;
  }
+ 
+ .shopAllMiddle{
+ 	width:100%;
+ 	margin:0px auto;
+ 	padding:10px;
+ }
+ 
+ /* adjustments */
+ .adjustWidthPWFemail{
+ 	width:342px!important;
+ }
+ 
+ .adjustRightMarginPWFbtn{
+ 	margin-right:32px;
+ }
+ 
+ .adjustInputFieldCSForm{
+  width:334px!important;
+ }
+ 
+ .adjustCartItems{
+ 	margin-top:40px!important;
+ 	min-height:380!important;
+ 	max-height:380px!important;
+ 
+ }
+ 
+ .imgCartAdjust{
+ 	max-width:100px!important;
+ 	height:auto;
+ }
+
+ 
+ /* workhsop page*/
+ 
+ 
+ .rowAdjust{
+ 	width:250%!important;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ }
+ 
+ .btnWorkshop{
+ 	width:100px!important;
+ 	margin-left:150px!important;
+ 	margin-top:50px!important;
+ }
+ 
+ .whiteTextInside{
+ 	color:white!important;
+ }
+ 

@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+    
+ <%@ page import="java.util.*" %>
+ <%@ page import="model.SalesItem" %>
+ <%@ page import="database.DBAccess" %>
+ <%@ page import="utility.Helper" %>
+ <%!ArrayList<SalesItem> salesItems=new ArrayList<SalesItem>();%>
+ <%
+ 	salesItems =(ArrayList)DBAccess.SP_GetInventory(1,1,1,0,400);
+ %>
 <div class="slideshow">
 	<div class="slide fade">
 		<img src="images/home/bannerHome2.jpg">
@@ -56,29 +65,43 @@
 <div class="row" id="bestRow">
 	<div id="best"><h1>OUR BEST SELLERS</h1></div>
 		<div id="prodGrid">			
-			<div class="bestGrid"> <img src="images/product1.png" alt="product1">
-				<div class="middle">
-   					 <div class="button"><a href="x">View Product</a></div>
- 				 </div>
-			</div>
-			<div class="bestGrid"> <img src="images/product1.png" alt="product1"> 
-				<div class="middle">
-   					<div class="button"><a href="x">View Product</a></div>
- 				</div>
-			</div>
-			<div class="bestGrid"> <img src="images/product1.png" alt="product1"> 
-				<div class="middle">
-   					<div class="button"><a href="x">View Product</a></div>
- 					</div>
-				</div>
-			<div class="bestGrid"> <img src="images/product1.png" alt="product1"> 
-				<div class="middle">
-   					<div class="button"><a href="x">View Product</a></div>
- 				</div>
-			</div>
+			 <%
+				   int i=0;
+       			for(SalesItem item:salesItems){
+       				i++;
+       				if(i==5)break;
+       				%> 
+       				
+
+                                    <div class="parentHover salesItemShop" onmousehover="magImageInside(this)">
+                                        <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
+                                        <div class="salesName">
+                                            <h1><%=item.getItemName()%></h1></div>
+                                        <div class="viewProduct tButton uButton">
+                                            <a href="<%=item.createHtmlAnchorHref() %>">
+		       							View Product
+		       						</a>
+                                        </div>
+                                        <div class="salesPrice front">
+                                            <h2><%=Helper.getFormattedAmount(item.getItemPrice())%></h2></div>
+                                        <div class="cartItemRating front"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating">
+                                            <%=item.getRating() %>
+                                        </div>
+
+                                    </div>
+
+                                    <%
+       			}
+
+       		%>
 		</div>
 </div>
-<div id="shopAll"><div class="button"><a href="x">SHOP ALL</a></div></div>
+
+<div class="continueShoppingBtnWrapper shopAllMiddle">
+      	<a href="http://localhost:8080/ground-hogs/Shopping.jsp">
+	    <input class="tButton" onClick="toggleCart('false')" title="Continue Shopping"  value="Shop All" name="placeYourOrder">
+	  </a>
+	</div>
 
 <!-- WORKSHOP -->
 <div class="row" id="workshop">

@@ -92,7 +92,7 @@
                                         <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
                                         <div class="salesName">
                                             <h1><%=item.getItemName()%></h1></div>
-                                        <div class="middle tButton uButton">
+                                        <div class="viewProduct tButton uButton">
                                             <a href="<%=item.createHtmlAnchorHref() %>">
 		       							View Product
 		       						</a>

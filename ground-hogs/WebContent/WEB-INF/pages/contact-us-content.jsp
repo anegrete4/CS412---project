@@ -1,21 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
     <div class="wrapper">
-        <div class="parallex" id="contactUs">
-            <header class="aboutHeader contactUsHeader">
-                <h1>Contact Us!</h1>
-                <p>The sun is too far to reach. We are just a click away.</p>
-                 <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
+        
+        <div class="section parallax about" id="contactUs">
+			<header class="aboutHeader">
+				<h1>CONTACT US!</h1>
+				<p>The sun is too far to reach. We are just a click away.</p>
+				<form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
                  	<div class="magButtonWrapper">
                         <input type="hidden" value="Customer Support" name="popUpTitle" />
                         <input type="hidden" value="popUpContactUsForm" name="popUpContent" />
                         <input type="submit" value="Contact Now" class="magButton">
                     </div>
                  </form>
-                <a id="DownArrow" href="#MeetUs" class="DownArrow nextSection"></a>
-            </header>
-
-        </div>
+				<div class="aboutMiddle">
+					<a href="#MeetUs" class="DownArrow nextSection"></a>
+				</div>
+			</header>
+		</div>
 
             <div class="row" id="MeetUs" >
                 <div id="best">

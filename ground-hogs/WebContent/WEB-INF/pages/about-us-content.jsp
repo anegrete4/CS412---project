@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+ <%@ page import="java.util.*" %>
+ <%@ page import="model.SalesItem" %>
+ <%@ page import="database.DBAccess" %>
+ <%@ page import="utility.Helper" %>
+ <%!ArrayList<SalesItem> salesItems=new ArrayList<SalesItem>();%>
+ <%
+ salesItems =(ArrayList)DBAccess.SP_GetInventory(1,1,1,0,400);
+ %>
 
 	<div class="wrapper">
 		<div class="section parallax about">
@@ -73,11 +82,37 @@
 
 		<div class="Media-Container row" id="bestRow">
 			<div id="best"><h1>OUR BEST SELLERS</h1></div>
-				<div id="prodGrid">			
-					<div> <a><img src="images/product1.png" alt="product1"></a> </div>
-					<div> <a><img src="images/product1.png" alt="product1"></a> </div>
-					<div> <a><img src="images/product1.png" alt="product1"></a> </div>
-					<div> <a><img src="images/product1.png" alt="product1"></a> </div>
+				<div id="prodGrid">	
+				   <%
+				   int i=0;
+       			for(SalesItem item:salesItems){
+       				i++;
+       				if(i==5)break;
+       				%> 
+       				
+
+                                    <div class="parentHover salesItemShop" onmousehover="magImageInside(this)">
+                                        <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
+                                        <div class="salesName">
+                                            <h1><%=item.getItemName()%></h1></div>
+                                        <div class="viewProduct tButton uButton">
+                                            <a href="<%=item.createHtmlAnchorHref() %>">
+		       							View Product
+		       						</a>
+                                        </div>
+                                        <div class="salesPrice front">
+                                            <h2><%=Helper.getFormattedAmount(item.getItemPrice())%></h2></div>
+                                        <div class="cartItemRating front"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating">
+                                            <%=item.getRating() %>
+                                        </div>
+
+                                    </div>
+
+                                    <%
+       			}
+
+       		%>
+						
 				</div>
 		</div>
 	</div>

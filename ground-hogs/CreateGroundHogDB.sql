@@ -177,10 +177,10 @@ Variety of ingredients with different shapes and sizes provide an enticing and s
     ('Pet Stroller/Folding Travel Carriage','This stroller is loaded! It features mesh windows for your pet to look out of while remaining in a calm and safe environment, soft bedding, multiple zippered entry points for you to gain access to your pet, a storage compartment to keep pet supplies and toys and even a cup holder for the human doing all the pushing!','89.95','Accessories', 'acc4.png'),
     ('Prince Bowl','This Prince Bowl looks great and is a sturdy, steady bowl at mealtime. This bowl features clean design on the outside, and a rubber bottom ring that keeps it in place while your groundhog is eating.','8.99','Accessories', 'acc5.png'),
     ('Herbs Balm','Groundhog herbs balm is 100% natural. It is applied to the groundhog''s outer fur, which makes it softer, shinier, and less likely to shed. ','24.98','CareProducts', 'care1.png'),
-    ('Item Name40','for misc purposes','11.1','CareProducts', 'care2.png'),
-	('Item Name41','for misc purposes','11.1','CareProducts', 'care3.png'),
-    ('Item Name42','for misc purposes','11.1','CareProducts', 'care4.png'),
-    ('Item Name43','for misc purposes','11.1','CareProducts', 'care5.png');
+    ('Item Name40','for misc purposes','11.1','CareProducts', 'beauty2.png'),
+	('Item Name41','for misc purposes','11.1','CareProducts', 'beauty3.png'),
+    ('Item Name42','for misc purposes','11.1','CareProducts', 'beauty4.png'),
+    ('Item Name43','for misc purposes','11.1','CareProducts', 'beauty5.png');
     
 INSERT INTO GGG_Review(itemId,userName,reviewMessage,rating)
 VALUES (1,'Keshab','This is a nice product!. Definitely use it!!',5),
