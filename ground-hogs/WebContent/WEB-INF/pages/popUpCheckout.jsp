@@ -41,11 +41,11 @@
             	CartItem i=(CartItem)e.nextElement();
             	%>
          <tr class="itemRow cartProductImage">
-            <td rowSpan="5"><a href="<%=i.createHtmlAnchorHref()%>"><img class="clickableImage" src="images/products/<%=i.getImagePath()%>" alt="Product Image"></a></td>
-            <td colSpan="2"><span class="cartItemName"><%=i.getItemName() %></span></td>
+            <td rowSpan="5"><img src="images/products/<%=i.getImagePath()%>" alt="Product Image"></td>
+            <td colSpan="2"><span class="cartItemName checkoutLeft cartItemNameCheckout"><%=i.getItemName() %></span></td>
          </tr>
          <tr class="itemRow">
-            <td colSpan="2" class="cartItemRating"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></td>
+            <td colSpan="2" class="cartItemRating checkoutLeft"><img src="images/icons/<%=Helper.getClassNameForRating(i.getRating()) %>.png" alt="rating"><%=i.getRating() %></td>
          </tr>
          <tr class="itemRow">
             <td class="leftAlign">Unit cost:</td>
@@ -146,6 +146,20 @@
  <input class="zip <%=Helper.validate("zip") %>" type="text" name="zip" id="zip" value="<%=Helper.getStoredString("zip") %>" placeholder="Zip" >
  <div class="line"></div>
  <input class=" <%=Helper.validate("email") %>" type="text" name="email" id="email" value="<%=Helper.getStoredString("email") %>" placeholder="Email: sample@sample.com" >
+ 	
+ 		<%
+ 			if(Helper.hasErrors()){
+ 				%>
+ 				<div class="errorMsgDisplayArea">
+ 				<p>
+					Please provide the valid information in the highlighted fields.
+ 				</p>
+ 				 	</div>
+ 				<%
+ 			}
+ 		%>
+
+ 
  </div>
 
 		</div>
@@ -309,6 +323,12 @@
 		</div>
 		
 	</div>
+	<script>
+        	document.getElementById('state').value = '<%=Helper.getStoredString("state") %>';
+        	document.getElementById('bstate').value = '<%=Helper.getStoredString("bstate") %>';
+        	document.getElementById('expmonth').value = '<%=Helper.getStoredString("expmonth") %>';
+        	document.getElementById('expyear').value = '<%=Helper.getStoredString("expyear") %>';
+       </script>
       		
 </form>
 <%

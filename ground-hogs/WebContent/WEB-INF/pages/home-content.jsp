@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
 <div class="slideshow">
 	<div class="slide fade">
 		<img src="images/home/bannerHome2.jpg">
@@ -95,3 +95,4 @@
 </div>
 
 <script>showSlides(slideIndex);</script>
+

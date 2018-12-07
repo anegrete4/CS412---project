@@ -11,8 +11,8 @@
 <%!Cart myCart=new Cart();%>
 <% 	
 	boolean isCartEmpty=true;
-	if(request.getSession().getAttribute("myCart")!=null){
-		myCart=(Cart)request.getSession().getAttribute("myCart");
+	if(request.getSession().getAttribute("myCartCheckedOut")!=null){
+		myCart=(Cart)request.getSession().getAttribute("myCartCheckedOut");
 		isCartEmpty=myCart.getTotalItems()<=0;
 	}
 	
@@ -85,4 +85,5 @@
 <%
 	myCart.disPose();
 	request.getSession().removeAttribute("myCart");
+	request.getSession().removeAttribute("myCartCheckedOut");
 %>

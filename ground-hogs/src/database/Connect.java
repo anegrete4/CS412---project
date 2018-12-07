@@ -1,5 +1,5 @@
 
-package database;    
+package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,15 +9,15 @@ public class Connect {
 	public static Connection getConnection() throws SQLException {
 		Connection conn = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver"); 
+			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/groundHogs_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-			String user = "root";
-			String password = "polo1234";
+			String user = "student";
+			String password = "student";
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return conn;
 	}
 

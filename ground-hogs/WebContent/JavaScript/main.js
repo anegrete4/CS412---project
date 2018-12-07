@@ -1,5 +1,12 @@
 
 $(document).ready(function(){
+	$("input").change(function(){
+		$(this).removeClass( "error" );
+	});
+	$("select").change(function(){
+		$(this).removeClass( "error" );
+	});
+	
 	
 	$('#isSameBilling').change(function() {
 		 $('#billingAddress').toggle(!this.checked);
@@ -21,6 +28,24 @@ $(document).ready(function(){
 	      });
 	    } 
 	  });
+	
+	 $( function() {
+		    $( "#slider-range" ).slider({
+		    
+		      range: true,
+		      min: 5,
+		      max: 200,
+		      values: [ $("#price-min").val(), $("#price-max").val() ],
+		      slide: function( event, ui ) {
+		        $("#minPrice").val("Minimum: $"+ui.values[0]);
+		        $("#maxPrice").val("Maximum: $"+ui.values[1]);
+		        $("#price-min").val(ui.values[0]);
+		        $("#price-max").val(ui.values[1]);
+		      }
+		    });
+		  } );
+	 
+	 
 	
 	$(".PanelButton").on('click', function(event) {
 		var buttonClass=($(this).attr('class')).split(' ')[1];
@@ -58,6 +83,21 @@ $(document).ready(function(){
 		}
 		
   });
+	/*
+	$(window).on('scroll',function(){
+		var scrolltop=$(this).scrollTop();
+		if(scrolltop >=0){
+			$("#filterContent").css('position','fixed');
+			$("#filterContent").css('margin-top','-140px');
+			
+		}
+		if(scrolltop<80){
+			$("#filterContent").css('position','absolute');
+			$("#filterContent").css('margin-top','-70px');
+
+		}
+	});
+	*/
 
 });
 
