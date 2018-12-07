@@ -10,6 +10,9 @@
 	if(request.getSession().getAttribute("myCart")!=null){
 		myCart=(Cart)request.getSession().getAttribute("myCart");
 	}
+	else{
+		myCart=new Cart();
+	}
 %>
 
 <div class="navbar">

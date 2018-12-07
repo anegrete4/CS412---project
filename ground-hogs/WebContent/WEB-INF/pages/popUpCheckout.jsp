@@ -146,17 +146,19 @@
  <input class="zip <%=Helper.validate("zip") %>" type="text" name="zip" id="zip" value="<%=Helper.getStoredString("zip") %>" placeholder="Zip" >
  <div class="line"></div>
  <input class=" <%=Helper.validate("email") %>" type="text" name="email" id="email" value="<%=Helper.getStoredString("email") %>" placeholder="Email: sample@sample.com" >
- 	<div class="errorMsgDisplayArea">
+ 	
  		<%
  			if(Helper.hasErrors()){
  				%>
+ 				<div class="errorMsgDisplayArea">
  				<p>
 					Please provide the valid information in the highlighted fields.
  				</p>
+ 				 	</div>
  				<%
  			}
  		%>
- 	</div>
+
  
  </div>
 

@@ -48,6 +48,9 @@ public class SubmitCheckout extends Action {
 
 			Helper.resetDataValidation(request);
 
+			request.getSession().setAttribute("myCartCheckedOut", request.getSession().getAttribute("myCart"));
+			request.getSession().setAttribute("myCart", null);
+
 		} else {
 			setResponseInSession(request.getSession(), "Checkout", responses, "success", "popUpCheckout");
 		}
