@@ -12,7 +12,7 @@
       <br>
       <table>
       	<tbody>
-      				<tr class="itemRow popUpProductImage"><td class="popUpProdImg" rowSpan="6"><img src="images/products/<%=item.getImagePath()%>" alt="Product Image"></td>
+      				<tr class="itemRow popUpProductImage"><td class="popUpProdImg whAdjustImg" rowSpan="6"><img src="images/products/<%=item.getImagePath()%>" alt="Product Image"></td>
       				</tr>
       					<tr class="itemRow"><td colSpan="2" class="cartItemRating rightAlign"><img src="images/icons/<%=Helper.getClassNameForRating(item.getRating()) %>.png" alt="rating"><%=item.getRating() %></td>
       					<tr>

@@ -5,7 +5,7 @@
         <div class="section parallax about" id="contactUs">
 			<header class="aboutHeader">
 				<h1>CONTACT US!</h1>
-				<p>The sun is too far to reach. We are just a click away.</p>
+				<p>We are just a click away.</p>
 				<form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
                  	<div class="magButtonWrapper">
                         <input type="hidden" value="Customer Support" name="popUpTitle" />

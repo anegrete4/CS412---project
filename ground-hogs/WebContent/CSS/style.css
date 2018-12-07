@@ -2955,6 +2955,10 @@ article p{
  	height:auto;
  }
 
+.checkoutImg {
+	
+	max-height:10px!important;
+}
  
  /* workhsop page*/
  
@@ -2974,4 +2978,15 @@ article p{
  .whiteTextInside{
  	color:white!important;
  }
+ 
+ .whAdjustImg{
+ 	max-height:300px;
+ 
+ }
+ 
+ .whAdjustImg img{
+ 	max-height:250px!important;
+ }
+ 
+ 
  
