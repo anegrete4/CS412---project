@@ -2445,3 +2445,26 @@ body, html{
  	z-index:-1!important;
  }
  
+ 
+ .errorMsgDisplayArea{
+ 	min-width:80%;
+ 	max-width:80%;
+ 	height:80px;
+ 	margin:50px auto;
+ 	color: rgba(255,0,0,.8);!important;
+ 	background:rgba(233,188,85,.1)!important;
+ 	border: 1px solid rgba(233,188,85,.5);
+ 	text-decoration:none!important;
+ 	border-radius:5px;
+ 	
+ }
+ 
+ .errorMsgDisplayArea p{
+  color:rgb(233,188,85)!important;
+ 	padding:10px!important;
+ 	font:20px!important;
+ 	fnot-weight:300;
+ 	letter-spacing:1px;
+ 	
+ 	
+ }

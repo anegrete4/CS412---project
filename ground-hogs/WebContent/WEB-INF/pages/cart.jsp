@@ -46,7 +46,7 @@
 	      						<input type="hidden" value="<%=i.getItemId() %>" name="itemId" />
 	      						<input type="hidden" value="0" name="quantity" />
                     			<input type="hidden" value="popUpCheckout" name="popUpContent" />
-			                	<input class="tButton colorRed" type="submit" value="Remove this item">  
+			                	<input class="tButton colorRed redGlow" type="submit" value="Remove this item">  
 			              </form>
       					</td></tr>		
       					<tr><td colSpan="3"></td></tr>
@@ -93,12 +93,12 @@
 	            <tr class="orderBtnRow">
 	            	<td >
 	            		    <a href="http://localhost:8080/ground-hogs/Shopping.jsp">
-	            		   		<input class="tButton" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
+	            		   		<input class="tButton yellowGlow" onClick="toggleCart('false')" title="Continue Shopping" class="continueShopppingBtn" value="Continue shopping" name="placeYourOrder">
 	            			</a>
 	            	</td>
 	            	<td>
 	                <form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST"> 
-	                	<input class="tButton" type="submit" onClick="toggleCart('false')" value="Proceed to checkout">  
+	                	<input class="tButton greenGlow" type="submit" onClick="toggleCart('false')" value="Proceed to checkout">  
 	                 	<input type="hidden" value="Checkout" name="popUpTitle" />
 	                    <input type="hidden" value="popUpCheckout" name="popUpContent" />
 	        		</form>

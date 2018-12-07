@@ -10,9 +10,12 @@
   		<jsp:include page="/WEB-INF/pages/${param.popUpContent}.jsp" />
   		<%
   			if(Helper.hasErrors()){
+  				
+  				if(!request.getParameter("popUpContent").equalsIgnoreCase("popUpCheckout")){
   				%>
   					<div class="errorMessage"><p>Please provide the valid information in the highlighted fields.</p></div>
   				<%
+  				}
   				Helper.resetDataValidation(request);
   			}
   		%>
