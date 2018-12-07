@@ -2988,5 +2988,14 @@ article p{
  	max-height:250px!important;
  }
  
- 
+ .logo{
+ 	width:200px;
+ 	max-height:48px!important;
+ }
+ .logo img{
+ 	width:90%;
+ 	height:auto;
+ 	margin-top:-20px!important;
+ 	padding-bottom:-20px;
+ }
  

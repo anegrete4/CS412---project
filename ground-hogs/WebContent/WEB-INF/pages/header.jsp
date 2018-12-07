@@ -17,6 +17,14 @@
 
 <div class="navbar">
 	<!--  Home  -->
+ <div class="dropdown">
+    <button id="shopping-content"  class="dropbtn hoverTransparentBg">
+    	<a href="index.jsp"class="disableTextSelection logo" class="DropDown">
+    	<img src="images/icons/logo.png">
+    	</img>
+    	</a>
+    </button>
+  </div> 
   <div class="dropdown">
     <button id="home-content"  class="dropbtn hoverTransparentBg">
     	<a href="index.jsp"class="disableTextSelection" class="DropDown">
