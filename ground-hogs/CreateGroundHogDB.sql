@@ -152,9 +152,9 @@ DELIMITER ;
 ##############################################################################################################################################
 INSERT INTO GGG_FAQ(question,answer,votes)
 VALUES
-	('Can I take my groundhog for a walk when it is snowing?','Sure you can, but make sure your groundhog is wearing one of the jacket like productId=3',100),
+	('Can I take my groundhog for a walk when it is snowing?','Sure you can, but make sure your groundhog is wearing one of the jacket like productId=1',100),
     ('My groundhog just delivered a baby with teeth, is it normal?','Unlike people, groundhog do take birth with teeths. I recommend using productId=4 and productId=2 when cleaning those tiny teeths',5),
-    ('Which item should I use to groom groundhog\'s hair?','Use productId=1. My groundhog also uses it and she is very happy with it.',3),
+    ('Which item should I use to groom groundhog\'s hair?','Use productId=5 .',5),
     ('How long do groundhog live?','Most of them live upto 20 years',4),
     ('Can I please get direct line to talk with groundhog trainer?','Sure, 773-234-5351',300),
     ('Do you guys open even on Thanks giving day?', 'Yes we are!',3),
@@ -173,16 +173,16 @@ VALUES
     ('DeShedding Brush','This handy tool reduces your groundhog''s loose hair from shedding up to 90% with regular use. No more groundhog hair in your house!','24.98','Accessories', 'acc3.png'),
    ('Nylon Groundhog Leash','This Nylon Leash is the perfect leash for your rambunctious groundhog. Sturdy and reliable, your daily walks will be enjoyable for both you and your four-legged best friend.','9.49','Accessories', 'acc2.png'),
     
-	('KAYTEE Fiesta Gourmet Food for Groundhogs, 25 lbs.','An exciting mixture of quality fruits, nuts, vegetables, specialty seeds and grains.
+	('Gary\'s Fiesta Gourmet Food for Groundhogs, 25 lbs.','An exciting mixture of quality fruits, nuts, vegetables, specialty seeds and grains.
 Variety of ingredients with different shapes and sizes provide an enticing and stimulating eating experience for your groundhog.','33.79','Food', 'food1.png'),
-    ('KAYTEE Timothy Complete Groundhog Food','A nutritionally fortified daily diet made with fiber-rich, sun-cured Timothy hay and other essential ingredients necessary for your groundhog. Timothy Hay aids the natural digestive process by providing a high quality source of fiber and because it''s lower in protein and calcium levels, also decreases the likelihood of health issues. Pelleted for easy feeding.','5.39','Food', 'food2.png'),
-    ('KAYTEE Forti-Diet Pro Health','A nutritionally enhanced daily diet that provides the essential nutrients your groundhog needs for a long, healthy life.','3.99','Food', 'food3.png'),
-    ('KAYTEE Forti-Diet Pro Health','Natural antioxidants support a healthy immune system. With probiotics & pre-biotics to aid in digestive health.','4.99','Food', 'food4.png'),
+    ('Gary\'s Complete Groundhog Food','A nutritionally fortified daily diet made with fiber-rich, sun-cured Timothy hay and other essential ingredients necessary for your groundhog. Timothy Hay aids the natural digestive process by providing a high quality source of fiber and because it''s lower in protein and calcium levels, also decreases the likelihood of health issues. Pelleted for easy feeding.','5.39','Food', 'food2.png'),
+    ('Gary\'s Forti-Diet Pro Health','A nutritionally enhanced daily diet that provides the essential nutrients your groundhog needs for a long, healthy life.','3.99','Food', 'food3.png'),
+    ('Gary\'s Forti-Diet Pro Health','Natural antioxidants support a healthy immune system. With probiotics & pre-biotics to aid in digestive health.','4.99','Food', 'food4.png'),
     ('Great Choice® Nutritious','This food combines quality grains, protein sources, and supplemental nutrients to help support growth and health.','6.99','Food', 'food5.png'),
-    ('Item Name40','for misc purposes','11.1','CareProducts', 'beauty2.png'),
-	('Item Name41','for misc purposes','11.1','CareProducts', 'beauty3.png'),
-    ('Item Name42','for misc purposes','11.1','CareProducts', 'beauty4.png'),
-    ('Item Name43','for misc purposes','11.1','CareProducts', 'beauty5.png');
+    ('Grooming wipes','This is a nice product, and we are getting good feed back on this item.','11.1','CareProducts', 'beauty2.png'),
+	('Flea & Tick Spray','This is a nice product, and we are getting good feed back on this item.','14.1','CareProducts', 'beauty3.png'),
+    ('Bristle brush','This is a nice product, and we are getting good feed back on this item.','16.1','CareProducts', 'beauty4.png'),
+    ('Pink Clippers','This is a nice product, and we are getting good feed back on this item.','12.1','CareProducts', 'beauty5.png');
     
 INSERT INTO GGG_Review(itemId,userName,reviewMessage,rating)
 VALUES (1,'Keshab','This is a nice product!. Definitely use it!!',5),

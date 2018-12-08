@@ -49,8 +49,13 @@
 			                	<input class="tButton colorRed redGlow" type="submit" value="Remove this item">  
 			              </form>
       					</td></tr>		
-      					<tr><td colSpan="3"><div class="line"></div></td></tr>
       				<%
+      				
+      				if (e.hasMoreElements()){
+      					%>
+      					<tr><td colSpan="3"><div class="line"></div></td></tr>
+      					<%
+      				}
       			}
       		
       		%>

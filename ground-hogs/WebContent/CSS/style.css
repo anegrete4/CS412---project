@@ -1906,8 +1906,8 @@ article p{
  
 
  .cartProductImage img{
- 	height:150px!important;
- 	width:auto;
+ 	max-height:150px!important;
+ 	max-width:150px!important;
  }
  
  .cartItemTotal, .cartItemName{
@@ -2534,9 +2534,14 @@ article p{
 }
 .salesImage img{
 	background:#FFFFFF;
-	width:150px!important;
-	height:200px!important;
+	max-width:150px!important;
+	max-height:200px!important;
 	margin-top:10px!important;
+}
+.imgMaxHeight{
+	max-height:200px!important;
+	min-height:200px!important;
+	overflow:hidden!important;
 }
 
 .salesName{
@@ -3009,15 +3014,6 @@ article p{
  	color:white!important;
  }
  
- .whAdjustImg{
- 	max-height:300px;
- 
- }
- 
- .whAdjustImg img{
- 	max-height:250px!important;
- }
- 
  .logo{
  	width:200px;
  	max-height:62px!important;
@@ -3149,4 +3145,11 @@ article p{
  	width:300px!important;
  	margin:auto;
  	padding-left:70px!important;
+ }
+ .cartItems tr{
+ 	min-height:350px!important;
+ }
+.popUpProdImg img{
+ 	max-width:200px!important;
+ 	max-height:200px!important;
  }

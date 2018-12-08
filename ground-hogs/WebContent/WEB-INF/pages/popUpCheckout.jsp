@@ -60,10 +60,14 @@
             <td class="rightAlign"><span class="cartItemTotal"><%=Helper.getFormattedAmount(i.getTotalPrice()) %></span></td>
          </tr>
      
-         <tr>
-            <td colSpan="3"></td>
-         </tr>
+         
          <%
+         
+         if (e.hasMoreElements()){
+				%>
+				<tr><td colSpan="3"><div class="line"></div></td></tr>
+				<%
+			}
             }
             
             %>

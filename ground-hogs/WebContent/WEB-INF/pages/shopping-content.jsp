@@ -88,7 +88,9 @@
        				%>
 
                                     <div class="parentHover salesItemShop" onmousehover="magImageInside(this)">
-                                        <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
+                                        <div class="imgMaxHeight">
+                                          <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
+                                        </div>
                                         <div class="salesName">
                                             <h1><%=item.getItemName()%></h1></div>
                                         <div class="viewProduct tButton uButton">
