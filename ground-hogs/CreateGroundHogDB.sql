@@ -153,16 +153,16 @@ DELIMITER ;
 INSERT INTO GGG_FAQ(question,answer,votes)
 VALUES
 	('Can I take my groundhog for a walk when it is snowing?','Sure you can, but make sure your groundhog is wearing one of the jacket like productId=1',100),
-    ('My groundhog just delivered a baby with teeth, is it normal?','Unlike people, groundhog do take birth with teeths. I recommend using productId=4 and productId=2 when cleaning those tiny teeths',5),
+    ('My groundhog just delivered a baby with teeth, is it normal?','Unlike people, groundhog do take birth with teeths',5),
     ('Which item should I use to groom groundhog\'s hair?','Use productId=5 .',5),
     ('How long do groundhog live?','Most of them live upto 20 years',4),
     ('Can I please get direct line to talk with groundhog trainer?','Sure, 773-234-5351',300),
     ('Do you guys open even on Thanks giving day?', 'Yes we are!',3),
     ('Is there parking available?', 'Yes there is free parking just behind our office',20),
-    ('Is it good idea to show cartoon to groundhog', 'No! it is bad idea, instead give them the toys like productId=6',8),
+    ('Is it good idea to show cartoon to groundhog', 'No! it is bad idea.',8),
     ('Do you guys also shell groundhogs?','Sorry! we do not !',1),
     ('I lost my receipt, can I still return the unused product?','Please send us the unused product; however, there will be 10% charges on the items without receipts',7),
-    ('Last time I purchased lipstick for my ground hog with color code 256, but I no longer see that item. Is there another product that is close?', 'Sorry we no longer product lipstick-256, however you may purchase productId=14',2);
+    ('Last time I purchased lipstick for my ground hog with color code 256, but I no longer see that item. Is there another product that is close?', 'Sorry we no longer sell any lipstick items.',2);
 INSERT INTO GGG_SalesItem(itemName, itemDescription,itemPrice,itemType,imagePath)
 VALUES
 ('Top Paw Fashion Bomber Jacket','Give your little one a great look for fall and early winter with this Top Paw Sweater & Coat. This great looking garment is actually two garments as one, as the outer coat snaps on and off to reveal a comfy sweater underneath. Such great and versatile look for your furry friend.','34.99','Accessories', 'acc1.png'),
