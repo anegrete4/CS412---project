@@ -27,7 +27,7 @@
 		<div id="bannerBox">
 			<h1>GARY'S GLORIOUS GROUNDHOGS</h1>	
 			<p>If you're all about these precious little creatures, you're in the right place.</p>
-			<div class="button"><a href="x">LEARN MORE</a></div>
+			<div class="button"><a href="AboutUs.jsp"class="disableTextSelection" class="DropDown">Learn More</a></div>
 			<!-- <p>OR scroll down!</p> -->
 		</div>
 	</div>
@@ -47,25 +47,36 @@
 <div id="catRow">
 	<div class="prodType" id="type1">
 		<div id="butcent">
-		<div class="button"><a href="x">Shop Food</a></div>
+		
+		<form class="Filters" ACTION="shopping.do" METHOD="POST">
+		 	<input type="hidden" name="Food" checked />
+         	<input type="submit" onClick="" value="Shop Food" class="button fixMe">
+		</form>
+		
 		</div>
 	</div>
 	<div class="prodType" id="type2">
 		<div id="butcent">
-			<div class="button"><a href="x">Shop Accessories</a></div>
+			<form class="Filters" ACTION="shopping.do" METHOD="POST">
+		 	<input type="hidden" name="Accessories" checked />
+         		<input type="submit" onClick="" value="Shop Accessories" class="button fixMe">
+		</form>
 		</div>
 	</div>
 	<div class="prodType" id="type3">
 		<div id="butcent">
-		<div class="button"><a href="x">Shop Care Products</a></div>
+		<form class="Filters" ACTION="shopping.do" METHOD="POST">
+		 	<input type="hidden" name="CareProducts" checked />
+         		<input type="submit" onClick="" value="Shop Care Products" class="button fixMe">
+         	</form>
 		</div>
 	</div>
 </div>
 
-<div class="row" id="bestRow">
-	<div id="best"><h1>OUR BEST SELLERS</h1></div>
-		<div id="prodGrid">			
-			 <%
+<div class="Media-Container row adjustHeightAbtUsMedia" id="bestRow">
+			<div id="best" class="adjustMoveUp"><h1>OUR BEST SELLERS</h1></div>
+				<div id="prodGrid" class="abtUsHeightAdjust">	
+				   <%
 				   int i=0;
        			for(SalesItem item:salesItems){
        				i++;
@@ -73,7 +84,7 @@
        				%> 
        				
 
-                                    <div class="parentHover salesItemShop" onmousehover="magImageInside(this)">
+                                    <div class="parentHover salesItemShop adjustMoveUpAbtUsPage" onmousehover="magImageInside(this)">
                                         <div class="salesImage"><img class="hovImg childMag back" src="images/products/<%=item.getImagePath()%>"></div>
                                         <div class="salesName">
                                             <h1><%=item.getItemName()%></h1></div>
@@ -94,18 +105,38 @@
        			}
 
        		%>
+						
+				</div>
 		</div>
-</div>
 
-<div class="continueShoppingBtnWrapper shopAllMiddle">
-      	<a href="http://localhost:8080/ground-hogs/Shopping.jsp">
-	    <input class="tButton" onClick="toggleCart('false')" title="Continue Shopping"  value="Shop All" name="placeYourOrder">
-	  </a>
+	<div class="shopAllMiddle">
+		<div class="newMiddle">
+	      	<a href="http://localhost:8080/ground-hogs/Shopping.jsp">
+		    <input class="tButton" onClick="toggleCart('false')" title="Continue Shopping"  value="Shop All" name="placeYourOrder">
+		  </a>
+		</div>
 	</div>
 
 <!-- WORKSHOP -->
 <div class="row" id="workshop">
-	<div id="col-1"></div>
+<div id="col-1"></div>
+	
+	<div class="Media-Container row controlMe" id="mission">
+			<div class="column">
+				<h1>WORKSHOPS</h1>
+				<p>
+			Want to take better care of your groundhog? Here at Gary's Glorious Groundhog's we have the right workshops for you &amp; your family. 
+			</div>
+		
+		</div>
+		<div class="shopAllMiddle bgWhite">
+		<div class="newMiddle newMiddle2">
+	      	<a href="http://localhost:8080/ground-hogs/Workshop.jsp">
+		    <input class="tButton" onClick="toggleCart('false')" title="Continue Shopping"  value="LEARN MORE" name="placeYourOrder">
+		  </a>
+		</div>
+	</div>
+	<!-- 
 	<div id="col-2">
 		<article>
 			<h2>WORKSHOPS</h2>
@@ -114,7 +145,7 @@
 			</p>
 			<div class="button"><a href="x">LEARN MORE</a></div>
 		</article>
-	</div>
+	</div> -->
 </div>
 
 <script>showSlides(slideIndex);</script>

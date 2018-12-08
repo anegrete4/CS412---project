@@ -71,7 +71,6 @@
            							
            										<td colSpan="3">
                                    						<input type="submit" onClick="" value="Apply Filter" class="tButton filterButton">
-             
                                    			</td>
            								
            								</tr>
