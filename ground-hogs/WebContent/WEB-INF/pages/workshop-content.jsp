@@ -9,15 +9,24 @@
    workshops=(ArrayList)DBAccess.SP_GetWorkshops();
    %>
 <div class="wrapper">
+
+
+
+
+
+
    <div class="section parallax about" id="workshopParallex">
-      <header class="aboutHeader whiteTextInside">
+   <div id="bannerText">
+   <div id="bannerBox">
          <h1>WORKSHOPS</h1>
          <p>We provide workshops that are positive, fun and informative.</p>
          <div class="aboutMiddle">
             <a href="#AboutWorkshops" class="DownArrow nextSection"></a>
          </div>
-      </header>
+         </div>
+	</div>
    </div>
+   
    <div class="AboutWorkshops" id="AboutWorkshops">
    	<div class="paraDiv">
       <h5>

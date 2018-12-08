@@ -11,14 +11,19 @@
  %>
 
 	<div class="wrapper">
+	
+	
+	
+	<!--  -->
 		<div class="section parallax about">
-			<header class="aboutHeader">
-				<h1>GET TO KNOW US!</h1>
-				<p>home of the glorious groundhogs</p>
-				<div class="aboutMiddle">
-					<a href="#mission" class="DownArrow nextSection"></a>
-				</div>
-			</header>
+		<div id="bannerText">
+		<div id="bannerBox">
+			<h1>GET TO KNOW US!</h1>	
+			<p>home of the glorious groundhogs</p>
+			<a href="#mission" class="DownArrow nextSection"></a>
+			<!-- <p>OR scroll down!</p> -->
+		</div>
+	</div>
 		</div>
 
 		<div class="Media-Container row" id="mission">

@@ -33,8 +33,8 @@ $(document).ready(function(){
 		    $( "#slider-range" ).slider({
 		    
 		      range: true,
-		      min: 5,
-		      max: 200,
+		      min: 0,
+		      max: 84,
 		      values: [ $("#price-min").val(), $("#price-max").val() ],
 		      slide: function( event, ui ) {
 		        $("#minPrice").val("Minimum: $"+ui.values[0]);

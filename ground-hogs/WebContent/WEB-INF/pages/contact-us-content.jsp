@@ -2,8 +2,21 @@
    pageEncoding="UTF-8"%>
     <div class="wrapper">
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <div class="section parallax about" id="contactUs">
-			<header class="aboutHeader">
+			<div id="bannerText">
+		<div id="bannerBox">
+
 				<h1>CONTACT US!</h1>
 				<p>We are just a click away.</p>
 				<form class="InputForm" ACTION="popUpDisplay.do" METHOD="POST">
@@ -16,8 +29,15 @@
 				<div class="aboutMiddle">
 					<a href="#MeetUs" class="DownArrow nextSection"></a>
 				</div>
-			</header>
+			</div>
+			</div>
 		</div>
+		
+		
+		
+		
+		
+		
 
             <div class="row" id="MeetUs" >
                 <div id="best">

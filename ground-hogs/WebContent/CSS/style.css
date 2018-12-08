@@ -1454,6 +1454,7 @@ article p{
   border-radius: 50%;
  transition: all 0.3s ease;
   margin:0px auto;
+  z-index:5!important;
 }
 .DownArrow:after {
   content: '';
@@ -2158,6 +2159,7 @@ article p{
 	border-radius: 30px;
 	background-color: rgba(0,255,0,0.7);
 	 outline: none;
+	 margin-top:5px;
 	
 	
 }
@@ -3135,4 +3137,16 @@ article p{
  }
  .fixMe:hover{
  	color:white;
+ }
+ .errorMiddleInShopMage{
+ 	widht:100%;
+ 	height:100%;
+ 	min-height:300px;
+ 	vertical-align:middle;
+ 	text-align:center;
+ }
+ .fitMe{
+ 	width:300px!important;
+ 	margin:auto;
+ 	padding-left:70px!important;
  }

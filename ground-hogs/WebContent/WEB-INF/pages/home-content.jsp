@@ -23,14 +23,28 @@
 		<img src="images/home/petGH2.png">
 	</div>
 
-	<div id="bannerText">
+
+	
+			<div id="bannerText">
 		<div id="bannerBox">
-			<h1>GARY'S GLORIOUS GROUNDHOGS</h1>	
-			<p>If you're all about these precious little creatures, you're in the right place.</p>
-			<div class="button"><a href="AboutUs.jsp"class="disableTextSelection" class="DropDown">Learn More</a></div>
-			<!-- <p>OR scroll down!</p> -->
-		</div>
-	</div>
+
+				<h1>GARY'S GLORIOUS GROUNDHOGS</h1>
+				<p>If you're all about these precious little creatures, you're in the right place.</p>
+                 <div class="magButtonWrapper fitMe">
+                 	<a href="AboutUs.jsp"><div class="magButton">Learn More</div></a>
+                 </div>
+                 <!--  
+				<div class="aboutMiddle">
+					<a href="#catRow" class="DownArrow nextSection"></a>
+				</div>
+				-->
+			</div>
+			</div>
+		
+		
+	
+	
+	
 
 	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 	<a class="next" onclick="plusSlides(1)">&#10095;</a>

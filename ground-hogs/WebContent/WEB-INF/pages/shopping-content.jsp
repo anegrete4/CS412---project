@@ -25,7 +25,7 @@
 	session.setAttribute("isCare",isCare);
 
 	int minPrice = (request.getParameter("price-min") == null) ? 0 : Integer.parseInt((request.getParameter("price-min")));
-	int maxPrice = (request.getParameter("price-max") == null) ? 200 : Integer.parseInt((request.getParameter("price-max")));
+	int maxPrice = (request.getParameter("price-max") == null) ? 84 : Integer.parseInt((request.getParameter("price-max")));
 	salesItems =(ArrayList)DBAccess.SP_GetInventory(isFood,isAccessories,isCare,minPrice,maxPrice);
 %>
 
@@ -106,6 +106,13 @@
 
                                     <%
        			}
+                if(salesItems.isEmpty()){
+                	%>
+                	<div class="errorMiddleInShopMage">
+                		<h3>Sorry we could not find any items in this price range.</h3>
+                	</div>
+                	<%
+                }
 
        		%>
                             </div>
