@@ -23,7 +23,7 @@
                 <div id="best">
                     <h1>Meet Us</h1>
                 </div>
-                <div class="MeetUsArea">
+                <div class="MeetUsArea boxShadowEverywhere">
                 <div id="MeetUsGrid">
                 <div>
                         <h3>General Contact</h3>

@@ -9,7 +9,7 @@
   
 <div class="Content-header" id="FAQContent">
 <div id="Q&As"><h1>Q & As</h1></div>
-       <div class="faqArea invisibleScrollBg">
+       <div class="faqArea invisibleScrollBg boxShadowEverywhere">
        		<ol>
        		<%
        			for(FrequentlyAskedQuestion q:faqs){

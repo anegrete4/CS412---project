@@ -165,18 +165,20 @@ VALUES
     ('Last time I purchased lipstick for my ground hog with color code 256, but I no longer see that item. Is there another product that is close?', 'Sorry we no longer product lipstick-256, however you may purchase productId=14',2);
 INSERT INTO GGG_SalesItem(itemName, itemDescription,itemPrice,itemType,imagePath)
 VALUES
+('Top Paw Fashion Bomber Jacket','Give your little one a great look for fall and early winter with this Top Paw Sweater & Coat. This great looking garment is actually two garments as one, as the outer coat snaps on and off to reveal a comfy sweater underneath. Such great and versatile look for your furry friend.','34.99','Accessories', 'acc1.png'),
+    ('Pet Stroller/Folding Travel Carriage','This stroller is loaded! It features mesh windows for your pet to look out of while remaining in a calm and safe environment, soft bedding, multiple zippered entry points for you to gain access to your pet, a storage compartment to keep pet supplies and toys and even a cup holder for the human doing all the pushing!','89.95','Accessories', 'acc4.png'),
+    ('Herbs Balm','Groundhog herbs balm is 100% natural. It is applied to the groundhog''s outer fur, which makes it softer, shinier, and less likely to shed. ','24.98','CareProducts', 'care1.png'),
+    
+ ('Prince Bowl','This Prince Bowl looks great and is a sturdy, steady bowl at mealtime. This bowl features clean design on the outside, and a rubber bottom ring that keeps it in place while your groundhog is eating.','8.99','Accessories', 'acc5.png'),
+    ('DeShedding Brush','This handy tool reduces your groundhog''s loose hair from shedding up to 90% with regular use. No more groundhog hair in your house!','24.98','Accessories', 'acc3.png'),
+   ('Nylon Groundhog Leash','This Nylon Leash is the perfect leash for your rambunctious groundhog. Sturdy and reliable, your daily walks will be enjoyable for both you and your four-legged best friend.','9.49','Accessories', 'acc2.png'),
+    
 	('KAYTEE Fiesta Gourmet Food for Groundhogs, 25 lbs.','An exciting mixture of quality fruits, nuts, vegetables, specialty seeds and grains.
 Variety of ingredients with different shapes and sizes provide an enticing and stimulating eating experience for your groundhog.','33.79','Food', 'food1.png'),
     ('KAYTEE Timothy Complete Groundhog Food','A nutritionally fortified daily diet made with fiber-rich, sun-cured Timothy hay and other essential ingredients necessary for your groundhog. Timothy Hay aids the natural digestive process by providing a high quality source of fiber and because it''s lower in protein and calcium levels, also decreases the likelihood of health issues. Pelleted for easy feeding.','5.39','Food', 'food2.png'),
     ('KAYTEE Forti-Diet Pro Health','A nutritionally enhanced daily diet that provides the essential nutrients your groundhog needs for a long, healthy life.','3.99','Food', 'food3.png'),
     ('KAYTEE Forti-Diet Pro Health','Natural antioxidants support a healthy immune system. With probiotics & pre-biotics to aid in digestive health.','4.99','Food', 'food4.png'),
     ('Great Choice® Nutritious','This food combines quality grains, protein sources, and supplemental nutrients to help support growth and health.','6.99','Food', 'food5.png'),
-    ('Top Paw Fashion Bomber Jacket','Give your little one a great look for fall and early winter with this Top Paw Sweater & Coat. This great looking garment is actually two garments as one, as the outer coat snaps on and off to reveal a comfy sweater underneath. Such great and versatile look for your furry friend.','34.99','Accessories', 'acc1.png'),
-    ('Nylon Groundhog Leash','This Nylon Leash is the perfect leash for your rambunctious groundhog. Sturdy and reliable, your daily walks will be enjoyable for both you and your four-legged best friend.','9.49','Accessories', 'acc2.png'),
-    ('DeShedding Brush','This handy tool reduces your groundhog''s loose hair from shedding up to 90% with regular use. No more groundhog hair in your house!','24.98','Accessories', 'acc3.png'),
-    ('Pet Stroller/Folding Travel Carriage','This stroller is loaded! It features mesh windows for your pet to look out of while remaining in a calm and safe environment, soft bedding, multiple zippered entry points for you to gain access to your pet, a storage compartment to keep pet supplies and toys and even a cup holder for the human doing all the pushing!','89.95','Accessories', 'acc4.png'),
-    ('Prince Bowl','This Prince Bowl looks great and is a sturdy, steady bowl at mealtime. This bowl features clean design on the outside, and a rubber bottom ring that keeps it in place while your groundhog is eating.','8.99','Accessories', 'acc5.png'),
-    ('Herbs Balm','Groundhog herbs balm is 100% natural. It is applied to the groundhog''s outer fur, which makes it softer, shinier, and less likely to shed. ','24.98','CareProducts', 'care1.png'),
     ('Item Name40','for misc purposes','11.1','CareProducts', 'beauty2.png'),
 	('Item Name41','for misc purposes','11.1','CareProducts', 'beauty3.png'),
     ('Item Name42','for misc purposes','11.1','CareProducts', 'beauty4.png'),
@@ -204,7 +206,7 @@ VALUES (1,'Keshab','This is a nice product!. Definitely use it!!',5),
 ;
 
 INSERT INTO GGG_Workshop ( workshopName, workshopDescription, workshopDay, workshopTime)
-VALUES ('Proper Introductions', 'You likely realize that first impressions count when meeting someone new. The same holds true for groundhogs. A botched introduction could lead to a cool relationship, or worse, between groundhogs. ', 'Monday', '6:00PM-8:00PM'),
-		('Groundhog Confidence Building', 'Is your groundhog shy around people or environmental changes? In this class, we will learn to read our groundhog\s stress signals, teach our groundhog to go to their safe place to relax, establish successful introductions to new people and build their confidence. ', 'Wednesday', '6:00PM-8:00PM'),
+VALUES ('Proper Introductions', 'You likely realize that first impressions count when meeting someone new. The same holds true for groundhogs. A botched introduction could lead to a cool relationship, or worse. ', 'Monday', '6:00PM-8:00PM'),
+		('Confidence Building', 'Is your groundhog shy around people or environmental changes? In this class, we will learn to read our groundhog\s stress signals, teach our groundhog to go to their safe place to relax, and establish successful introductions to new people and build their confidence. ', 'Wednesday', '6:00PM-8:00PM'),
         ('Your New Groundhog Cub', 'Did you just get a groundhog cub? This workshop is designed to give you a jump start on dealing with cub problems! Issues that will be addressed include: housebreaking, crate training, jumping, and social development.', 'Saturday', '1:00PM-4:00PM');
 

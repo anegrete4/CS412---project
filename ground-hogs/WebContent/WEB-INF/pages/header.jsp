@@ -17,24 +17,28 @@
 
 <div class="navbar">
 	<!--  Home  -->
+	
+	
+	
+	
  <div class="dropdown">
-    <button id="shopping-content"  class="dropbtn hoverTransparentBg">
+    <button id="Home-logo"  class="dropbtn hoverTransparentBg">
     	<a href="index.jsp"class="disableTextSelection logo" class="DropDown">
     	<img src="images/icons/logo.png">
     	</img>
     	</a>
     </button>
   </div> 
+  
   <div class="dropdown">
     <button id="home-content"  class="dropbtn hoverTransparentBg">
     	<a href="index.jsp"class="disableTextSelection" class="DropDown">
-    	Home &nbsp; <i class="fa fa-caret-down"></i></a>
+    	Home</a>
     </button>
-    <div class="dropdown-content">
-      <a href="index.jsp" >Home</a>
-      <a href="index.jsp#link2" >Link2</a>
-    </div>
   </div> 
+  
+  
+ 
   <!-- END -->
   
   <!--  About Us  -->
@@ -44,14 +48,8 @@
     	About Us &nbsp; <i class="fa fa-caret-down"></i></a>
     </button>
     <div class="dropdown-content">
-      <a href="AboutUs.jsp" >About Us</a>
       <a href="AboutUs.jsp#mission" > Mission</a>
-       <a href="AboutUs.jsp#innovative" >Innovative</a>
-       <a href="AboutUs.jsp#familyOriented" >Family Oriented</a>
-        <a href="AboutUs.jsp#globalImpact" >Global Impact</a>
-         <a href="AboutUs.jsp#wellEstablished" >Well Established</a>
-          <a href="AboutUs.jsp#best" >Our Best Sellers</a>
-    </div>
+     </div>
   </div> 
   <!-- END -->
   
@@ -71,7 +69,6 @@
     	<a href="Workshop.jsp"class="disableTextSelection" class="DropDown">Workshop &nbsp; <i class="fa fa-caret-down"></i></a>
     </button>
     <div class="dropdown-content">
-      <a href="Workshop.jsp" >Workshop</a>
       <a href="Workshop.jsp#Workshop1" >Proper Introductions</a>
       <a href="Workshop.jsp#Workshop2" >Groundhog Confidence Building</a>
       <a href="Workshop.jsp#Workshop3" >Your New Groundhog Cub</a>
@@ -85,7 +82,6 @@
     	<a href="ContactUs.jsp"class="disableTextSelection" class="DropDown">Contact Us &nbsp; <i class="fa fa-caret-down"></i></a>
     </button>
     <div class="dropdown-content">
-      <a href="ContactUs.jsp" >Contact Us</a>
       <a href="ContactUs.jsp#MeetUs" >Meet Us</a>
       <a href="ContactUs.jsp#Q&As" >Q & As</a>
     </div>
